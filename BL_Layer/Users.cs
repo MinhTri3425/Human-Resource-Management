@@ -1,0 +1,117 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace QLNS.BL_Layer
+{
+    internal class Users
+    {
+        DB db = null;
+        UserMode UserMode = null;
+        int UserID;
+        string functionName = null;
+        public Users(int userID, string functionName)
+        {
+            db = new DB();
+            UserMode = new UserMode();
+            UserID = userID;
+            this.functionName = functionName;
+        }
+        public DataSet LayUsers()
+        {
+            return db.ExecuteQueryDataSet("select * from Users", CommandType.Text);
+        }
+        public DataSet LayUsersTheoID(int UserID)
+        {
+            string sql = $"SELECT * FROM Users WHERE UserID = {UserID}";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        public bool ThemUsers(int UserID, string Username, string PasswordHash, int RoleID, int NhanVienID, ref string err)
+        {
+            if (!UserMode.HasPermission(UserID, functionName, "Add", ref err))
+            {
+                err = "Bạn không có quyền thêm User.";
+                return false;
+            }
+            string sqlString = "Insert Into Users(Username, PasswordHash, RoleID, NhanVienID) Values(N'" +
+            Username + "','" +
+            PasswordHash + "'," +
+            RoleID + "," +
+            NhanVienID + ")";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+        public bool XoaUsers(int UserID, ref string err)
+        {
+            if (!UserMode.HasPermission(UserID, functionName, "Delete", ref err))
+            {
+                err = "Bạn không có quyền xóa User.";
+                return false;
+            }
+            string sqlString = "Delete From Users Where UserID=" + UserID;
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+        public bool CapNhatUsers(int UserID, string Username, string PasswordHash, int RoleID, int NhanVienID, ref string err)
+        {
+            if (!UserMode.HasPermission(UserID, functionName, "Edit", ref err))
+            {
+                err = "Bạn không có quyền cập nhật User.";
+                return false;
+            }
+            string sqlString = "Update Users Set Username=N'" + Username + "',PasswordHash=N'" +
+            PasswordHash + "',RoleID=" +
+            RoleID + ",NhanVienID=" +
+            NhanVienID + " Where UserID=" + UserID;
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                foreach (var b in bytes)
+                    builder.Append(b.ToString("x2"));
+                return builder.ToString();
+            }
+        }
+        public bool DangNhap(string username, string plainPassword, ref int userID, ref int roleID, ref string err)
+        {
+            string hashedPassword = HashPassword(plainPassword);
+            string sql = $"SELECT UserID, RoleID FROM Users WHERE Username = N'{username}' AND PasswordHash = N'{hashedPassword}'";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                userID = Convert.ToInt32(ds.Tables[0].Rows[0]["UserID"]);
+                roleID = Convert.ToInt32(ds.Tables[0].Rows[0]["RoleID"]);
+                return true;
+            }
+            else
+            {
+                err = "Tài khoản hoặc mật khẩu không đúng.";
+                return false;
+            }
+        }
+        public bool DoiMatKhau(int userID, string oldPasswordHash, string newPasswordHash, ref string err)
+        {
+            string sqlCheck = $"SELECT * FROM Users WHERE UserID = {userID} AND PasswordHash = N'{oldPasswordHash}'";
+            DataSet ds = db.ExecuteQueryDataSet(sqlCheck, CommandType.Text);
+            if (ds.Tables[0].Rows.Count == 0)
+            {
+                err = "Mật khẩu cũ không đúng.";
+                return false;
+            }
+
+            string sqlUpdate = $"UPDATE Users SET PasswordHash = N'{newPasswordHash}' WHERE UserID = {userID}";
+            return db.MyExecuteNonQuery(sqlUpdate, CommandType.Text, ref err);
+        }
+        public DataSet TimKiemUsers(string keyword)
+        {
+            string sql = $"SELECT * FROM Users WHERE Username LIKE N'%{keyword}%'";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+    }
+}
