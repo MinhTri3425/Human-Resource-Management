@@ -66,6 +66,30 @@
     <Compile Include="BL_Layer\UserMode.cs" />
     <Compile Include="BL_Layer\Users.cs" />
     <Compile Include="DB_Layer\DB.cs" />
+    <Compile Include="UI_Layer\All UserControl\UC_Contract.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\UC_Contract.Designer.cs">
+      <DependentUpon>UC_Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\UC_PersonalInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\UC_PersonalInformation.Designer.cs">
+      <DependentUpon>UC_PersonalInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\UC_SalaryInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\UC_SalaryInformation.Designer.cs">
+      <DependentUpon>UC_SalaryInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All.Designer.cs">
+      <DependentUpon>All.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Layer\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +120,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI_Layer\All UserControl\UC_Contract.resx">
+      <DependentUpon>UC_Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\UC_PersonalInformation.resx">
+      <DependentUpon>UC_PersonalInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\UC_SalaryInformation.resx">
+      <DependentUpon>UC_SalaryInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All.resx">
+      <DependentUpon>All.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -108,6 +108,20 @@ namespace QLNS.BL_Layer
             string sqlUpdate = $"UPDATE Users SET PasswordHash = N'{newPasswordHash}' WHERE UserID = {userID}";
             return db.MyExecuteNonQuery(sqlUpdate, CommandType.Text, ref err);
         }
+        public int LayUserIDTheoUsername(string username, ref string err)
+        {
+            string sql = $"SELECT UserID FROM Users WHERE Username = N'{username}'";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return Convert.ToInt32(ds.Tables[0].Rows[0]["UserID"]);
+            }
+            else
+            {
+                err = "Không tìm thấy User tương ứng với Username.";
+                return -1; // hoặc giá trị mặc định khác tùy bạn
+            }
+        }
         public DataSet TimKiemUsers(string keyword)
         {
             string sql = $"SELECT * FROM Users WHERE Username LIKE N'%{keyword}%'";
