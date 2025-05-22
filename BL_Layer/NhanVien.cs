@@ -111,5 +111,33 @@ namespace QLNS.BL_Layer
             int count = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
             return count > 0;
         }
+        public int TongNhanVienTheoPhongBan(int phongBanID, ref string err)
+        {
+            try
+            {
+                string sql = $"SELECT COUNT(*) FROM NhanVien WHERE PhongBanID = {phongBanID}";
+                object result = db.ExecuteScalar(sql, CommandType.Text);
+                return Convert.ToInt32(result);
+            }
+            catch (Exception ex)
+            {
+                err = "Lỗi khi lấy tổng số nhân viên theo phòng ban: " + ex.Message;
+                return 0;
+            }
+        }
+        public int TongNhanVien(ref string err)
+        {
+            try
+            {
+                string sql = "SELECT COUNT(*) FROM NhanVien";
+                object result = db.ExecuteScalar(sql, CommandType.Text);
+                return Convert.ToInt32(result);
+            }
+            catch (Exception ex)
+            {
+                err = "Lỗi khi lấy tổng số nhân viên: " + ex.Message;
+                return 0;
+            }
+        }
     }
 }

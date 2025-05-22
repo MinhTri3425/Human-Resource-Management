@@ -96,6 +96,5 @@ namespace QLNS.BL_Layer
 
             return 0;
         }
-
     }
 }

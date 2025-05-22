@@ -77,6 +77,33 @@ namespace QLNS.BL_Layer
             string sql = $"SELECT * FROM CongTrinh WHERE NgayKetThuc >= GETDATE()";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
-
+        public int TongCongTrinh(ref string err)
+        {
+            string sql = "SELECT COUNT(*) FROM CongTrinh";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+            }
+            else
+            {
+                err = "Không tìm thấy dữ liệu.";
+                return 0;
+            }
+        }
+        public int TongCongTrinhTheoPhongBan(int phongBanID, ref string err)
+        {
+            string sql = $"SELECT COUNT(*) FROM CongTrinh WHERE PhongBanID = {phongBanID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+            }
+            else
+            {
+                err = "Không tìm thấy dữ liệu.";
+                return 0;
+            }
+        }
     }
 }
