@@ -41,6 +41,19 @@ namespace QLNS.BL_Layer
         {
             return db.ExecuteQueryDataSet("select * from ChucVu", CommandType.Text);
         }
+        public String LayTenChucVuTheoID(int ChucVuID)//Admin
+        {
+            string sql = $"SELECT TenChucVu FROM ChucVu WHERE ChucVuID = {ChucVuID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return ds.Tables[0].Rows[0]["TenChucVu"].ToString();
+            }
+            else
+            {
+                return null;
+            }
+        }
         public bool ThemChucVu(string TenChucVu, ref string err)//Admin
         {
             if (!UserMode.HasPermission(UserID, functionName, "Add", ref err))

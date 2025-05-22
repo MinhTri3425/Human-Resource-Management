@@ -41,7 +41,19 @@ namespace QLNS.BL_Layer
         {
             return db.ExecuteQueryDataSet("select * from PhongBan", CommandType.Text);
         }
-
+        public String LayTenPhongBanTheoID(int PhongBanID)//Admin
+        {
+            string sql = $"SELECT TenPhongBan FROM PhongBan WHERE PhongBanID = {PhongBanID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return ds.Tables[0].Rows[0]["TenPhongBan"].ToString();
+            }
+            else
+            {
+                return null;
+            }
+        }
         public bool ThemPhongBan(string TenPhongBan, ref string err)//Admin
         {
             if (!UserMode.HasPermission(UserID, functionName, "Add", ref err))

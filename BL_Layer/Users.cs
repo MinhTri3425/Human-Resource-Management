@@ -21,6 +21,11 @@ namespace QLNS.BL_Layer
             UserID = userID;
             this.functionName = functionName;
         }
+        public Users()
+        {
+            db = new DB();
+            UserMode = new UserMode();
+        }
         public DataSet LayUsers()
         {
             return db.ExecuteQueryDataSet("select * from Users", CommandType.Text);
