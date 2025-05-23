@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNS.BL_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,42 @@ namespace QLNS.UI_Layer.All_UserControl
 {
     public partial class UC_SalaryInformation : UserControl
     {
-        public UC_SalaryInformation()
+
+        private int UserID;
+        private String functionName = "Admin";
+
+        DataSet ds;
+
+        int nhanVienID;
+        String hoTenNhanVien;
+        int chucVuID; 
+
+        public UC_SalaryInformation(int userID)
         {
             InitializeComponent();
+            UserID = userID;
+            LoadData();
+        }
+
+
+        public void LoadData()
+        {
+            NhanVien nhanVien = new NhanVien(this.UserID, this.functionName);
+            string err = "";
+            nhanVienID = nhanVien.LayNhanVienIDtheoUserID(ref err);
+            DataSet thongtinNhanVien = nhanVien.LayNhanVienTheoID(this.nhanVienID);
+            if (thongtinNhanVien != null && thongtinNhanVien.Tables.Count > 0 && thongtinNhanVien.Tables[0].Rows.Count > 0)
+            {
+                this.hoTenNhanVien = thongtinNhanVien.Tables[0].Rows[0]["HoTen"].ToString();
+                this.chucVuID = Convert.ToInt32(thongtinNhanVien.Tables[0].Rows[0]["ChucVuID"]);
+            }
+            LoadSalary();
+        }
+
+        private void LoadSalary()
+        {
+            Luong luong = new Luong(this.UserID, this.functionName);
+            ds = luong.LayLuongTheoNhanVienID(this.nhanVienID);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,6 +64,25 @@ namespace QLNS.UI_Layer.All_UserControl
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void UC_SalaryInformation_Load(object sender, EventArgs e)
+        {
+            this.lbFullName.Text = this.hoTenNhanVien;
+            ChucVu chucVu = new ChucVu(this.UserID, this.functionName);
+            this.lbChucVu.Text = chucVu.LayTenChucVuTheoID(this.chucVuID);
+
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                int thang = Convert.ToInt32(row["Thang"]);
+                int nam = Convert.ToInt32(row["Nam"]);
+                float luongCoBan = Convert.ToSingle(row["LuongCoBan"]);
+                float phuCap = Convert.ToSingle(row["PhuCap"]);
+                float tongLuong = Convert.ToSingle(row["TongLuong"]);
+                SalaryItem salaryItem = new SalaryItem(thang, nam, luongCoBan, phuCap, tongLuong);
+                salaryItem.Dock = DockStyle.Top;
+                this.flowLayoutPanel1.Controls.Add(salaryItem);
+            }
         }
     }
 }

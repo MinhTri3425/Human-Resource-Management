@@ -66,6 +66,12 @@
     <Compile Include="BL_Layer\UserMode.cs" />
     <Compile Include="BL_Layer\Users.cs" />
     <Compile Include="DB_Layer\DB.cs" />
+    <Compile Include="UI_Layer\All UserControl\SalaryItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\SalaryItem.Designer.cs">
+      <DependentUpon>SalaryItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Layer\All UserControl\UC_Contract.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI_Layer\All UserControl\SalaryItem.resx">
+      <DependentUpon>SalaryItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\UC_Contract.resx">
       <DependentUpon>UC_Contract.cs</DependentUpon>
     </EmbeddedResource>

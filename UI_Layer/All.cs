@@ -55,7 +55,11 @@ namespace QLNS.UI_Layer
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
         {
-           
+            this.guna2Panel2.Controls.Clear();
+
+            UC_SalaryInformation uC_SalaryInformation = new UC_SalaryInformation(this.UserID);
+            uC_SalaryInformation.Location = new Point(0, 0);
+            this.guna2Panel2.Controls.Add(uC_SalaryInformation);
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)

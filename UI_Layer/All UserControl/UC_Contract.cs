@@ -56,12 +56,12 @@ namespace QLNS.UI_Layer.All_UserControl
                 this.NgayKy = ds.Tables[0].Rows[0]["NgayKy"].ToString();
                 this.NgayHetHan = ds.Tables[0].Rows[0]["NgayHetHan"].ToString();
             }
-            else
-            {
-                String message = "Không tìm thấy hợp đồng lao động cho nhân viên này.";
-                MessageDialog.Show(message);
+            //else
+            //{
+            //    String message = "Không tìm thấy hợp đồng lao động cho nhân viên này.";
+            //    MessageDialog.Show(message);
 
-            }
+            //}
         }
 
         private void UC_Contract_Load(object sender, EventArgs e)
