@@ -46,6 +46,8 @@ namespace QLNS.UI_Layer
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            this.guna2Panel2.Controls.Clear();
+
             UC_PersonalInformation uC_PersonalInformation = new UC_PersonalInformation(this.UserID);
             uC_PersonalInformation.Location = new Point(0,0);
             this.guna2Panel2.Controls.Add(uC_PersonalInformation);
@@ -63,12 +65,23 @@ namespace QLNS.UI_Layer
 
         private void btnContract_Click(object sender, EventArgs e)
         {
-           
+            this.guna2Panel2.Controls.Clear();
+
+            UC_Contract uC_Contract = new UC_Contract(this.UserID);
+            uC_Contract.Location = new Point(0, 0);
+            this.guna2Panel2.Controls.Add(uC_Contract);
         }
 
         private void uC_Contract1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
         }
     }
 }

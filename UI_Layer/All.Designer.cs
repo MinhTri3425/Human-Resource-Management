@@ -39,6 +39,7 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,9 +52,10 @@
             this.guna2Panel1.Controls.Add(this.btnPersonalInfor);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 88);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 70);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(309, 644);
+            this.guna2Panel1.Size = new System.Drawing.Size(275, 515);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnContract
@@ -65,9 +67,10 @@
             this.btnContract.FillColor = System.Drawing.Color.Transparent;
             this.btnContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContract.ForeColor = System.Drawing.Color.Black;
-            this.btnContract.Location = new System.Drawing.Point(0, 192);
+            this.btnContract.Location = new System.Drawing.Point(0, 154);
+            this.btnContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnContract.Name = "btnContract";
-            this.btnContract.Size = new System.Drawing.Size(309, 57);
+            this.btnContract.Size = new System.Drawing.Size(275, 46);
             this.btnContract.TabIndex = 3;
             this.btnContract.Text = "Employment Contract";
             this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
@@ -81,9 +84,10 @@
             this.btnSalary.FillColor = System.Drawing.Color.Transparent;
             this.btnSalary.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalary.ForeColor = System.Drawing.Color.Black;
-            this.btnSalary.Location = new System.Drawing.Point(0, 129);
+            this.btnSalary.Location = new System.Drawing.Point(0, 103);
+            this.btnSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalary.Name = "btnSalary";
-            this.btnSalary.Size = new System.Drawing.Size(309, 57);
+            this.btnSalary.Size = new System.Drawing.Size(275, 46);
             this.btnSalary.TabIndex = 2;
             this.btnSalary.Text = "Salary Information";
             this.btnSalary.Click += new System.EventHandler(this.guna2Button4_Click_1);
@@ -97,9 +101,10 @@
             this.btnPersonalInfor.FillColor = System.Drawing.Color.Transparent;
             this.btnPersonalInfor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonalInfor.ForeColor = System.Drawing.Color.Black;
-            this.btnPersonalInfor.Location = new System.Drawing.Point(0, 66);
+            this.btnPersonalInfor.Location = new System.Drawing.Point(0, 53);
+            this.btnPersonalInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPersonalInfor.Name = "btnPersonalInfor";
-            this.btnPersonalInfor.Size = new System.Drawing.Size(309, 57);
+            this.btnPersonalInfor.Size = new System.Drawing.Size(275, 46);
             this.btnPersonalInfor.TabIndex = 1;
             this.btnPersonalInfor.Text = "Personal Information";
             this.btnPersonalInfor.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -113,9 +118,10 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 3);
+            this.guna2Button2.Location = new System.Drawing.Point(0, 2);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(309, 57);
+            this.guna2Button2.Size = new System.Drawing.Size(275, 46);
             this.guna2Button2.TabIndex = 0;
             this.guna2Button2.Text = "DashBoard";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -126,9 +132,10 @@
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.Location = new System.Drawing.Point(307, 88);
+            this.guna2Panel2.Location = new System.Drawing.Point(273, 70);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1080, 644);
+            this.guna2Panel2.Size = new System.Drawing.Size(960, 515);
             this.guna2Panel2.TabIndex = 1;
             // 
             // guna2BorderlessForm1
@@ -152,9 +159,10 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1215, 21);
+            this.guna2Button1.Location = new System.Drawing.Point(1084, 17);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(124, 50);
+            this.guna2Button1.Size = new System.Drawing.Size(125, 40);
             this.guna2Button1.TabIndex = 2;
             this.guna2Button1.Text = "Exit";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -163,22 +171,42 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 30);
+            this.label1.Location = new System.Drawing.Point(11, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 32);
+            this.label1.Size = new System.Drawing.Size(283, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "HR Managment System";
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BorderRadius = 12;
+            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogOut.FillColor = System.Drawing.Color.Lime;
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Location = new System.Drawing.Point(923, 17);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(125, 40);
+            this.btnLogOut.TabIndex = 4;
+            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // All
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1387, 735);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1233, 588);
             this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnLogOut);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "All";
             this.Text = "All";
             this.Load += new System.EventHandler(this.All_Load);
@@ -200,5 +228,6 @@
         private Guna.UI2.WinForms.Guna2Button btnContract;
         private Guna.UI2.WinForms.Guna2Button btnSalary;
         private Guna.UI2.WinForms.Guna2Button btnPersonalInfor;
+        private Guna.UI2.WinForms.Guna2Button btnLogOut;
     }
 }
