@@ -26,7 +26,7 @@ namespace QLNS.UI_Layer
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
