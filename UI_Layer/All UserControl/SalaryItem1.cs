@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QLNS.UI_Layer.All_UserControl
 {
-    public partial class SalaryItem : UserControl
+    public partial class SalaryItem1 : UserControl
     {
         private int thang;
         private int nam;
@@ -18,7 +18,7 @@ namespace QLNS.UI_Layer.All_UserControl
         private float phuCap;
         private float tongLuong;
 
-        public SalaryItem(int thang, int nam, float luongCoBan, float phuCap, float tongLuong)
+        public SalaryItem1(int thang, int nam, float luongCoBan, float phuCap, float tongLuong)
         {
             InitializeComponent();
             this.thang = thang;
@@ -35,6 +35,16 @@ namespace QLNS.UI_Layer.All_UserControl
             lbLuongCoBan.Text = luongCoBan.ToString("N0");
             lbPhuCap.Text = phuCap.ToString("N0");
             lbTong.Text = tongLuong.ToString("N0");
+        }
+
+        private void lbNam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbPhuCap_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

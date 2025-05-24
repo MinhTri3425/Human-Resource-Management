@@ -48,7 +48,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
 
-            UC_PersonalInformation uC_PersonalInformation = new UC_PersonalInformation(this.UserID);
+            PersonalInformation uC_PersonalInformation = new PersonalInformation(this.UserID);
             uC_PersonalInformation.Location = new Point(0,0);
             this.guna2Panel2.Controls.Add(uC_PersonalInformation);
         }
@@ -57,7 +57,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
 
-            UC_SalaryInformation uC_SalaryInformation = new UC_SalaryInformation(this.UserID);
+            SalaryInformation uC_SalaryInformation = new SalaryInformation(this.UserID);
             uC_SalaryInformation.Location = new Point(0, 0);
             this.guna2Panel2.Controls.Add(uC_SalaryInformation);
         }
@@ -71,7 +71,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
 
-            UC_Contract uC_Contract = new UC_Contract(this.UserID);
+            Contract uC_Contract = new Contract(this.UserID);
             uC_Contract.Location = new Point(0, 0);
             this.guna2Panel2.Controls.Add(uC_Contract);
         }

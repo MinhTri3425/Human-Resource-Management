@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QLNS.UI_Layer.All_UserControl
 {
-    public partial class UC_SalaryInformation : UserControl
+    public partial class SalaryInformation : UserControl
     {
 
         private int UserID;
@@ -23,7 +23,7 @@ namespace QLNS.UI_Layer.All_UserControl
         String hoTenNhanVien;
         int chucVuID; 
 
-        public UC_SalaryInformation(int userID)
+        public SalaryInformation(int userID)
         {
             InitializeComponent();
             UserID = userID;
@@ -79,10 +79,15 @@ namespace QLNS.UI_Layer.All_UserControl
                 float luongCoBan = Convert.ToSingle(row["LuongCoBan"]);
                 float phuCap = Convert.ToSingle(row["PhuCap"]);
                 float tongLuong = Convert.ToSingle(row["TongLuong"]);
-                SalaryItem salaryItem = new SalaryItem(thang, nam, luongCoBan, phuCap, tongLuong);
+                SalaryItem1 salaryItem = new SalaryItem1(thang, nam, luongCoBan, phuCap, tongLuong);
                 salaryItem.Dock = DockStyle.Top;
                 this.flowLayoutPanel1.Controls.Add(salaryItem);
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

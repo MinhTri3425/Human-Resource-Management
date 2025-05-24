@@ -29,6 +29,11 @@ namespace QLNS.BL_Layer
             string sql = $"SELECT * FROM ChamCong WHERE NhanVienID = {nhanVienID}";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
+        public DataSet LayChamCongTheoPhongBanID(int phongBanID)//Admin, Accoutants
+        {
+            string sql = $"SELECT * FROM ChamCong WHERE NhanVienID IN (SELECT NhanVienID FROM NhanVien WHERE PhongBanID = {phongBanID})";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
         public bool ThemChamCong(int NhanVienID, DateTime Ngay, string GioVao, string GioRa, string TrangThai, ref string err)//Admin, Accoutants
         {
             if (!UserMode.HasPermission(UserID, functionName, "Add", ref err))
@@ -54,20 +59,35 @@ namespace QLNS.BL_Layer
             string sqlString = "Delete From ChamCong Where ChamCongID=" + ChamCongID;
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public double TinhTongGioLamTrongThang(int nhanVienID, int thang, int nam)
+        public decimal TinhTongGioLamTrongThang(int nhanVienID, int thang, int nam)
         {
-            string sql = $"SELECT GioVao, GioRa FROM ChamCong WHERE NhanVienID = {nhanVienID} AND MONTH(Ngay) = {thang} AND YEAR(Ngay) = {nam}";
+            string sql = $@"
+        SELECT GioVao, GioRa 
+        FROM ChamCong 
+        WHERE NhanVienID = {nhanVienID} 
+            AND MONTH(Ngay) = {thang} 
+            AND YEAR(Ngay) = {nam}";
+
             DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
 
-            double tongGio = 0;
+            decimal tongGio = 0;
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                DateTime vao = DateTime.Parse(row["GioVao"].ToString());
-                DateTime ra = DateTime.Parse(row["GioRa"].ToString());
-                tongGio += (ra - vao).TotalHours;
+                if (row["GioVao"] != DBNull.Value && row["GioRa"] != DBNull.Value)
+                {
+                    DateTime gioVao = Convert.ToDateTime(row["GioVao"]);
+                    DateTime gioRa = Convert.ToDateTime(row["GioRa"]);
+
+                    // Chỉ cộng nếu giờ ra sau giờ vào
+                    if (gioRa > gioVao)
+                    {
+                        tongGio += (decimal)(gioRa - gioVao).TotalHours;
+                    }
+                }
             }
 
             return tongGio;
         }
+
     }
 }

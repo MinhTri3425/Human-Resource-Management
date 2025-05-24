@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace QLNS.UI_Layer.All_UserControl
 {
-    public partial class UC_Contract : UserControl
+    public partial class Contract : UserControl
     {
 
         private int UserID;
@@ -26,7 +26,7 @@ namespace QLNS.UI_Layer.All_UserControl
         String hoTenNhanVien;
         int chucVuID;
 
-        public UC_Contract(int UserID)
+        public Contract(int UserID)
         {
             InitializeComponent();
             this.UserID = UserID;
@@ -74,6 +74,11 @@ namespace QLNS.UI_Layer.All_UserControl
             this.lbLoaiHopDong.Text = this.LoaiHopDong;
             this.lbNgayKy.Text = this.NgayKy;
             this.lbNgayHetHan.Text = this.NgayHetHan;
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

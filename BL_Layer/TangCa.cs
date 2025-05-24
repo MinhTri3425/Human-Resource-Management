@@ -83,15 +83,25 @@ namespace QLNS.BL_Layer
             string sql = $"SELECT * FROM TangCa WHERE TrangThai = N'{trangThai}'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
-        public double LayTongGioTangCa(int nhanVienID, DateTime ngayTangCa)
+        public decimal LayTongGioTangCa(int nhanVienID)
         {
-            string sql = $"SELECT SUM(DATEDIFF(MINUTE, GioBatDau, GioKetThuc)) / 60.0 AS TongGioTangCa FROM TangCa WHERE NhanVienID = {nhanVienID} AND NgayTangCa = '{ngayTangCa.ToString("yyyy-MM-dd")}'";
+            string sql = $"SELECT SUM(DATEDIFF(MINUTE, GioBatDau, GioKetThuc)) / 60.0 AS TongGioTangCa FROM TangCa WHERE NhanVienID = {nhanVienID}";
             DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
-            if (ds.Tables[0].Rows.Count > 0)
+            if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["TongGioTangCa"] != DBNull.Value)
             {
-                return Convert.ToDouble(ds.Tables[0].Rows[0]["TongGioTangCa"]);
+                return Convert.ToDecimal(ds.Tables[0].Rows[0]["TongGioTangCa"]);
             }
             return 0;
+        }
+        public string LayHinhThucTangCa(int nhanVienID)
+        {
+            string sql = $"SELECT DISTINCT HinhThuc FROM TangCa WHERE NhanVienID = {nhanVienID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["HinhThuc"] != DBNull.Value)
+            {
+                return ds.Tables[0].Rows[0]["HinhThuc"].ToString();
+            }
+            return string.Empty;
         }
     }
 }

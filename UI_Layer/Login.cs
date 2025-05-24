@@ -43,7 +43,7 @@ namespace QLNS.UI_Layer
 
         private void ForgotPass_Click(object sender, EventArgs e)
         {
-            string message = "          PASSWORD RECOVERY INSTRUCTIONS\n\n" +
+            string message =
                  "Step 1. Contact the system administrator to request password recovery.\n\n" +
                  "Step 2. Provide your username or email to verify your identity.\n\n" +
                  "Step 3. Receive a new password or a password reset link from the administrator.\n\n" +
@@ -84,6 +84,18 @@ namespace QLNS.UI_Layer
                     this.Hide();
                     All all = new All(1);
                     all.Show();
+                }
+                if (userID == 2)
+                {
+                    this.Hide();
+                    ManagerUI manager = new ManagerUI(2);
+                    manager.Show();
+                }
+                if (userID == 3)
+                {
+                    this.Hide();
+                    AccoutantUI acc = new AccoutantUI(3);
+                    acc.Show();
                 }
             }
             else

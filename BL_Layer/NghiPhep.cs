@@ -79,7 +79,20 @@ namespace QLNS.BL_Layer
             string sql = $"SELECT * FROM NghiPhep WHERE TrangThai = N'{trangThai}'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
-        public double LayTongSoNgayNghiPhep(int nhanVienID)
+        public string LayLoaiNghiPhep(int nhanVienID)
+        {
+            string sql = $@"
+            SELECT DISTINCT Loai 
+            FROM NghiPhep 
+            WHERE NhanVienID = {nhanVienID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["Loai"] != DBNull.Value)
+            {
+                return ds.Tables[0].Rows[0]["Loai"].ToString();
+            }
+            return string.Empty;
+        }
+        public decimal LayTongSoNgayNghiPhep(int nhanVienID)
         {
             string sql = $@"
             SELECT 
@@ -91,7 +104,7 @@ namespace QLNS.BL_Layer
 
             if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["TongSoNgayNghiPhep"] != DBNull.Value)
             {
-                return Convert.ToDouble(ds.Tables[0].Rows[0]["TongSoNgayNghiPhep"]);
+                return Convert.ToDecimal(ds.Tables[0].Rows[0]["TongSoNgayNghiPhep"]);
             }
 
             return 0;

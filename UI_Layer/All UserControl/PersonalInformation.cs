@@ -11,7 +11,7 @@ using QLNS.BL_Layer;
 
 namespace QLNS.UI_Layer.All_UserControl
 {
-    public partial class UC_PersonalInformation : UserControl
+    public partial class PersonalInformation : UserControl
     {
         private int UserID;
         private String functionName = "Admin";
@@ -25,7 +25,7 @@ namespace QLNS.UI_Layer.All_UserControl
         int PhongBanID;
         int ChucVuID;
         String TrangThai;
-        public UC_PersonalInformation(int UserID)
+        public PersonalInformation(int UserID)
         {
             InitializeComponent();
             this.UserID = UserID;
@@ -87,31 +87,7 @@ namespace QLNS.UI_Layer.All_UserControl
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            // Hiển thị MessageBox với 2 nút Yes và No
-            DialogResult result = MessageBox.Show(
-                "Do you want change?",
-                "Choose",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button1);
 
-            if (result == DialogResult.Yes)
-            {
-                // Người chơi chọn "Yes" -> đổi ảnh
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-                openFileDialog.Title = "Chọn ảnh đại diện";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string filePath = openFileDialog.FileName;
-                    guna2PictureBox1.Image = Image.FromFile(filePath);
-                }
-            }
-            else if (result == DialogResult.No)
-            {
-                //Do noth
-            }
         }
 
     }

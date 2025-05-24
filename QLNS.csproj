@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
@@ -66,41 +69,137 @@
     <Compile Include="BL_Layer\UserMode.cs" />
     <Compile Include="BL_Layer\Users.cs" />
     <Compile Include="DB_Layer\DB.cs" />
-    <Compile Include="UI_Layer\All UserControl\SalaryItem.cs">
+    <Compile Include="UI_Layer\AccoutantUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\AccoutantUI.Designer.cs">
+      <DependentUpon>AccoutantUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Leave.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI_Layer\All UserControl\SalaryItem.Designer.cs">
-      <DependentUpon>SalaryItem.cs</DependentUpon>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Leave.Designer.cs">
+      <DependentUpon>A_UC_Leave.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI_Layer\All UserControl\UC_Contract.cs">
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_LeaveItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI_Layer\All UserControl\UC_Contract.Designer.cs">
-      <DependentUpon>UC_Contract.cs</DependentUpon>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_LeaveItem.Designer.cs">
+      <DependentUpon>A_UC_LeaveItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI_Layer\All UserControl\UC_PersonalInformation.cs">
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_OverTime.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI_Layer\All UserControl\UC_PersonalInformation.Designer.cs">
-      <DependentUpon>UC_PersonalInformation.cs</DependentUpon>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_OverTime.Designer.cs">
+      <DependentUpon>A_UC_OverTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI_Layer\All UserControl\UC_SalaryInformation.cs">
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_OvertimeItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI_Layer\All UserControl\UC_SalaryInformation.Designer.cs">
-      <DependentUpon>UC_SalaryInformation.cs</DependentUpon>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_OvertimeItem.Designer.cs">
+      <DependentUpon>A_UC_OvertimeItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Salary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Salary.Designer.cs">
+      <DependentUpon>A_UC_Salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_SalaryItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_SalaryItem.Designer.cs">
+      <DependentUpon>A_UC_SalaryItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Timekeeping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Timekeeping.Designer.cs">
+      <DependentUpon>A_UC_Timekeeping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_TimekeepingItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_TimekeepingItem.Designer.cs">
+      <DependentUpon>A_UC_TimekeepingItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_HopDongLaoDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_HopDongLaoDong.Designer.cs">
+      <DependentUpon>M_UC_HopDongLaoDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemChamCong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemChamCong.Designer.cs">
+      <DependentUpon>M_UC_ItemChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemHopDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemHopDong.Designer.cs">
+      <DependentUpon>M_UC_ItemHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ManageEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ManageEmployees.Designer.cs">
+      <DependentUpon>M_UC_ManageEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ManageProjectItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ManageProjectItem.Designer.cs">
+      <DependentUpon>M_UC_ManageProjectItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_NhanVienItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_NhanVienItem.Designer.cs">
+      <DependentUpon>M_UC_NhanVienItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiChamCong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiChamCong.Designer.cs">
+      <DependentUpon>M_UC_QuanLiChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiCongTrinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\H_UC_QuanLiCongTrinh.Designer.cs">
+      <DependentUpon>M_UC_QuanLiCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\SalaryItem1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\SalaryItem1.Designer.cs">
+      <DependentUpon>SalaryItem1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Contract.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Contract.Designer.cs">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\PersonalInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\PersonalInformation.Designer.cs">
+      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\SalaryInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\SalaryInformation.Designer.cs">
+      <DependentUpon>SalaryInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="UI_Layer\All.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI_Layer\All.Designer.cs">
       <DependentUpon>All.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI_Layer\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI_Layer\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +208,12 @@
     </Compile>
     <Compile Include="UI_Layer\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\ManagerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\ManagerUI.Designer.cs">
+      <DependentUpon>ManagerUI.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,28 +225,74 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI_Layer\All UserControl\SalaryItem.resx">
-      <DependentUpon>SalaryItem.cs</DependentUpon>
+    <EmbeddedResource Include="UI_Layer\AccoutantUI.resx">
+      <DependentUpon>AccoutantUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI_Layer\All UserControl\UC_Contract.resx">
-      <DependentUpon>UC_Contract.cs</DependentUpon>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Leave.resx">
+      <DependentUpon>A_UC_Leave.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI_Layer\All UserControl\UC_PersonalInformation.resx">
-      <DependentUpon>UC_PersonalInformation.cs</DependentUpon>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\A_UC_LeaveItem.resx">
+      <DependentUpon>A_UC_LeaveItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI_Layer\All UserControl\UC_SalaryInformation.resx">
-      <DependentUpon>UC_SalaryInformation.cs</DependentUpon>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\A_UC_OverTime.resx">
+      <DependentUpon>A_UC_OverTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\A_UC_OvertimeItem.resx">
+      <DependentUpon>A_UC_OvertimeItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Salary.resx">
+      <DependentUpon>A_UC_Salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\A_UC_SalaryItem.resx">
+      <DependentUpon>A_UC_SalaryItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Timekeeping.resx">
+      <DependentUpon>A_UC_Timekeeping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\A_UC_TimekeepingItem.resx">
+      <DependentUpon>A_UC_TimekeepingItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_HopDongLaoDong.resx">
+      <DependentUpon>M_UC_HopDongLaoDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemChamCong.resx">
+      <DependentUpon>M_UC_ItemChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_ManageEmployees.resx">
+      <DependentUpon>M_UC_ManageEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_ManageProjectItem.resx">
+      <DependentUpon>M_UC_ManageProjectItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiChamCong.resx">
+      <DependentUpon>M_UC_QuanLiChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\H_UC_QuanLiCongTrinh.resx">
+      <DependentUpon>M_UC_QuanLiCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\SalaryItem1.resx">
+      <DependentUpon>SalaryItem1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Contract.resx">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\PersonalInformation.resx">
+      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\SalaryInformation.resx">
+      <DependentUpon>SalaryInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All.resx">
       <DependentUpon>All.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI_Layer\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\ManagerUI.resx">
+      <DependentUpon>ManagerUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,10 +307,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\User.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Password.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus1.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

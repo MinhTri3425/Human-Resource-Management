@@ -189,9 +189,9 @@
             this.ForgotPass.Location = new System.Drawing.Point(1064, 469);
             this.ForgotPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ForgotPass.Name = "ForgotPass";
-            this.ForgotPass.Size = new System.Drawing.Size(181, 31);
+            this.ForgotPass.Size = new System.Drawing.Size(192, 31);
             this.ForgotPass.TabIndex = 10;
-            this.ForgotPass.Text = "Forgot pasword?  ";
+            this.ForgotPass.Text = "Forgot password?  ";
             this.ForgotPass.Click += new System.EventHandler(this.ForgotPass_Click);
             this.ForgotPass.MouseEnter += new System.EventHandler(this.ForgotPass_MouseEnter);
             this.ForgotPass.MouseLeave += new System.EventHandler(this.ForgotPass_MouseLeave);
@@ -213,6 +213,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

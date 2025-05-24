@@ -24,6 +24,11 @@ namespace QLNS.BL_Layer
         {
             return db.ExecuteQueryDataSet("select * from HopDongLaoDong", CommandType.Text);
         }
+        public DataSet LayHopDongTheoPhongBan(int PhongBanID)
+        {
+            string sqlString = "Select * From HopDongLaoDong Where NhanVienID IN (Select NhanVienID From NhanVien Where PhongBanID=" + PhongBanID + ")";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+        }
         public bool ThemHopDongLaoDong(int NhanVienID, string LoaiHopDong, DateTime NgayKy, DateTime NgayHetHan, ref string err)
         {
             if (!UserMode.HasPermission(UserID, functionName, "Add", ref err))
