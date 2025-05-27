@@ -73,6 +73,17 @@ namespace QLNS.BL_Layer
             TrangThai + "' Where TangCaID=" + TangCaID;
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+        public bool CapNhatTrangThaiTangCa(int TangCaID, string TrangThai, ref string err)//Admin, Accoutants
+        {
+            if (!UserMode.HasPermission(UserID, functionName, "Edit", ref err))
+            {
+                err = "Bạn không có quyền cập nhật trạng thái tăng ca.";
+                return false;
+            }
+            string sqlString = "Update TangCa Set TrangThai=N'" +
+            TrangThai + "' Where TangCaID=" + TangCaID;
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
         public DataSet TimKiemTangCa(string keyword)
         {
             string sql = $"SELECT * FROM TangCa WHERE NhanVienID LIKE '%{keyword}%' OR NgayTangCa LIKE '%{keyword}%' OR GioBatDau LIKE '%{keyword}%' OR GioKetThuc LIKE '%{keyword}%' OR LoaiTangCa LIKE N'%{keyword}%' OR HinhThuc LIKE N'%{keyword}%' OR TrangThai LIKE N'%{keyword}%'";
@@ -85,14 +96,23 @@ namespace QLNS.BL_Layer
         }
         public decimal LayTongGioTangCa(int nhanVienID)
         {
-            string sql = $"SELECT SUM(DATEDIFF(MINUTE, GioBatDau, GioKetThuc)) / 60.0 AS TongGioTangCa FROM TangCa WHERE NhanVienID = {nhanVienID}";
+            string sql = $@"
+        SELECT 
+            SUM(DATEDIFF(MINUTE, GioBatDau, GioKetThuc)) / 60.0 AS TongGioTangCa 
+        FROM TangCa 
+        WHERE NhanVienID = {nhanVienID}";
+
             DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+
             if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["TongGioTangCa"] != DBNull.Value)
             {
-                return Convert.ToDecimal(ds.Tables[0].Rows[0]["TongGioTangCa"]);
+                // Ép kiểu từ double -> decimal chính xác
+                return Convert.ToDecimal(Convert.ToDouble(ds.Tables[0].Rows[0]["TongGioTangCa"]));
             }
+
             return 0;
         }
+
         public string LayHinhThucTangCa(int nhanVienID)
         {
             string sql = $"SELECT DISTINCT HinhThuc FROM TangCa WHERE NhanVienID = {nhanVienID}";
@@ -102,6 +122,57 @@ namespace QLNS.BL_Layer
                 return ds.Tables[0].Rows[0]["HinhThuc"].ToString();
             }
             return string.Empty;
+        }
+        public string LayTrangThaiTangCa(int nhanVienID)
+        {
+            string sql = $"SELECT DISTINCT TrangThai FROM TangCa WHERE NhanVienID = {nhanVienID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["TrangThai"] != DBNull.Value)
+            {
+                return ds.Tables[0].Rows[0]["TrangThai"].ToString();
+            }
+            return string.Empty;
+        }
+        public string LayTrangThaiTangCaTheoTangCaID(int tangCaID)
+        {
+            string sql = $"SELECT TrangThai FROM TangCa WHERE TangCaID = {tangCaID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["TrangThai"] != DBNull.Value)
+            {
+                return ds.Tables[0].Rows[0]["TrangThai"].ToString();
+            }
+            return string.Empty;
+        }
+        public DataSet LayTangCaTheoPhongBanID(int phongBanID)
+        {
+            string sql = @"
+            SELECT tc.*
+            FROM TangCa tc
+            INNER JOIN NhanVien nv ON tc.NhanVienID = nv.NhanVienID
+            WHERE nv.PhongBanID = " + phongBanID;
+
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        public DataSet TimKiemTangCaTheoTenNhanVienCungPhongBan(int phongBanID, string keyword)
+        {
+            string sql = $@"
+            SELECT tc.*
+            FROM TangCa tc
+            INNER JOIN NhanVien nv ON tc.NhanVienID = nv.NhanVienID
+            WHERE nv.PhongBanID = {phongBanID} 
+            AND (nv.HoTen LIKE N'%{keyword}%' OR nv.CMND LIKE N'%{keyword}%' OR nv.MaSoThue LIKE N'%{keyword}%')";
+
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        public DataSet LayTangCaTheoTrangThaiCungPhongBan(int phongBanID, string trangThai)
+        {
+            string sql = $@"
+            SELECT tc.*
+            FROM TangCa tc
+            INNER JOIN NhanVien nv ON tc.NhanVienID = nv.NhanVienID
+            WHERE nv.PhongBanID = {phongBanID} 
+            AND tc.TrangThai = N'{trangThai}'";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
     }
 }

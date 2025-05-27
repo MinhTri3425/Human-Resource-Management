@@ -63,5 +63,10 @@ namespace QLNS.UI_Layer.All_UserControl
         {
 
         }
+
+        private void cbbtrangthai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

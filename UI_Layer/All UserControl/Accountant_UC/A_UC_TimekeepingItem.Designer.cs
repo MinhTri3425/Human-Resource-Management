@@ -73,7 +73,7 @@
             // 
             this.lbgiobatdau.AutoSize = true;
             this.lbgiobatdau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbgiobatdau.Location = new System.Drawing.Point(585, 14);
+            this.lbgiobatdau.Location = new System.Drawing.Point(631, 14);
             this.lbgiobatdau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbgiobatdau.Name = "lbgiobatdau";
             this.lbgiobatdau.Size = new System.Drawing.Size(29, 31);
@@ -84,7 +84,7 @@
             // 
             this.lbtrangthai.AutoSize = true;
             this.lbtrangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtrangthai.Location = new System.Drawing.Point(1147, 14);
+            this.lbtrangthai.Location = new System.Drawing.Point(1096, 14);
             this.lbtrangthai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbtrangthai.Name = "lbtrangthai";
             this.lbtrangthai.Size = new System.Drawing.Size(29, 31);
@@ -95,7 +95,7 @@
             // 
             this.lbgioketthuc.AutoSize = true;
             this.lbgioketthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbgioketthuc.Location = new System.Drawing.Point(837, 14);
+            this.lbgioketthuc.Location = new System.Drawing.Point(866, 14);
             this.lbgioketthuc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbgioketthuc.Name = "lbgioketthuc";
             this.lbgioketthuc.Size = new System.Drawing.Size(29, 31);
@@ -114,7 +114,7 @@
             this.Controls.Add(this.lbchamcongid);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "A_UC_TimekeepingItem";
-            this.Size = new System.Drawing.Size(1383, 59);
+            this.Size = new System.Drawing.Size(1334, 59);
             this.Load += new System.EventHandler(this.A_UC_TimekeepingItem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

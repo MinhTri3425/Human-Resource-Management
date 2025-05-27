@@ -14,7 +14,7 @@ namespace QLNS.UI_Layer.All_UserControl
     public partial class M_UC_QuanLiChamCong : UserControl
     {
         private int UserID;
-        private String functionName = "Admin";
+        private String functionName = "M.ChamCong";
 
         DataSet ds;
 
@@ -87,6 +87,35 @@ namespace QLNS.UI_Layer.All_UserControl
             }
 
             
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            ChamCong chamCong = new ChamCong(this.UserID, this.functionName);
+            string searchText = guna2TextBox1.Text.Trim();
+            DataSet dataSet = chamCong.TimKiemChamCongCungPhongBan(PhongBanID, searchText);
+            panelQuanLiChamCong.Controls.Clear();
+
+            foreach (DataRow row in dataSet.Tables[0].Rows)
+            {
+                int id = Convert.ToInt32(row["ChamCongID"]);
+                int IDNhanVien = Convert.ToInt32(row["NhanVienID"]);
+                NhanVien nhanVien = new NhanVien(this.UserID, this.functionName);
+                DataSet thongtinNhanVien = nhanVien.LayNhanVienTheoID(IDNhanVien);
+                string hoten = "";
+                if (thongtinNhanVien != null && thongtinNhanVien.Tables.Count > 0 && thongtinNhanVien.Tables[0].Rows.Count > 0)
+                {
+                    hoten = thongtinNhanVien.Tables[0].Rows[0]["HoTen"].ToString();
+                }
+                string ngayChamCong = Convert.ToDateTime(row["Ngay"]).ToString("dd/MM/yyyy");
+                string gioVao = DateTime.Parse(row["GioVao"].ToString()).ToString("HH:mm");
+                string gioRa = DateTime.Parse(row["GioRa"].ToString()).ToString("HH:mm");
+                string TrangThai = row["TrangThai"].ToString();
+
+                M_UC_ItemChamCong chamcong = new M_UC_ItemChamCong(id, hoten, ngayChamCong, gioVao, gioRa, TrangThai);
+                chamcong.Dock = DockStyle.Top;
+                this.panelQuanLiChamCong.Controls.Add(chamcong);
+            }
         }
     }
 }

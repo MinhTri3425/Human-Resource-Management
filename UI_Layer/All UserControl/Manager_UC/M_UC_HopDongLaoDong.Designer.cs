@@ -73,7 +73,7 @@
             // 
             this.lbChucVuquanli.AutoSize = true;
             this.lbChucVuquanli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChucVuquanli.Location = new System.Drawing.Point(303, 101);
+            this.lbChucVuquanli.Location = new System.Drawing.Point(303, 102);
             this.lbChucVuquanli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbChucVuquanli.Name = "lbChucVuquanli";
             this.lbChucVuquanli.Size = new System.Drawing.Size(140, 31);
@@ -95,7 +95,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 101);
+            this.label4.Location = new System.Drawing.Point(44, 102);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 31);
@@ -106,7 +106,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(43, 44);
+            this.label9.Location = new System.Drawing.Point(44, 44);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(214, 31);
@@ -130,7 +130,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(215, 161);
+            this.label7.Location = new System.Drawing.Point(214, 161);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(213, 31);
@@ -142,7 +142,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Location = new System.Drawing.Point(41, 161);
+            this.label6.Location = new System.Drawing.Point(40, 161);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 31);
@@ -151,8 +151,9 @@
             // 
             // panelHopDongNhanVien
             // 
+            this.panelHopDongNhanVien.AutoScroll = true;
             this.panelHopDongNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelHopDongNhanVien.Location = new System.Drawing.Point(23, 204);
+            this.panelHopDongNhanVien.Location = new System.Drawing.Point(22, 205);
             this.panelHopDongNhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHopDongNhanVien.Name = "panelHopDongNhanVien";
             this.panelHopDongNhanVien.Size = new System.Drawing.Size(1650, 454);
@@ -162,7 +163,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(595, 44);
+            this.label5.Location = new System.Drawing.Point(596, 44);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(164, 31);
@@ -197,7 +198,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label10.Location = new System.Drawing.Point(641, 161);
+            this.label10.Location = new System.Drawing.Point(640, 161);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(193, 31);
@@ -209,22 +210,22 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(1373, 161);
+            this.label2.Location = new System.Drawing.Point(1372, 161);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 31);
             this.label2.TabIndex = 21;
             this.label2.Text = "Expiration Date";
             // 
-            // H_UC_HopDongLaoDong
+            // M_UC_HopDongLaoDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "H_UC_HopDongLaoDong";
-            this.Size = new System.Drawing.Size(2071, 798);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "M_UC_HopDongLaoDong";
+            this.Size = new System.Drawing.Size(2072, 798);
             this.Load += new System.EventHandler(this.UC_HopDongLaoDong_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();

@@ -1,0 +1,78 @@
+﻿using QLNS.BL_Layer;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace QLNS.UI_Layer.All_UserControl.Manager_UC
+{
+    public partial class M_UC_ItemQuanLiNghiPhep : UserControl
+    {
+        int idNghiPhep;
+        string hoTenNhanVien;
+        string ngayBatDau;
+        string ngayKetThuc;
+        string loaiNghiPhep;
+        string trangThai;
+
+        int userID;
+        string functionName;
+        Action reloadCallback;
+
+
+        public M_UC_ItemQuanLiNghiPhep(int idNghiPhep, string hoTenNhanVien, string ngayBatDau, string ngayKetThuc, string loaiNghiPhep, string trangThai, int userID, string functionName, Action reloadCallback)
+        {
+            InitializeComponent();
+            this.idNghiPhep = idNghiPhep;
+            this.hoTenNhanVien = hoTenNhanVien;
+            this.ngayBatDau = ngayBatDau;
+            this.ngayKetThuc = ngayKetThuc;
+            this.loaiNghiPhep = loaiNghiPhep;
+            this.trangThai = trangThai;
+            this.userID = userID;
+            this.functionName = functionName;
+            this.reloadCallback = reloadCallback;
+            this.guna2PictureBox1.Visible = false;
+            this.guna2PictureBox2.Visible = false;
+        }
+
+        private void M_UC_ItemQuanLiNghiPhep_Load(object sender, EventArgs e)
+        {
+            lbIDNghiPhep.Text = idNghiPhep.ToString();
+            lbTenNhanVien.Text = hoTenNhanVien;
+            lbNgayBatDau.Text = ngayBatDau;
+            lbNgayKetThuc.Text = ngayKetThuc;
+            lbLoai.Text = loaiNghiPhep;
+            lbTrangThai.Text = trangThai;
+        }
+
+        private void M_UC_ItemQuanLiNghiPhep_MouseLeave(object sender, EventArgs e)
+        {
+            if (!this.ClientRectangle.Contains(this.PointToClient(Cursor.Position)))
+            {
+                this.guna2PictureBox1.Visible = false;
+                this.guna2PictureBox2.Visible = false;
+            }
+        }
+
+        private void M_UC_ItemQuanLiNghiPhep_MouseEnter(object sender, EventArgs e)
+        {
+            NghiPhep nghiPhep = new NghiPhep(userID, functionName);
+            if (nghiPhep.LayTrangThaiNghiPhepTheoNghiPhepID(this.idNghiPhep) == "Chưa duyệt")
+            {
+                this.guna2PictureBox1.Visible = true;
+                this.guna2PictureBox2.Visible = true;
+            }
+            else
+            {
+                this.guna2PictureBox1.Visible = false;
+                this.guna2PictureBox2.Visible = false;
+            }
+        }
+    }
+}

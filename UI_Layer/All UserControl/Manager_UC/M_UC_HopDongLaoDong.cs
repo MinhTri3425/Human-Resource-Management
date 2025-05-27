@@ -15,7 +15,7 @@ namespace QLNS.UI_Layer.All_UserControl
     {
 
         private int UserID;
-        private String functionName = "Admin";
+        private String functionName = "M.HopDong";
 
         DataSet ds;
 
@@ -69,12 +69,25 @@ namespace QLNS.UI_Layer.All_UserControl
                 }
                 string loaiHopDong = row["LoaiHopDong"].ToString();
                 string ngayChamCong = Convert.ToDateTime(row["NgayKy"]).ToString("dd/MM/yyyy");
-                string ngayHetHopDong = Convert.ToDateTime(row["NgayHetHan"]).ToString("dd/MM/yyyy");
+                string ngayHetHopDong = "";
+                if (row["NgayHetHan"] != DBNull.Value)
+                {
+                    ngayHetHopDong = Convert.ToDateTime(row["NgayHetHan"]).ToString("dd/MM/yyyy");
+                }
+                else
+                {
+                    ngayHetHopDong = "--"; 
+                }
 
                 M_UC_ItemHopDong hopDong = new M_UC_ItemHopDong(id, hoten, loaiHopDong, ngayChamCong, ngayHetHopDong);
                 hopDong.Dock = DockStyle.Top;
                 this.panelHopDongNhanVien.Controls.Add(hopDong);
             }
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

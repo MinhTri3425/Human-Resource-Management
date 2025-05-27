@@ -36,6 +36,10 @@
             this.lbluongcoban = new System.Windows.Forms.Label();
             this.lbphucap = new System.Windows.Forms.Label();
             this.lbtongluong = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbluongid
@@ -75,7 +79,7 @@
             // 
             this.lbtrangthai.AutoSize = true;
             this.lbtrangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtrangthai.Location = new System.Drawing.Point(1155, 14);
+            this.lbtrangthai.Location = new System.Drawing.Point(1167, 14);
             this.lbtrangthai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbtrangthai.Name = "lbtrangthai";
             this.lbtrangthai.Size = new System.Drawing.Size(29, 31);
@@ -120,17 +124,49 @@
             // 
             this.lbtongluong.AutoSize = true;
             this.lbtongluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtongluong.Location = new System.Drawing.Point(955, 14);
+            this.lbtongluong.Location = new System.Drawing.Point(968, 14);
             this.lbtongluong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbtongluong.Name = "lbtongluong";
             this.lbtongluong.Size = new System.Drawing.Size(29, 31);
             this.lbtongluong.TabIndex = 27;
             this.lbtongluong.Text = "1";
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox2.Image = global::QLNS.Properties.Resources.X;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(1389, 6);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 29;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox1.Image = global::QLNS.Properties.Resources.check;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1321, 6);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 28;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            this.guna2PictureBox1.MouseEnter += new System.EventHandler(this.A_UC_SalaryItem_Load);
+            this.guna2PictureBox1.MouseLeave += new System.EventHandler(this.A_UC_SalaryItem_Load);
+            // 
             // A_UC_SalaryItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.lbtongluong);
             this.Controls.Add(this.lbphucap);
             this.Controls.Add(this.lbluongcoban);
@@ -141,8 +177,12 @@
             this.Controls.Add(this.lbluongid);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "A_UC_SalaryItem";
-            this.Size = new System.Drawing.Size(1454, 59);
+            this.Size = new System.Drawing.Size(1461, 59);
             this.Load += new System.EventHandler(this.A_UC_SalaryItem_Load);
+            this.MouseEnter += new System.EventHandler(this.A_UC_SalaryItem_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.A_UC_SalaryItem_MouseLeave);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +198,7 @@
         private System.Windows.Forms.Label lbluongcoban;
         private System.Windows.Forms.Label lbphucap;
         private System.Windows.Forms.Label lbtongluong;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

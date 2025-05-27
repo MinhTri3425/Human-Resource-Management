@@ -33,7 +33,8 @@ namespace QLNS.UI_Layer.All_UserControl
         {
             lbchamcongid.Text = ChamCongID.ToString();
             lbnhanvienid.Text = NhanVienID.ToString();
-            lbngay.Text = ngay;
+            DateTime date = DateTime.Parse(ngay);
+            lbngay.Text = date.ToString("dd/MM/yyyy");
             lbgiobatdau.Text = gioBatDau;
             lbgioketthuc.Text = gioKetThuc;
             lbtrangthai.Text = trangThai;

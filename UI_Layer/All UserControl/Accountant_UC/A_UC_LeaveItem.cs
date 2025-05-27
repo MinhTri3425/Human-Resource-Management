@@ -33,8 +33,10 @@ namespace QLNS.UI_Layer.All_UserControl
         {
             this.lbnghiphepid.Text = NghiPhepID.ToString();
             this.lbnhanvienid.Text = NhanVienID.ToString();
-            this.lbngaybatdau.Text = ngaybatdau;
-            this.lbngayketthuc.Text = ngayketthuc;
+            DateTime startDate = DateTime.Parse(ngaybatdau);
+            this.lbngaybatdau.Text = startDate.ToString("dd/MM/yyyy");
+            DateTime endDate = DateTime.Parse(ngayketthuc);
+            this.lbngayketthuc.Text = endDate.ToString("dd/MM/yyyy");
             this.lbloainghiphep.Text = loai;
             this.lbtrangthai.Text = trangthai;
         }

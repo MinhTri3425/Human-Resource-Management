@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -139,7 +140,56 @@ namespace QLNS.BL_Layer
                 return 0;
             }
         }
-
-
+        public int TongNhanVienCungPhongBan(int phongBanID, ref string err)
+        {
+            try
+            {
+                string sql = $"SELECT COUNT(*) FROM NhanVien WHERE PhongBanID = {phongBanID}";
+                object result = db.ExecuteScalar(sql, CommandType.Text);
+                return Convert.ToInt32(result);
+            }
+            catch (Exception ex)
+            {
+                err = "Lỗi khi lấy tổng số nhân viên trong phòng ban: " + ex.Message;
+                return 0;
+            }
+        }
+        public bool NhanVienIDDaTonTai(int nhanVienID, ref string err)
+        {
+            try
+            {
+                string sql = $"SELECT COUNT(*) FROM NhanVien WHERE NhanVienID = {nhanVienID}";
+                object result = db.ExecuteScalar(sql, CommandType.Text);
+                return Convert.ToInt32(result) > 0;
+            }
+            catch (Exception ex)
+            {
+                err = "Lỗi khi kiểm tra nhân viên ID: " + ex.Message;
+                return false;
+            }
+        }
+        public DataSet TimKiemNhanVienCungPhongBan(int phongBanID, string keyword)
+        {
+            string sql = $@"
+            SELECT * 
+            FROM NhanVien 
+            WHERE PhongBanID = {phongBanID} 
+            AND (HoTen LIKE N'%{keyword}%' OR CMND LIKE N'%{keyword}%' OR MaSoThue LIKE N'%{keyword}%')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        public bool NhanVienCoCungPhongBan(int nhanVienID, int phongBanID, ref string err)
+        {
+            try
+            {
+                string sql = $"SELECT COUNT(*) FROM NhanVien WHERE NhanVienID = {nhanVienID} AND PhongBanID = {phongBanID}";
+                object result = db.ExecuteScalar(sql, CommandType.Text);
+                return Convert.ToInt32(result) > 0;
+            }
+            catch (Exception ex)
+            {
+                err = "Lỗi khi kiểm tra nhân viên có cùng phòng ban: " + ex.Message;
+                return false;
+            }
+        }
     }
 }

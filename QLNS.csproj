@@ -123,6 +123,36 @@
     <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_TimekeepingItem.Designer.cs">
       <DependentUpon>A_UC_TimekeepingItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\ThemLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Accountant_UC\ThemLuong.Designer.cs">
+      <DependentUpon>ThemLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\addPhanCongCongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\addPhanCongCongTrinh.Designer.cs">
+      <DependentUpon>addPhanCongCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_SuaCongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_SuaCongTrinh.Designer.cs">
+      <DependentUpon>M_SuaCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_ThemTangCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_ThemTangCa.Designer.cs">
+      <DependentUpon>M_ThemTangCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_Congtrinhitemcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_Congtrinhitemcon.Designer.cs">
+      <DependentUpon>M_UC_Congtrinhitemcon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_HopDongLaoDong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +170,18 @@
     </Compile>
     <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemHopDong.Designer.cs">
       <DependentUpon>M_UC_ItemHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemQuanLiNghiPhep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemQuanLiNghiPhep.Designer.cs">
+      <DependentUpon>M_UC_ItemQuanLiNghiPhep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemTangCa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemTangCa.Designer.cs">
+      <DependentUpon>M_UC_ItemTangCa.cs</DependentUpon>
     </Compile>
     <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_ManageEmployees.cs">
       <SubType>UserControl</SubType>
@@ -159,6 +201,18 @@
     <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_NhanVienItem.Designer.cs">
       <DependentUpon>M_UC_NhanVienItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_nhanvienitemcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_nhanvienitemcon.Designer.cs">
+      <DependentUpon>M_UC_nhanvienitemcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_PAMItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_PAMItem.Designer.cs">
+      <DependentUpon>M_UC_PAMItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiChamCong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,8 +222,32 @@
     <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiCongTrinh.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI_Layer\All UserControl\Manager_UC\H_UC_QuanLiCongTrinh.Designer.cs">
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiCongTrinh.Designer.cs">
       <DependentUpon>M_UC_QuanLiCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanliNghiPhep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanliNghiPhep.Designer.cs">
+      <DependentUpon>M_UC_QuanliNghiPhep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiTangCa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiTangCa.Designer.cs">
+      <DependentUpon>M_UC_QuanLiTangCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLyPhanCongCongTrinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLyPhanCongCongTrinh.Designer.cs">
+      <DependentUpon>M_UC_QuanLyPhanCongCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\ThemCongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Manager_UC\ThemCongTrinh.Designer.cs">
+      <DependentUpon>ThemCongTrinh.cs</DependentUpon>
     </Compile>
     <Compile Include="UI_Layer\All UserControl\SalaryItem1.cs">
       <SubType>UserControl</SubType>
@@ -252,11 +330,32 @@
     <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\A_UC_TimekeepingItem.resx">
       <DependentUpon>A_UC_TimekeepingItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\ThemLuong.resx">
+      <DependentUpon>ThemLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\addPhanCongCongTrinh.resx">
+      <DependentUpon>addPhanCongCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_SuaCongTrinh.resx">
+      <DependentUpon>M_SuaCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_ThemTangCa.resx">
+      <DependentUpon>M_ThemTangCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_Congtrinhitemcon.resx">
+      <DependentUpon>M_UC_Congtrinhitemcon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_HopDongLaoDong.resx">
       <DependentUpon>M_UC_HopDongLaoDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemChamCong.resx">
       <DependentUpon>M_UC_ItemChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemQuanLiNghiPhep.resx">
+      <DependentUpon>M_UC_ItemQuanLiNghiPhep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_ItemTangCa.resx">
+      <DependentUpon>M_UC_ItemTangCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_ManageEmployees.resx">
       <DependentUpon>M_UC_ManageEmployees.cs</DependentUpon>
@@ -264,11 +363,29 @@
     <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_ManageProjectItem.resx">
       <DependentUpon>M_UC_ManageProjectItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_nhanvienitemcon.resx">
+      <DependentUpon>M_UC_nhanvienitemcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_PAMItem.resx">
+      <DependentUpon>M_UC_PAMItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiChamCong.resx">
       <DependentUpon>M_UC_QuanLiChamCong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\H_UC_QuanLiCongTrinh.resx">
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiCongTrinh.resx">
       <DependentUpon>M_UC_QuanLiCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanliNghiPhep.resx">
+      <DependentUpon>M_UC_QuanliNghiPhep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLiTangCa.resx">
+      <DependentUpon>M_UC_QuanLiTangCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\M_UC_QuanLyPhanCongCongTrinh.resx">
+      <DependentUpon>M_UC_QuanLyPhanCongCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Manager_UC\ThemCongTrinh.resx">
+      <DependentUpon>ThemCongTrinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\SalaryItem1.resx">
       <DependentUpon>SalaryItem1.cs</DependentUpon>
@@ -318,6 +435,14 @@
   <ItemGroup>
     <None Include="Resources\plus1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\trashbin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

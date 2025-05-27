@@ -1,4 +1,5 @@
 ﻿using QLNS.BL_Layer;
+using QLNS.UI_Layer.All_UserControl.Manager_UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,10 +12,10 @@ using System.Windows.Forms;
 
 namespace QLNS.UI_Layer.All_UserControl
 {
-    public partial class H_UC_QuanLiCongTrinh : UserControl
+    public partial class M_UC_QuanLiCongTrinh : UserControl
     {
         private int UserID;
-        private String functionName = "Admin";
+        private String functionName = "M.CongTrinh(samePB)";
 
         DataSet ds;
 
@@ -24,7 +25,7 @@ namespace QLNS.UI_Layer.All_UserControl
         int PhongBanID;
 
 
-        public H_UC_QuanLiCongTrinh(int UserID)
+        public M_UC_QuanLiCongTrinh(int UserID)
         {
             InitializeComponent();
             this.UserID = UserID;
@@ -66,7 +67,12 @@ namespace QLNS.UI_Layer.All_UserControl
                 string ngayBatDau = Convert.ToDateTime(row["NgayBatDau"]).ToString("dd/MM/yyyy");
                 string ngayKetThuc = Convert.ToDateTime(row["NgayKetThuc"]).ToString("dd/MM/yyyy");
 
-                H_UC_ManageProjectItem congTrinh = new H_UC_ManageProjectItem(id, tenCongTrinh, diaDiem, ngayBatDau, ngayKetThuc);
+                M_UC_ManageProjectItem congTrinh = new M_UC_ManageProjectItem(id, tenCongTrinh, diaDiem, ngayBatDau, ngayKetThuc, UserID, functionName, () =>
+                {
+                    this.panelQuanLiCongTrinh.Controls.Clear();
+                    LoadData();
+                    UC_QuanLiCongTrinh_Load(null, null);
+                });
                 congTrinh.Dock = DockStyle.Top;
                 this.panelQuanLiCongTrinh.Controls.Add(congTrinh);
             }
@@ -75,6 +81,48 @@ namespace QLNS.UI_Layer.All_UserControl
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnThemCongTrinh_Click(object sender, EventArgs e)
+        {
+            ThemCongTrinh form = new ThemCongTrinh(UserID, functionName, PhongBanID,() =>
+            {
+                this.panelQuanLiCongTrinh.Controls.Clear(); 
+                LoadData(); 
+                UC_QuanLiCongTrinh_Load(null, null); 
+            });
+            form.ShowDialog();
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            CongTrinh congTrinh = new CongTrinh(this.UserID, this.functionName);
+            string searchText = guna2TextBox1.Text.Trim();
+            DataSet dataSet = congTrinh.TimKiemCongTrinhCungPhongBan(PhongBanID, searchText);
+            panelQuanLiCongTrinh.Controls.Clear();
+            LoadData();
+            if (dataSet != null)
+            {
+                if (dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
+                {
+                    foreach (DataRow row in dataSet.Tables[0].Rows)
+                    {
+                        int id = Convert.ToInt32(row["CongTrinhID"]);
+                        string tenCongTrinh = row["TenCongTrinh"].ToString();
+                        string diaDiem = row["DiaDiem"].ToString();
+                        string ngayBatDau = Convert.ToDateTime(row["NgayBatDau"]).ToString("dd/MM/yyyy");
+                        string ngayKetThuc = Convert.ToDateTime(row["NgayKetThuc"]).ToString("dd/MM/yyyy");
+                        M_UC_ManageProjectItem congTrinhItem = new M_UC_ManageProjectItem(id, tenCongTrinh, diaDiem, ngayBatDau, ngayKetThuc, UserID, functionName, () =>
+                        {
+                            this.panelQuanLiCongTrinh.Controls.Clear();
+                            LoadData();
+                            UC_QuanLiCongTrinh_Load(null, null);
+                        });
+                        congTrinhItem.Dock = DockStyle.Top;
+                        this.panelQuanLiCongTrinh.Controls.Add(congTrinhItem);
+                    }
+                }
+            }
         }
     }
 }

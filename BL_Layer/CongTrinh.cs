@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Data;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -103,6 +104,40 @@ namespace QLNS.BL_Layer
             {
                 err = "Không tìm thấy dữ liệu.";
                 return 0;
+            }
+        }
+        public DataSet TimKiemCongTrinhCungPhongBan(int phongBanID, string keyword)
+        {
+            string sql = $"SELECT * FROM CongTrinh WHERE PhongBanID = {phongBanID} AND TenCongTrinh LIKE N'%{keyword}%' OR DiaDiem LIKE N'%{keyword}%'";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
+        public bool CongTrinhIDDaTonTai(int congTrinhID, ref string err)
+        {
+            string sql = $"SELECT COUNT(*) FROM CongTrinh WHERE CongTrinhID = {congTrinhID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0 && Convert.ToInt32(ds.Tables[0].Rows[0][0]) > 0)
+            {
+                return true; // Công trình đã tồn tại
+            }
+            else
+            {
+                err = "Công trình không tồn tại.";
+                return false; // Công trình không tồn tại
+            }
+        }
+        public bool CongTrinhCoCungPhongBan(int congTrinhID, int phongBanID, ref string err)
+        {
+            string sql = $"SELECT COUNT(*) FROM CongTrinh WHERE CongTrinhID = {congTrinhID} AND PhongBanID = {phongBanID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0 && Convert.ToInt32(ds.Tables[0].Rows[0][0]) > 0)
+            {
+                return true; // Công trình thuộc phòng ban
+            }
+            else
+            {
+                err = "Công trình không thuộc phòng ban này.";
+                return false; // Công trình không thuộc phòng ban này
             }
         }
     }

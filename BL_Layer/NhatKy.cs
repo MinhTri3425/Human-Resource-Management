@@ -29,7 +29,7 @@ namespace QLNS.BL_Layer
             string sql = $"SELECT * FROM NhatKy WHERE UserID = {UserID}";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
-        public bool ThemNhatKy(int NhatKyID, int userID, string HanhDong, DateTime ThoiGian, ref string err)
+        public bool ThemNhatKy(int userID, string HanhDong, DateTime ThoiGian, ref string err)
         {
             if (!UserMode.HasPermission(UserID, functionName, "Add", ref err))
             {

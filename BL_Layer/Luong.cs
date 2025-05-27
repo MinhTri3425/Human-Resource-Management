@@ -29,6 +29,21 @@ namespace QLNS.BL_Layer
             string sql = $"SELECT * FROM Luong WHERE NhanVienID = {nhanVienID}";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
+        public int LayLuongIDTheoNhanVienID(int nhanVienID)
+        {
+            string sql = $"SELECT LuongID FROM Luong WHERE NhanVienID = {nhanVienID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                return Convert.ToInt32(ds.Tables[0].Rows[0]["LuongID"]);
+            }
+            return -1; // Trả về -1 nếu không tìm thấy
+        }
+        public DataSet LayLuongTheoTrangThai(string trangThai)
+        {
+            string sql = $"SELECT * FROM Luong WHERE TrangThai = N'{trangThai}'";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
         public bool ThemLuong(int NhanVienID, int Thang, int Nam, decimal LuongCoBan, decimal PhuCap, decimal TongLuong, string TrangThai, ref string err)//Admin, Accoutants
         {
             if (!UserMode.HasPermission(UserID, functionName, "Add", ref err))
@@ -56,27 +71,43 @@ namespace QLNS.BL_Layer
             string sqlString = "Delete From Luong Where LuongID=" + LuongID;
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public bool CapNhatLuong(int LuongID, int NhanVienID, int Thang, int Nam, decimal HeSoLuong, decimal PhuCap, decimal TongLuong, string TrangThai, ref string err)//Admin, Accoutants
+        public bool CapNhatTrangThaiLuong(int LuongID, string TrangThai, ref string err)//Admin, Accoutants
         {
             if (!UserMode.HasPermission(UserID, functionName, "Edit", ref err))
             {
-                err = "Bạn không có quyền cập nhật lương.";
+                err = "Bạn không có quyền cập nhật trạng thái lương.";
                 return false;
             }
-            string sqlString = "Update Luong Set NhanVienID=" +
-            NhanVienID + ",Thang=" +
-            Thang + ",Nam=" +
-            Nam + ",LuongCoBan=" +
-            HeSoLuong + ",PhuCap=" +
-            PhuCap + ",TongLuong='" +
-            TongLuong + "',TrangThai=N'" +
+            string sqlString = "Update Luong Set TrangThai=N'" +
             TrangThai + "' Where LuongID=" + LuongID;
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public DataSet TimKiemLuongTheoThangNam(int thang, int nam)
+        public DataSet TimKiemLuong(string keyword)
         {
-            string sql = $"SELECT * FROM Luong WHERE Thang = {thang} AND Nam = {nam}";
+            string sql = $"SELECT * FROM Luong WHERE NhanVienID LIKE '%{keyword}%' OR Thang LIKE '%{keyword}%' OR Nam LIKE '%{keyword}%' OR LuongCoBan LIKE '%{keyword}%' OR PhuCap LIKE '%{keyword}%' OR TongLuong LIKE '%{keyword}%' OR TrangThai LIKE N'%{keyword}%'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
+        public decimal LayLuongCoBan(int nhanVienID, int thang, int nam)
+        {
+            string sql = $"SELECT LuongCoBan FROM Luong WHERE NhanVienID = {nhanVienID} AND Thang = {thang} AND Nam = {nam}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                return Convert.ToDecimal(ds.Tables[0].Rows[0]["LuongCoBan"]);
+            }
+            return 0;
+        }
+
+        public decimal LayPhuCap(int nhanVienID, int thang, int nam)
+        {
+            string sql = $"SELECT PhuCap FROM Luong WHERE NhanVienID = {nhanVienID} AND Thang = {thang} AND Nam = {nam}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                return Convert.ToDecimal(ds.Tables[0].Rows[0]["PhuCap"]);
+            }
+            return 0;
+        }
+
     }
 }

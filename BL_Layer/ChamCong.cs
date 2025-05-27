@@ -75,19 +75,30 @@ namespace QLNS.BL_Layer
             {
                 if (row["GioVao"] != DBNull.Value && row["GioRa"] != DBNull.Value)
                 {
-                    DateTime gioVao = Convert.ToDateTime(row["GioVao"]);
-                    DateTime gioRa = Convert.ToDateTime(row["GioRa"]);
+                    // Ép kiểu chính xác sang TimeSpan vì kiểu `time` trong SQL Server tương ứng TimeSpan trong .NET
+                    TimeSpan gioVao = (TimeSpan)row["GioVao"];
+                    TimeSpan gioRa = (TimeSpan)row["GioRa"];
 
                     // Chỉ cộng nếu giờ ra sau giờ vào
                     if (gioRa > gioVao)
                     {
-                        tongGio += (decimal)(gioRa - gioVao).TotalHours;
+                        TimeSpan thoiGianLam = gioRa - gioVao;
+                        tongGio += (decimal)thoiGianLam.TotalHours;
                     }
                 }
             }
 
             return tongGio;
         }
+        public DataSet TimKiemChamCongCungPhongBan(int phongBanID, string keyword)
+        {
+            string sql = $@"
+            SELECT * 
+            FROM ChamCong 
+            WHERE NhanVienID IN (SELECT NhanVienID FROM NhanVien WHERE PhongBanID = {phongBanID}) 
+            AND (NhanVienID LIKE '%{keyword}%' OR Ngay LIKE '%{keyword}%' OR GioVao LIKE '%{keyword}%' OR GioRa LIKE '%{keyword}%' OR TrangThai LIKE N'%{keyword}%')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
 
+        }
     }
 }

@@ -71,15 +71,16 @@ namespace QLNS.UI_Layer.All_UserControl
             this.lbFullName.Text = this.hoTenNhanVien;
             ChucVu chucVu = new ChucVu(this.UserID, this.functionName);
             this.lbChucVu.Text = chucVu.LayTenChucVuTheoID(this.chucVuID);
-
+            Luong luong = new Luong(this.UserID, this.functionName);
+            int luongID = luong.LayLuongIDTheoNhanVienID(this.nhanVienID);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 int thang = Convert.ToInt32(row["Thang"]);
                 int nam = Convert.ToInt32(row["Nam"]);
-                float luongCoBan = Convert.ToSingle(row["LuongCoBan"]);
-                float phuCap = Convert.ToSingle(row["PhuCap"]);
-                float tongLuong = Convert.ToSingle(row["TongLuong"]);
-                SalaryItem1 salaryItem = new SalaryItem1(thang, nam, luongCoBan, phuCap, tongLuong);
+                decimal luongCoBan = Convert.ToDecimal(row["LuongCoBan"]);
+                decimal phuCap = Convert.ToDecimal(row["PhuCap"]);
+                decimal tongLuong = Convert.ToDecimal(row["TongLuong"]);
+                SalaryItem1 salaryItem = new SalaryItem1(UserID, luongID, nhanVienID, thang, nam, luongCoBan, phuCap, tongLuong);
                 salaryItem.Dock = DockStyle.Top;
                 this.flowLayoutPanel1.Controls.Add(salaryItem);
             }

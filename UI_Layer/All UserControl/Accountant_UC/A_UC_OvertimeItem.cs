@@ -41,12 +41,23 @@ namespace QLNS.UI_Layer.All_UserControl
         {
             lbtangcaid.Text = TangCaID.ToString();
             lbnhanvienid.Text = NhanVienID.ToString();
-            lbngay.Text = ngay;
+            DateTime Date = DateTime.Parse(ngay);
+            lbngay.Text = Date.ToString("dd/MM/yyyy");
             lbgiobatdau.Text = gioBatDau;
             lbgioketthuc.Text = gioKetThuc;
             lbloaitangca.Text = loaiTangCa;
             lbhinhthuc.Text = hinhThuc;
             lbtrangthai.Text = trangThai;
+        }
+
+        private void lbngay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbgiobatdau_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

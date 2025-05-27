@@ -1,4 +1,5 @@
 ﻿using QLNS.UI_Layer.All_UserControl;
+using QLNS.UI_Layer.All_UserControl.Manager_UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,7 +57,7 @@ namespace QLNS.UI_Layer
         {
             guna2Panel2.Controls.Clear();
 
-            H_UC_QuanLiCongTrinh quanlicongtrinh = new H_UC_QuanLiCongTrinh(this.UserID);
+            M_UC_QuanLiCongTrinh quanlicongtrinh = new M_UC_QuanLiCongTrinh(this.UserID);
             quanlicongtrinh.Location = new Point(0, 0);
             guna2Panel2.Controls.Add(quanlicongtrinh);
         }
@@ -106,6 +107,31 @@ namespace QLNS.UI_Layer
             Contract uC_Contract = new Contract(this.UserID);
             uC_Contract.Location = new Point(0, 0);
             this.guna2Panel2.Controls.Add(uC_Contract);
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            guna2Panel2.Controls.Clear();
+            M_UC_QuanliNghiPhep quanliNghiPhep = new M_UC_QuanliNghiPhep(this.UserID);
+            quanliNghiPhep.Location = new Point(0, 0);
+            guna2Panel2.Controls.Add(quanliNghiPhep);
+
+        }
+
+        private void btnQuanLiTangCa_Click(object sender, EventArgs e)
+        {
+            guna2Panel2.Controls.Clear();
+            M_UC_QuanLiTangCa quanLiTangCa = new M_UC_QuanLiTangCa(this.UserID);
+            quanLiTangCa.Location = new Point(0, 0);
+            guna2Panel2.Controls.Add(quanLiTangCa);
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            guna2Panel2.Controls.Clear();
+            M_UC_QuanLyPhanCongCongTrinh quanLyPhanCongCongTrinh = new M_UC_QuanLyPhanCongCongTrinh(this.UserID);
+            quanLyPhanCongCongTrinh.Location = new Point(0, 0);
+            guna2Panel2.Controls.Add(quanLyPhanCongCongTrinh);
         }
     }
 }

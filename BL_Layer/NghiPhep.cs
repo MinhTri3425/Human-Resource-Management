@@ -109,5 +109,58 @@ namespace QLNS.BL_Layer
 
             return 0;
         }
+        public string LayTrangThaiNghiPhep(int nhanVienID)
+        {
+            string sql = $@"
+            SELECT DISTINCT TrangThai 
+            FROM NghiPhep 
+            WHERE NhanVienID = {nhanVienID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["TrangThai"] != DBNull.Value)
+            {
+                return ds.Tables[0].Rows[0]["TrangThai"].ToString();
+            }
+            return string.Empty;
+        }
+        public string LayTrangThaiNghiPhepTheoNghiPhepID(int nghiPhepID)
+        {
+            string sql = $"SELECT TrangThai FROM NghiPhep WHERE NghiPhepID = {nghiPhepID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["TrangThai"] != DBNull.Value)
+            {
+                return ds.Tables[0].Rows[0]["TrangThai"].ToString();
+            }
+            return string.Empty;
+        }
+        public DataSet LayNghiPhepTheoPhongBanID(int phongBanID)
+        {
+            string sql = @"
+            SELECT np.*
+            FROM NghiPhep np
+            INNER JOIN NhanVien nv ON np.NhanVienID = nv.NhanVienID
+            WHERE nv.PhongBanID = " + phongBanID;
+
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        public DataSet TimKiemNghiPhepTheoTenNhanVienCungPhongBan(int phongBanID, string keyword)
+        {
+            string sql = $@"
+            SELECT np.*
+            FROM NghiPhep np
+            INNER JOIN NhanVien nv ON np.NhanVienID = nv.NhanVienID
+            WHERE nv.PhongBanID = {phongBanID} 
+            AND (nv.HoTen LIKE N'%{keyword}%' OR nv.CMND LIKE '%{keyword}%' OR nv.MaSoThue LIKE '%{keyword}%')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        public DataSet LayNghiPhepTheoTrangThaiCungPhongBan(int phongBanID, string trangThai)
+        {
+            string sql = $@"
+            SELECT np.*
+            FROM NghiPhep np
+            INNER JOIN NhanVien nv ON np.NhanVienID = nv.NhanVienID
+            WHERE nv.PhongBanID = {phongBanID} 
+            AND np.TrangThai = N'{trangThai}'";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
     }
 }

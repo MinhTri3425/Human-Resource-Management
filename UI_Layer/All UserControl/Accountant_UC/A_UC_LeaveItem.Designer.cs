@@ -114,7 +114,7 @@
             this.Controls.Add(this.lbnghiphepid);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "A_UC_LeaveItem";
-            this.Size = new System.Drawing.Size(1383, 59);
+            this.Size = new System.Drawing.Size(1334, 59);
             this.Load += new System.EventHandler(this.A_UC_LeaveItem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

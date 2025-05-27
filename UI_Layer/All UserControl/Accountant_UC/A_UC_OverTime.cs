@@ -28,6 +28,7 @@ namespace QLNS.UI_Layer.All_UserControl
         {
             InitializeComponent();
             this.UserID = UserID;
+            LoadData();
         }
         public void LoadData()
         {
@@ -59,6 +60,11 @@ namespace QLNS.UI_Layer.All_UserControl
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

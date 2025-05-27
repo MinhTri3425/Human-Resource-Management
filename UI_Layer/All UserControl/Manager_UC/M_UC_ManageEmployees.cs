@@ -14,7 +14,7 @@ namespace QLNS.UI_Layer.All_UserControl
     public partial class M_UC_ManageEmployees : UserControl
     {
         private int UserID;
-        private String functionName = "Admin";
+        private String functionName = "M.NhanVien(samePB)";
 
         DataSet ds;
 
@@ -54,7 +54,11 @@ namespace QLNS.UI_Layer.All_UserControl
             PhongBan phongBan = new PhongBan(this.UserID, this.functionName);
             String tenPhongBan = phongBan.LayTenPhongBanTheoID(this.PhongBanID);
             lbPhongBanQuanLi.Text = tenPhongBan;
-            
+            NhanVien nhanVien1 = new NhanVien(this.UserID, this.functionName);
+            string err = "";
+            int tongNhanVien = nhanVien1.TongNhanVienCungPhongBan(PhongBanID, ref err);
+            this.label10.Text = tongNhanVien.ToString();
+
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 int id = Convert.ToInt32(row["NhanVienID"]);
@@ -84,6 +88,39 @@ namespace QLNS.UI_Layer.All_UserControl
         }
 
         private void panelQuanLiNhanVien_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            NhanVien nhanVien = new NhanVien(this.UserID, this.functionName);
+            string searchText = guna2TextBox1.Text.Trim();
+            PhongBan phongBan = new PhongBan(this.UserID, this.functionName);
+            String tenPhongBan = phongBan.LayTenPhongBanTheoID(this.PhongBanID);
+            DataSet dataSet = nhanVien.TimKiemNhanVienCungPhongBan(this.PhongBanID, searchText);
+            panelQuanLiNhanVien.Controls.Clear();
+            if (dataSet != null && dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    int id = Convert.ToInt32(row["NhanVienID"]);
+                    String hoTen = row["HoTen"].ToString();
+                    String ngaySinh = Convert.ToDateTime(row["NgaySinh"]).ToString("dd/MM/yyyy");
+                    String cmnd = row["CMND"].ToString();
+                    String maSoThue = row["MaSoThue"].ToString();
+                    int ChucVuID = Convert.ToInt32(row["ChucVuID"]);
+                    ChucVu chucVuNhanVien = new ChucVu(this.UserID, this.functionName);
+                    String tenChucVu = chucVuNhanVien.LayTenChucVuTheoID(ChucVuID);
+                    String trangThai = row["TrangThai"].ToString();
+                    M_UC_NhanVienItem nhanVienItem = new M_UC_NhanVienItem(id, hoTen, ngaySinh, cmnd, maSoThue, tenPhongBan, tenChucVu, trangThai);
+                    nhanVienItem.Dock = DockStyle.Top;
+                    this.panelQuanLiNhanVien.Controls.Add(nhanVienItem);
+                }
+            }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }

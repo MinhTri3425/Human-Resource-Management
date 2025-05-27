@@ -24,6 +24,11 @@ namespace QLNS.BL_Layer
         {
             return db.ExecuteQueryDataSet("select * from PhanCongCongTrinh", CommandType.Text);
         }
+        public DataSet LayPhanCongCongTrinhCungPhongBan(int PhongBanID, ref string err)//Manager
+        {
+            string sqlString = "Select * From PhanCongCongTrinh Where NhanVienID IN (Select NhanVienID From NhanVien Where PhongBanID=" + PhongBanID + ")";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+        }
         public bool ThemPhanCongCongTrinh(int NhanVienID, int CongTrinhID, DateTime NgayPhanCong, string Loai, string TrangThai, ref string err)//Manager, Employee
         {
             if (!UserMode.HasPermission(UserID, functionName, "Add", ref err))
@@ -69,5 +74,34 @@ namespace QLNS.BL_Layer
             string sql = $"SELECT * FROM PhanCongCongTrinh WHERE NhanVienID LIKE '%{keyword}%' OR CongTrinhID LIKE '%{keyword}%' OR NgayPhanCong LIKE '%{keyword}%' OR Loai LIKE N'%{keyword}%' OR TrangThai LIKE N'%{keyword}%'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
+        public bool CongTrinhDaDuocPhanCong(int CongTrinhID, ref string err)
+        {
+            string sql = $"SELECT COUNT(*) FROM PhanCongCongTrinh WHERE CongTrinhID = {CongTrinhID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0 && Convert.ToInt32(ds.Tables[0].Rows[0][0]) > 0)
+            {
+                return true; // Công trình đã được phân công
+            }
+            else
+            {
+                err = "Công trình chưa được phân công cho nhân viên nào.";
+                return false; // Công trình chưa được phân công
+            }
+        }
+        public string LayTrangThaiPhanCong(int NhanVienID, int CongTrinhID, ref string err)
+        {
+            string sql = $"SELECT TrangThai FROM PhanCongCongTrinh WHERE NhanVienID = {NhanVienID} AND CongTrinhID = {CongTrinhID}";
+            object result = db.ExecuteScalar(sql, CommandType.Text);
+            if (result != null)
+            {
+                return result.ToString();
+            }
+            else
+            {
+                err = "Không tìm thấy trạng thái phân công cho nhân viên và công trình này.";
+                return null;
+            }
+        }
+
     }
 }

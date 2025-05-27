@@ -64,29 +64,31 @@
             // 
             this.lbngay.AutoSize = true;
             this.lbngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbngay.Location = new System.Drawing.Point(343, 14);
+            this.lbngay.Location = new System.Drawing.Point(273, 14);
             this.lbngay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbngay.Name = "lbngay";
             this.lbngay.Size = new System.Drawing.Size(29, 31);
             this.lbngay.TabIndex = 21;
             this.lbngay.Text = "1";
+            this.lbngay.Click += new System.EventHandler(this.lbngay_Click);
             // 
             // lbgiobatdau
             // 
             this.lbgiobatdau.AutoSize = true;
             this.lbgiobatdau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbgiobatdau.Location = new System.Drawing.Point(563, 14);
+            this.lbgiobatdau.Location = new System.Drawing.Point(456, 14);
             this.lbgiobatdau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbgiobatdau.Name = "lbgiobatdau";
             this.lbgiobatdau.Size = new System.Drawing.Size(29, 31);
             this.lbgiobatdau.TabIndex = 22;
             this.lbgiobatdau.Text = "1";
+            this.lbgiobatdau.Click += new System.EventHandler(this.lbgiobatdau_Click);
             // 
             // lbtrangthai
             // 
             this.lbtrangthai.AutoSize = true;
             this.lbtrangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtrangthai.Location = new System.Drawing.Point(1190, 14);
+            this.lbtrangthai.Location = new System.Drawing.Point(1138, 14);
             this.lbtrangthai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbtrangthai.Name = "lbtrangthai";
             this.lbtrangthai.Size = new System.Drawing.Size(29, 31);
@@ -97,7 +99,7 @@
             // 
             this.lbgioketthuc.AutoSize = true;
             this.lbgioketthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbgioketthuc.Location = new System.Drawing.Point(709, 14);
+            this.lbgioketthuc.Location = new System.Drawing.Point(623, 14);
             this.lbgioketthuc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbgioketthuc.Name = "lbgioketthuc";
             this.lbgioketthuc.Size = new System.Drawing.Size(29, 31);
@@ -108,7 +110,7 @@
             // 
             this.lbloaitangca.AutoSize = true;
             this.lbloaitangca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbloaitangca.Location = new System.Drawing.Point(840, 14);
+            this.lbloaitangca.Location = new System.Drawing.Point(771, 14);
             this.lbloaitangca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbloaitangca.Name = "lbloaitangca";
             this.lbloaitangca.Size = new System.Drawing.Size(29, 31);
@@ -119,7 +121,7 @@
             // 
             this.lbhinhthuc.AutoSize = true;
             this.lbhinhthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbhinhthuc.Location = new System.Drawing.Point(990, 14);
+            this.lbhinhthuc.Location = new System.Drawing.Point(920, 14);
             this.lbhinhthuc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbhinhthuc.Name = "lbhinhthuc";
             this.lbhinhthuc.Size = new System.Drawing.Size(29, 31);
@@ -140,7 +142,7 @@
             this.Controls.Add(this.lbtangcaid);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "A_UC_OvertimeItem";
-            this.Size = new System.Drawing.Size(1383, 59);
+            this.Size = new System.Drawing.Size(1334, 59);
             this.Load += new System.EventHandler(this.A_UC_OvertimeItem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
