@@ -79,23 +79,29 @@ namespace QLNS.UI_Layer
             {
                 // Lưu thông tin người dùng vào session hoặc biến toàn cục
                 // Chuyển đến giao diện chính của ứng dụng
-                if (userID == 1)
+                if (roleID == 1)
                 {
                     this.Hide();
-                    All all = new All(1);
+                    All all = new All(userID);
                     all.Show();
                 }
-                if (userID == 2)
+                if (roleID == 2)
                 {
                     this.Hide();
-                    ManagerUI manager = new ManagerUI(2);
-                    manager.Show();
+                    Hr hr = new Hr(userID);
+                    hr.Show();
                 }
-                if (userID == 3)
+                if (roleID == 3)
                 {
                     this.Hide();
-                    AccoutantUI acc = new AccoutantUI(3);
+                    AccoutantUI acc = new AccoutantUI(userID);
                     acc.Show();
+                }
+                if (roleID == 4)
+                {
+                    this.Hide();
+                    ManagerUI manager = new ManagerUI(userID);
+                    manager.Show();
                 }
             }
             else
