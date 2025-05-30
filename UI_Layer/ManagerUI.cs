@@ -129,7 +129,7 @@ namespace QLNS.UI_Layer
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             guna2Panel2.Controls.Clear();
-            M_UC_QuanLyPhanCongCongTrinh quanLyPhanCongCongTrinh = new M_UC_QuanLyPhanCongCongTrinh(this.UserID);
+            M_UC_QuanLyPhanCongCongTrinh quanLyPhanCongCongTrinh = new M_UC_QuanLyPhanCongCongTrinh(this.UserID, 4, "M.CongTrinh(samePB)");
             quanLyPhanCongCongTrinh.Location = new Point(0, 0);
             guna2Panel2.Controls.Add(quanLyPhanCongCongTrinh);
         }

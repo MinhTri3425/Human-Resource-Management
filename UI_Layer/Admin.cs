@@ -1,4 +1,6 @@
 ﻿using QLNS.UI_Layer.All_UserControl;
+using QLNS.UI_Layer.All_UserControl.Admin_UC;
+using QLNS.UI_Layer.All_UserControl.Manager_UC;
 using QLNS.UI_Layer.HR;
 using System;
 using System.Collections.Generic;
@@ -56,6 +58,29 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
 
+        }
+
+        private void phancongcongtrinhbtn_Click(object sender, EventArgs e)
+        {
+            this.guna2Panel2.Controls.Clear();
+            M_UC_QuanLyPhanCongCongTrinh m = new M_UC_QuanLyPhanCongCongTrinh(UserID, 1, "Admin");
+            m.Dock = DockStyle.Fill;
+            m.Location = new Point(0, 0);
+            this.guna2Panel2.Controls.Add(m);
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.guna2Panel2.Controls.Clear();
+            Users_UC users_UC = new Users_UC(this.UserID);
+            users_UC.Dock = DockStyle.Fill;
+            users_UC.Location = new Point(0, 0);
+            this.guna2Panel2.Controls.Add(users_UC);
         }
     }
 }

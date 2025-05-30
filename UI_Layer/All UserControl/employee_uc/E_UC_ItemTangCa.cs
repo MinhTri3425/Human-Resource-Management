@@ -101,7 +101,16 @@ namespace QLNS.UI_Layer.All_UserControl.Employee_UC
             NhanVien nv = new NhanVien(userID, functionName);
             return nv.LayNhanVienIDtheoUserID(ref err);
         }
+        private void RegisterHoverEvents(Control parent)
+        {
+            parent.MouseEnter += E_UC_ItemTangCa_MouseEnter;
+            parent.MouseLeave += E_UC_ItemTangCa_MouseLeave;
 
+            foreach (Control child in parent.Controls)
+            {
+                RegisterHoverEvents(child); // gán cho tất cả control con
+            }
+        }
         private void E_UC_ItemTangCa_MouseLeave(object sender, EventArgs e)
         {
             if (!this.ClientRectangle.Contains(this.PointToClient(Cursor.Position)))

@@ -135,6 +135,24 @@
     <Compile Include="UI_Layer\All UserControl\Accountant_UC\ThemLuong.Designer.cs">
       <DependentUpon>ThemLuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\ItemUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\ItemUser.Designer.cs">
+      <DependentUpon>ItemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\SuaUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\SuaUser.Designer.cs">
+      <DependentUpon>SuaUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\Users_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\Users_UC.Designer.cs">
+      <DependentUpon>Users_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Layer\All UserControl\employee_uc\E_FormChamCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -473,6 +491,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\ThemLuong.resx">
       <DependentUpon>ThemLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\ItemUser.resx">
+      <DependentUpon>ItemUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\SuaUser.resx">
+      <DependentUpon>SuaUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\Users_UC.resx">
+      <DependentUpon>Users_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\employee_uc\E_FormChamCong.resx">
       <DependentUpon>E_FormChamCong.cs</DependentUpon>

@@ -36,6 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
+            this.cbbLoai = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNhanvienid
@@ -106,7 +108,7 @@
             this.dateNgayPhanCong.FillColor = System.Drawing.Color.White;
             this.dateNgayPhanCong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNgayPhanCong.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateNgayPhanCong.Location = new System.Drawing.Point(55, 314);
+            this.dateNgayPhanCong.Location = new System.Drawing.Point(47, 314);
             this.dateNgayPhanCong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateNgayPhanCong.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayPhanCong.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -137,7 +139,7 @@
             this.btnHuy.FillColor = System.Drawing.Color.Black;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(292, 436);
+            this.btnHuy.Location = new System.Drawing.Point(292, 575);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(153, 62);
@@ -155,7 +157,7 @@
             this.btnLuu.FillColor = System.Drawing.Color.Black;
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(47, 436);
+            this.btnLuu.Location = new System.Drawing.Point(47, 575);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(153, 62);
@@ -163,11 +165,43 @@
             this.btnLuu.Text = "Save";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // cbbLoai
+            // 
+            this.cbbLoai.BackColor = System.Drawing.Color.Transparent;
+            this.cbbLoai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLoai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbLoai.ItemHeight = 40;
+            this.cbbLoai.Items.AddRange(new object[] {
+            "Đăng ký",
+            "Phân công"});
+            this.cbbLoai.Location = new System.Drawing.Point(47, 462);
+            this.cbbLoai.Name = "cbbLoai";
+            this.cbbLoai.Size = new System.Drawing.Size(380, 46);
+            this.cbbLoai.TabIndex = 44;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Location = new System.Drawing.Point(41, 428);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 31);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Type";
+            // 
             // addPhanCongCongTrinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 540);
+            this.ClientSize = new System.Drawing.Size(500, 673);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbbLoai);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.dateNgayPhanCong);
@@ -194,5 +228,7 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnHuy;
         private Guna.UI2.WinForms.Guna2Button btnLuu;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbLoai;
+        private System.Windows.Forms.Label label3;
     }
 }

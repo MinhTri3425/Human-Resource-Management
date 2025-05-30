@@ -75,7 +75,16 @@ namespace QLNS.UI_Layer.All_UserControl.Employee_UC
                 }
             }
         }
+        private void RegisterHoverEvents(Control parent)
+        {
+            parent.MouseEnter += E_UC_ItemPhanCongCongTrinh_MouseEnter;
+            parent.MouseLeave += E_UC_ItemPhanCongCongTrinh_MouseLeave;
 
+            foreach (Control child in parent.Controls)
+            {
+                RegisterHoverEvents(child); // gán cho tất cả control con
+            }
+        }
         private void E_UC_ItemPhanCongCongTrinh_MouseEnter(object sender, EventArgs e)
         {
             this.btnSua.Visible = true;

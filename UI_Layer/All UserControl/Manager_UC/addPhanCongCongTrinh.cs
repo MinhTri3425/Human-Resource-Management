@@ -14,8 +14,8 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
     public partial class addPhanCongCongTrinh : Form
     {
         int UserID;
-        string functionName = "M.CongTrinh(samePB)";
-
+        string functionName;
+        int roleID;
         int PhongBanID;
         int CongTrinhID;
         int NhanVienID;
@@ -23,10 +23,12 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
         string loaiPhanCong;
         string TrangThai;
         Action reloadCallback;
-        public addPhanCongCongTrinh(int userID, int phongBanID, Action reloadCallback)
+        public addPhanCongCongTrinh(int userID, string functionName, int roleID, int phongBanID, Action reloadCallback)
         {
             InitializeComponent();
             UserID = userID;
+            this.functionName = functionName;
+            this.roleID = roleID;
             PhongBanID = phongBanID;
             this.reloadCallback = reloadCallback;
         }
@@ -36,41 +38,64 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
             CongTrinhID = Convert.ToInt32(projectid.Text);
             NhanVienID = Convert.ToInt32(txtNhanvienid.Text);
             NhanVien nhanVien = new NhanVien(UserID, functionName);
+            CongTrinh congTrinh = new CongTrinh(UserID, functionName);
+            PhanCongCongTrinh phanCong = new PhanCongCongTrinh(UserID, functionName);
             string err = "";
-            if (nhanVien.NhanVienCoCungPhongBan(NhanVienID, PhongBanID, ref err))
+            if (roleID == 4)
+            {
+                if (nhanVien.NhanVienCoCungPhongBan(NhanVienID, PhongBanID, ref err))
+                {
+                    if (!nhanVien.NhanVienIDDaTonTai(NhanVienID, ref err))
+                    {
+                        MessageBox.Show("Nhân viên không tồn tại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Dừng xử lý nếu không tồn tại
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Nhân viên không thuộc phòng ban này!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Dừng xử lý nếu không thuộc phòng ban
+                }
+                if (congTrinh.CongTrinhCoCungPhongBan(CongTrinhID, PhongBanID, ref err))
+                {
+                    if (!congTrinh.CongTrinhIDDaTonTai(CongTrinhID, ref err))
+                    {
+                        MessageBox.Show("Công trình không tồn tại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Dừng xử lý nếu công trình không tồn tại
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Công trình không thuộc phòng ban này!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Dừng xử lý nếu không thuộc phòng ban
+                }
+            }
+            else if (roleID == 1)
             {
                 if (!nhanVien.NhanVienIDDaTonTai(NhanVienID, ref err))
                 {
                     MessageBox.Show("Nhân viên không tồn tại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return; // Dừng xử lý nếu không tồn tại
                 }
-            }
-            else
-            {
-                MessageBox.Show("Nhân viên không thuộc phòng ban này!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Dừng xử lý nếu không thuộc phòng ban
-            }
-
-            CongTrinh congTrinh = new CongTrinh(UserID, functionName);
-            PhanCongCongTrinh phanCong = new PhanCongCongTrinh(UserID, functionName);
-
-            if (congTrinh.CongTrinhCoCungPhongBan(CongTrinhID, PhongBanID, ref err))
-            {
                 if (!congTrinh.CongTrinhIDDaTonTai(CongTrinhID, ref err))
                 {
                     MessageBox.Show("Công trình không tồn tại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return; // Dừng xử lý nếu công trình không tồn tại
                 }
             }
-            else
+            NgayPhanCong = dateNgayPhanCong.Value.Date;
+            if (roleID == 4)
             {
-                MessageBox.Show("Công trình không thuộc phòng ban này!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Dừng xử lý nếu không thuộc phòng ban
+                loaiPhanCong = "Phân công";
+                cbbLoai.Visible = false; // Ẩn combobox loại phân công cho nhân viên
+                TrangThai = "Đã duyệt";
+            }
+            else if (roleID == 1)
+            {
+                loaiPhanCong = cbbLoai.SelectedItem.ToString();
+                TrangThai = "Chưa duyệt";
             }
 
-            NgayPhanCong = dateNgayPhanCong.Value.Date;
-            loaiPhanCong = "Phân công";
-            TrangThai = "Đã duyệt";
             bool res = phanCong.ThemPhanCongCongTrinh(CongTrinhID, NhanVienID, NgayPhanCong, loaiPhanCong, TrangThai, ref err);
             if (res)
             {

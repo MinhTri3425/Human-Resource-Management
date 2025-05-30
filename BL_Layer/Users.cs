@@ -59,20 +59,26 @@ namespace QLNS.BL_Layer
             string sqlString = "Delete From Users Where UserID=" + UserID;
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public bool CapNhatUsers(int UserID, string Username, string PasswordHash, int RoleID, int NhanVienID, ref string err)
+        public bool CapNhatUsers(int UserID, int userid, string Username, string PasswordHash, ref string err)
         {
             if (!UserMode.HasPermission(UserID, functionName, "Edit", ref err))
             {
                 err = "Bạn không có quyền cập nhật User.";
                 return false;
             }
-            string sqlString = "Update Users Set Username=N'" + Username + "',PasswordHash=N'" +
-            PasswordHash + "',RoleID=" +
-            RoleID + ",NhanVienID=" +
-            NhanVienID + " Where UserID=" + UserID;
+            string sqlString = null;
+            if (PasswordHash == null || PasswordHash == "")
+            {
+                sqlString = "Update Users Set Username=N'" + Username + "' Where UserID =" + userid;
+            }
+            else
+            {
+                sqlString = "Update Users Set Username=N'" + Username + "',PasswordHash=N'" + PasswordHash + "' Where UserID =" + userid;
+            }
+            
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public static string HashPassword(string password)
+        public string HashPassword(string password)
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {

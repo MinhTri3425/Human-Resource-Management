@@ -14,18 +14,21 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
 {
     public partial class M_UC_QuanLyPhanCongCongTrinh : UserControl
     {
+        int roleID;
         int UserID;
         int PhongBanID;
-        string functionName = "M.CongTrinh(samePB)";
+        string functionName;
         int CongTrinhID;
         int NhanVienID;
         string ngay;
         string loai;
         string trangthai;
-        public M_UC_QuanLyPhanCongCongTrinh(int UserID)
+        public M_UC_QuanLyPhanCongCongTrinh(int UserID, int roleID, string functionName)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.roleID = roleID;
+            this.functionName = functionName;
             LoadData();
         }
         public void LoadData()
@@ -40,8 +43,17 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
                 int chucVuIDQuanLi = Convert.ToInt32(thongtinNhanVien.Tables[0].Rows[0]["ChucVuID"]);
                 this.PhongBanID = Convert.ToInt32(thongtinNhanVien.Tables[0].Rows[0]["PhongBanID"]);
             }
+            DataSet dataSet = null;
             PhanCongCongTrinh phanCongCongTrinh = new PhanCongCongTrinh(UserID, functionName);
-            DataSet dataSet = phanCongCongTrinh.LayPhanCongCongTrinhCungPhongBan(PhongBanID, ref err);
+            if (roleID == 4)
+            {
+                dataSet = phanCongCongTrinh.LayPhanCongCongTrinhCungPhongBan(PhongBanID, ref err);
+            }
+            else if (roleID == 1)
+            {
+                dataSet = phanCongCongTrinh.LayPhanCongCongTrinh();
+            }
+
             if (dataSet != null)
             {
                 if (dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
@@ -53,13 +65,22 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
                         ngay = dataSet.Tables[0].Rows[i]["NgayPhanCong"].ToString();
                         loai = dataSet.Tables[0].Rows[i]["Loai"].ToString();
                         trangthai = dataSet.Tables[0].Rows[i]["TrangThai"].ToString();
-                        M_UC_PAMItem pamItem = new M_UC_PAMItem(UserID, CongTrinhID, NhanVienID, Convert.ToDateTime(ngay), loai, trangthai);
+                        M_UC_PAMItem pamItem = new M_UC_PAMItem(UserID, functionName, CongTrinhID, NhanVienID, Convert.ToDateTime(ngay), loai, trangthai);
                         panelQuanLiCongTrinh.Controls.Add(pamItem);
                     }
                 }
             }
             //NhanVien nhanVien = new NhanVien(this.UserID, this.functionName);
-            DataSet dsNV = nhanVien.LayNhanVienTheoPhongBanID(PhongBanID);
+
+            DataSet dsNV = null;
+            if (roleID == 4)
+            {
+                dsNV = nhanVien.LayNhanVienTheoPhongBanID(PhongBanID);
+            }
+            else if (roleID == 1)
+            {
+                dsNV = nhanVien.LayNhanVien();
+            }
             if (dsNV != null)
             {
                 if (dsNV.Tables.Count > 0 && dsNV.Tables[0].Rows.Count > 0)
@@ -74,7 +95,15 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
                 }
             }
             CongTrinh congTrinh = new CongTrinh(this.UserID, this.functionName);
-            DataSet dsCT = congTrinh.LayCongTrinhTheoPhongBan(PhongBanID);
+            DataSet dsCT = null;
+            if (roleID == 4)
+            {
+                dsCT = congTrinh.LayCongTrinhTheoPhongBan(PhongBanID);
+            }
+            else if (roleID == 1)
+            {
+                dsCT = congTrinh.LayCongTrinh();
+            }
             if (dsCT != null)
             {
                 if (dsCT.Tables.Count > 0 && dsCT.Tables[0].Rows.Count > 0)
@@ -91,7 +120,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
         }
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
-            addPhanCongCongTrinh addPhanCongCongTrinh = new addPhanCongCongTrinh(UserID, PhongBanID, () =>
+            addPhanCongCongTrinh addPhanCongCongTrinh = new addPhanCongCongTrinh(UserID, functionName, roleID, PhongBanID, () =>
             {
                 this.panelQuanLiCongTrinh.Controls.Clear();
                 LoadData();
@@ -110,6 +139,11 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

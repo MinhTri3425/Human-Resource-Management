@@ -50,7 +50,6 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
             lbLoai.Text = loaiNghiPhep;
             lbTrangThai.Text = trangThai;
         }
-
         private void M_UC_ItemQuanLiNghiPhep_MouseLeave(object sender, EventArgs e)
         {
             if (!this.ClientRectangle.Contains(this.PointToClient(Cursor.Position)))

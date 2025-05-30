@@ -49,6 +49,10 @@ namespace QLNS.UI_Layer.HR
                             ngayKetThuc = Convert.ToDateTime(row["NgayHetHan"]);
                             this.NgayKetThuc = ngayKetThuc.Value.ToString("dd/MM/yyyy");
                         }
+                        else
+                        {
+                            this.NgayKetThuc = "__";
+                        }
                         H_HopDong hd = new H_HopDong(UserID, functionName, ID_HopDong, ID_NhanVien, LoaiHopDong, NgayBatDau, NgayKetThuc);
                         this.flowLayoutPanel1.Controls.Add(hd);
                     }

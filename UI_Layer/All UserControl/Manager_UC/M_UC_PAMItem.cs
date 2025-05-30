@@ -14,16 +14,18 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
     public partial class M_UC_PAMItem : UserControl
     {
         int UserID;
+        string functionName;
         int CongTrinhID;
         int NhanVienID;
         DateTime NgayPhanCong;
         string loaiPhanCong;
         string trangThai;
 
-        public M_UC_PAMItem(int UserID, int congTrinhID, int nhanVienID, DateTime ngayPhanCong, string loaiPhanCong, string trangThai)
+        public M_UC_PAMItem(int UserID, string functionName, int congTrinhID, int nhanVienID, DateTime ngayPhanCong, string loaiPhanCong, string trangThai)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.functionName = functionName;
             this.CongTrinhID = congTrinhID;
             this.NhanVienID = nhanVienID;
             this.NgayPhanCong = ngayPhanCong;
@@ -45,7 +47,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            PhanCongCongTrinh phanCongCongTrinh = new PhanCongCongTrinh(UserID, "M.CongTrinh(samePB)");
+            PhanCongCongTrinh phanCongCongTrinh = new PhanCongCongTrinh(UserID, functionName);
             string err = "";
             if (phanCongCongTrinh.CapNhatPhanCongCongTrinh(NhanVienID,CongTrinhID, NgayPhanCong, loaiPhanCong, "Đã duyệt", ref err))
             {
@@ -60,7 +62,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
 
         private void guna2PictureBox2_Click_1(object sender, EventArgs e)
         {
-            PhanCongCongTrinh phanCongCongTrinh = new PhanCongCongTrinh(UserID, "M.CongTrinh(samePB)");
+            PhanCongCongTrinh phanCongCongTrinh = new PhanCongCongTrinh(UserID, functionName);
             string err = "";
             if (phanCongCongTrinh.CapNhatPhanCongCongTrinh(NhanVienID, CongTrinhID, NgayPhanCong, loaiPhanCong, "Từ chối", ref err))
             {
@@ -89,7 +91,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
 
         private void Enter1(object sender, EventArgs e)
         {
-            PhanCongCongTrinh phanCongCongTrinh = new PhanCongCongTrinh(UserID, "M.CongTrinh(samePB)");
+            PhanCongCongTrinh phanCongCongTrinh = new PhanCongCongTrinh(UserID, functionName);
             string err = "";
             if (phanCongCongTrinh.LayTrangThaiPhanCong(NhanVienID, CongTrinhID, ref err) == "Chưa duyệt")
             {
