@@ -82,7 +82,7 @@ namespace QLNS.UI_Layer
                 if (roleID == 1)
                 {
                     this.Hide();
-                    All all = new All(userID);
+                    Admin all = new Admin(userID);
                     all.Show();
                 }
                 if (roleID == 2)

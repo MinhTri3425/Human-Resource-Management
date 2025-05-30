@@ -74,5 +74,43 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
                 this.guna2PictureBox2.Visible = false;
             }
         }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            NghiPhep nghiPhep = new NghiPhep(this.userID, this.functionName);
+            string err = "";
+            if (nghiPhep.CapNhatTrangThaiNghiPhep(idNghiPhep, "Đã duyệt", ref err))
+            {
+                MessageBox.Show("Cập nhật trạng thái thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lbTrangThai.Text = "Đã duyệt";
+                NhatKy nhatKy = new NhatKy(this.userID, this.functionName);
+                string hanhDong = $"Cập nhật trạng thái nghỉ phép ID: {this.idNghiPhep} thành 'Đã duyệt'";
+                DateTime recentTime = DateTime.Now;
+                nhatKy.ThemNhatKy(this.userID, hanhDong, recentTime, ref err);
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật trạng thái thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            NghiPhep nghiPhep = new NghiPhep(this.userID, this.functionName);
+            string err = "";
+            if (nghiPhep.CapNhatTrangThaiNghiPhep(idNghiPhep, "Từ chối", ref err))
+            {
+                MessageBox.Show("Cập nhật trạng thái thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lbTrangThai.Text = "Từ chối";
+                NhatKy nhatKy = new NhatKy(this.userID, this.functionName);
+                string hanhDong = $"Cập nhật trạng thái nghỉ phép ID: {this.idNghiPhep} thành 'Từ chối'";
+                DateTime recentTime = DateTime.Now;
+                nhatKy.ThemNhatKy(this.userID, hanhDong, recentTime, ref err);
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật trạng thái thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

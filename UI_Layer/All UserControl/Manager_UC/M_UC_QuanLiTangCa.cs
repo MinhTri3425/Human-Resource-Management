@@ -14,7 +14,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
     public partial class M_UC_QuanLiTangCa : UserControl
     {
         private int UserID;
-        private string functionName = "M.TangCa";
+        private string functionName;
 
         DataSet ds;
 
@@ -23,10 +23,11 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
         int chucVuIDQuanLi;
         int PhongBanID;
 
-        public M_UC_QuanLiTangCa(int UserID)
+        public M_UC_QuanLiTangCa(int UserID, string functionName)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.functionName = functionName;
             LoadData();
         }
 
@@ -78,7 +79,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
                 string hinhThuc = row["HinhThuc"].ToString();
                 string trangThai = row["TrangThai"].ToString();
 
-                M_UC_ItemTangCa tangca = new M_UC_ItemTangCa(UserID ,id, hoten, ngayTangCa, gioBatDau, gioKetThuc, loaiTangCa, hinhThuc, trangThai);
+                M_UC_ItemTangCa tangca = new M_UC_ItemTangCa(UserID, functionName, id, hoten, ngayTangCa, gioBatDau, gioKetThuc, loaiTangCa, hinhThuc, trangThai);
                 tangca.Dock = DockStyle.Top;
                 this.panelQuanLiTangCa.Controls.Add(tangca);
             }
@@ -123,7 +124,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
                         string loaiTangCa = row["LoaiTangCa"].ToString();
                         string hinhThuc = row["HinhThuc"].ToString();
                         string trangThai = row["TrangThai"].ToString();
-                        M_UC_ItemTangCa tangcaItem = new M_UC_ItemTangCa(UserID, id, hoten, ngayTangCa, gioBatDau, gioKetThuc, loaiTangCa, hinhThuc, trangThai);
+                        M_UC_ItemTangCa tangcaItem = new M_UC_ItemTangCa(UserID, functionName, id, hoten, ngayTangCa, gioBatDau, gioKetThuc, loaiTangCa, hinhThuc, trangThai);
                         tangcaItem.Dock = DockStyle.Top;
                         this.panelQuanLiTangCa.Controls.Add(tangcaItem);
                     }
@@ -159,7 +160,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
                         string loaiTangCa = row["LoaiTangCa"].ToString();
                         string hinhThuc = row["HinhThuc"].ToString();
                         string trangThaiItem = row["TrangThai"].ToString();
-                        M_UC_ItemTangCa tangcaItem = new M_UC_ItemTangCa(UserID, id, hoten, ngayTangCa, gioBatDau, gioKetThuc, loaiTangCa, hinhThuc, trangThaiItem);
+                        M_UC_ItemTangCa tangcaItem = new M_UC_ItemTangCa(UserID, functionName, id, hoten, ngayTangCa, gioBatDau, gioKetThuc, loaiTangCa, hinhThuc, trangThaiItem);
                         tangcaItem.Dock = DockStyle.Top;
                         this.panelQuanLiTangCa.Controls.Add(tangcaItem);
                     }

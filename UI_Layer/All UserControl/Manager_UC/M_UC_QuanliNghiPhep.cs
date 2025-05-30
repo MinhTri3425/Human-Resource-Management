@@ -14,7 +14,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
     public partial class M_UC_QuanliNghiPhep : UserControl
     {
         private int UserID;
-        private String functionName = "M.NghiPhep";
+        private String functionName;
 
         DataSet ds;
 
@@ -23,10 +23,11 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
         int chucVuIDQuanLi;
         int PhongBanID;
 
-        public M_UC_QuanliNghiPhep(int UserID)
+        public M_UC_QuanliNghiPhep(int UserID, string functionName)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.functionName = functionName;
             LoadData();
         }
 

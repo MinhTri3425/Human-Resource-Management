@@ -12,17 +12,21 @@ namespace QLNS.UI_Layer.All_UserControl
 {
     public partial class A_UC_LeaveItem : UserControl
     {
+        private int UserID;
+        private string functionName;
         private int NghiPhepID;
         private int NhanVienID;
         private string ngaybatdau;
         private string ngayketthuc;
         private string loai;
         private string trangthai;
-        public A_UC_LeaveItem(int nghiPhepID, int nhanVienID, string ngaybatdau, string ngayketthuc, string loai, string trangthai)
+        public A_UC_LeaveItem(int UserID, string functionName, int nghiPhepID, int nhanVienID, string ngaybatdau, string ngayketthuc, string loai, string trangthai)
         {
             InitializeComponent();
-            NghiPhepID = nghiPhepID;
-            NhanVienID = nhanVienID;
+            this.UserID = UserID;
+            this.functionName = functionName;
+            this.NghiPhepID = nghiPhepID;
+            this.NhanVienID = nhanVienID;
             this.ngaybatdau = ngaybatdau;
             this.ngayketthuc = ngayketthuc;
             this.loai = loai;

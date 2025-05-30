@@ -14,6 +14,7 @@ namespace QLNS.UI_Layer.All_UserControl
     public partial class SalaryItem1 : UserControl
     {
         private int userID;
+        private string functionName = "Admin";
         private int luongID;
         private int nhanVienID;
         private int thang;
@@ -41,7 +42,7 @@ namespace QLNS.UI_Layer.All_UserControl
             lbNam.Text = nam.ToString();
             lbLuongCoBan.Text = luongCoBan.ToString("N0");
             lbPhuCap.Text = phuCap.ToString("N0");
-            A_UC_SalaryItem a_UC_SalaryItem = new A_UC_SalaryItem(userID, luongID, nhanVienID, thang, nam, luongCoBan, phuCap, tongLuong, "Đã duyệt", null);
+            A_UC_SalaryItem a_UC_SalaryItem = new A_UC_SalaryItem(userID, functionName, luongID, nhanVienID, thang, nam, luongCoBan, phuCap, tongLuong, "Đã duyệt", null);
             lbTong.Text = a_UC_SalaryItem.tinhTongLuong().ToString("N0");
         }
 

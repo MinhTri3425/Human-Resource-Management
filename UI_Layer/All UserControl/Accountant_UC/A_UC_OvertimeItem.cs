@@ -12,6 +12,8 @@ namespace QLNS.UI_Layer.All_UserControl
 {
     public partial class A_UC_OvertimeItem : UserControl
     {
+        private int UserID;
+        private string functionName;
         private int TangCaID;
         private int NhanVienID;
         private string ngay;
@@ -20,9 +22,11 @@ namespace QLNS.UI_Layer.All_UserControl
         private string loaiTangCa;
         private string hinhThuc;
         private string trangThai;
-        public A_UC_OvertimeItem(int TangCaID, int NhanVienID, string ngay, string gioBatDau, string gioKetThuc, string loaiTangCa, string hinhThuc, string trangThai)
+        public A_UC_OvertimeItem(int UserID, string functionName, int TangCaID, int NhanVienID, string ngay, string gioBatDau, string gioKetThuc, string loaiTangCa, string hinhThuc, string trangThai)
         {
             InitializeComponent();
+            this.UserID = UserID;
+            this.functionName = functionName;
             this.TangCaID = TangCaID;
             this.NhanVienID = NhanVienID;
             this.ngay = ngay;

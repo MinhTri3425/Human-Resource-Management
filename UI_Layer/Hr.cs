@@ -60,7 +60,7 @@ namespace QLNS.UI_Layer
         private void btnEmloyee_Click(object sender, EventArgs e)
         {
             this.Panel2.Controls.Clear();
-            H_NhanVienShow h_NhanVienShow = new H_NhanVienShow(this.UserID);
+            H_NhanVienShow h_NhanVienShow = new H_NhanVienShow(this.UserID, "HR.NhanVien");
             h_NhanVienShow.Location = new Point(0, 0);
             this.Panel2.Controls.Add(h_NhanVienShow);
         }
@@ -68,7 +68,7 @@ namespace QLNS.UI_Layer
         private void btnContract_Click(object sender, EventArgs e)
         {
             this.Panel2.Controls.Clear();
-            H_HopDongShow h_hopdongshow = new H_HopDongShow(this.UserID);
+            H_HopDongShow h_hopdongshow = new H_HopDongShow(this.UserID, "HR.HopDong");
             h_hopdongshow.Location = new Point(0, 0);
             this.Panel2.Controls.Add(h_hopdongshow);
         }

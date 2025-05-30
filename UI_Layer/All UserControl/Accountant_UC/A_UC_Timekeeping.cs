@@ -14,17 +14,18 @@ namespace QLNS.UI_Layer.All_UserControl
     public partial class A_UC_Timekeeping : UserControl
     {
         int UserID;
-        String functionName = "A.ChamCong";
+        String functionName;
         int ChamCongID;
         int NhanVienID;
         string ngay;
         string gioBatDau;
         string gioKetThuc;
         string trangThai;
-        public A_UC_Timekeeping(int UserID)
+        public A_UC_Timekeeping(int UserID, string functionName)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.functionName = functionName;
             LoadData();
 
         }

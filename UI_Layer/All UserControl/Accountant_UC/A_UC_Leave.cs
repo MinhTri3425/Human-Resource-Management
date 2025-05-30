@@ -14,17 +14,18 @@ namespace QLNS.UI_Layer.All_UserControl
     public partial class A_UC_Leave : UserControl
     {
         int UserID;
-        String functionName = "A.NghiPhep";
+        String functionName;
         int NghiPhepID;
         int NhanVienID;
         string ngaybatdau;
         string ngayketthuc;
         string loai;
         string trangthai;
-        public A_UC_Leave(int UserID)
+        public A_UC_Leave(int UserID, string functionName)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.functionName = functionName;
             LoadData();
         }
         public void LoadData()
@@ -43,7 +44,7 @@ namespace QLNS.UI_Layer.All_UserControl
                         ngayketthuc = dataSet.Tables[0].Rows[i]["NgayKetThuc"].ToString();
                         loai = dataSet.Tables[0].Rows[i]["Loai"].ToString();
                         trangthai = dataSet.Tables[0].Rows[i]["TrangThai"].ToString();
-                        A_UC_LeaveItem leaveItem = new A_UC_LeaveItem(NghiPhepID, NhanVienID, ngaybatdau, ngayketthuc, loai, trangthai);
+                        A_UC_LeaveItem leaveItem = new A_UC_LeaveItem(UserID, functionName, NghiPhepID, NhanVienID, ngaybatdau, ngayketthuc, loai, trangthai);
                         flowLayoutPanel1.Controls.Add(leaveItem);
                     }
                 }

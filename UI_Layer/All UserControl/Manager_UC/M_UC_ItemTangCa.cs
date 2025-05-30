@@ -14,6 +14,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
     public partial class M_UC_ItemTangCa : UserControl
     {
         int UserID;
+        string functionName;
         int idTangCa;
         string tenNhanVien;
         string ngayTangCa;
@@ -23,10 +24,11 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
         string hinhThucTangCa;
         string trangThai;
 
-        public M_UC_ItemTangCa(int UserID,int idTangCa, string tenNhanVien, string ngayTangCa, string gioBatDau, string gioKetThuc, string loaiTangCa, string hinhThucTangCa, string trangThai)
+        public M_UC_ItemTangCa(int UserID, string functionName, int idTangCa, string tenNhanVien, string ngayTangCa, string gioBatDau, string gioKetThuc, string loaiTangCa, string hinhThucTangCa, string trangThai)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.functionName = functionName;
             this.idTangCa = idTangCa;
             this.tenNhanVien = tenNhanVien;
             this.ngayTangCa = ngayTangCa;
@@ -53,7 +55,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            TangCa tangCa = new TangCa(UserID, "M.TangCa");
+            TangCa tangCa = new TangCa(UserID, functionName);
             string err = "";
             if (tangCa.CapNhatTrangThaiTangCa(idTangCa, "Đã duyệt", ref err))
             {
@@ -72,7 +74,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
-            TangCa tangCa = new TangCa(UserID, "M.TangCa");
+            TangCa tangCa = new TangCa(UserID, functionName);
             string err = "";
             if (tangCa.CapNhatTrangThaiTangCa(idTangCa, "Từ chối", ref err))
             {
@@ -100,7 +102,7 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
 
         private void M_(object sender, EventArgs e)
         {
-            TangCa tangCa = new TangCa(UserID, "M.TangCa");
+            TangCa tangCa = new TangCa(UserID, functionName);
             if (tangCa.LayTrangThaiTangCaTheoTangCaID(this.idTangCa) == "Chưa duyệt")
             {
                 guna2PictureBox1.Visible = true; // Hiển thị biểu tượng duyệt

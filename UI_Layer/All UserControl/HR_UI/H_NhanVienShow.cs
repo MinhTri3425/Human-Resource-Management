@@ -15,8 +15,8 @@ namespace QLNS.UI_Layer.HR
 {
     public partial class H_NhanVienShow : UserControl
     {
-        private String functionName = "Admin";
-        int UserID = 4;
+        private String functionName;
+        int UserID;
         private int ID_NhanVien;
         private string HoTen;
         private string NgaySinh;
@@ -25,10 +25,11 @@ namespace QLNS.UI_Layer.HR
         private int idPhong;
         private int idChucVu;
         private string TrangThai;
-        public H_NhanVienShow(int userID)
+        public H_NhanVienShow(int userID, string functionName)
         {
             InitializeComponent();
-            UserID = userID;
+            this.UserID = userID;
+            this.functionName = functionName;
             LoadData();
         }
         public void LoadData()
@@ -51,7 +52,7 @@ namespace QLNS.UI_Layer.HR
                         this.idPhong = Convert.ToInt32(row["PhongBanID"]);
                         this.idChucVu = Convert.ToInt32(row["ChucVuID"]);
                         this.TrangThai = row["TrangThai"].ToString();
-                        H_NhanVien nv = new H_NhanVien(UserID, ID_NhanVien, HoTen, NgaySinh, cmnd, MaSoThue, idPhong, idChucVu, TrangThai);
+                        H_NhanVien nv = new H_NhanVien(UserID, functionName ,ID_NhanVien, HoTen, NgaySinh, cmnd, MaSoThue, idPhong, idChucVu, TrangThai);
                         this.flowLayoutPanel1.Controls.Add(nv);
                     }
                 }

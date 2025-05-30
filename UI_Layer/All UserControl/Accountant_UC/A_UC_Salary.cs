@@ -15,7 +15,7 @@ namespace QLNS.UI_Layer.All_UserControl
     public partial class A_UC_Salary : UserControl
     {
         int UserID;
-        string functionName = "A.Luong";
+        string functionName;
         int LuongID;
         int NhanVienID;
         int Thang;
@@ -24,10 +24,11 @@ namespace QLNS.UI_Layer.All_UserControl
         decimal PhuCap;
         decimal TongLuong;
         string TrangThai;
-        public A_UC_Salary(int UserID)
+        public A_UC_Salary(int UserID, string functionName)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.functionName = functionName;
             LoadData();
         }
         public void LoadData()
@@ -48,7 +49,7 @@ namespace QLNS.UI_Layer.All_UserControl
                         PhuCap = Convert.ToDecimal(dataSet.Tables[0].Rows[i]["PhuCap"]);
                         TongLuong = Convert.ToDecimal(dataSet.Tables[0].Rows[i]["TongLuong"]);
                         TrangThai = dataSet.Tables[0].Rows[i]["TrangThai"].ToString();
-                        A_UC_SalaryItem salaryItem = new A_UC_SalaryItem(UserID, LuongID, NhanVienID, Thang, Nam, LuongCoBan, PhuCap, TongLuong, TrangThai,() =>
+                        A_UC_SalaryItem salaryItem = new A_UC_SalaryItem(UserID, functionName, LuongID, NhanVienID, Thang, Nam, LuongCoBan, PhuCap, TongLuong, TrangThai,() =>
                         {
                             flowLayoutPanel1.Controls.Clear();
                             LoadData();
@@ -83,7 +84,7 @@ namespace QLNS.UI_Layer.All_UserControl
                         PhuCap = Convert.ToDecimal(dataSet.Tables[0].Rows[i]["PhuCap"]);
                         TongLuong = Convert.ToDecimal(dataSet.Tables[0].Rows[i]["TongLuong"]);
                         TrangThai = dataSet.Tables[0].Rows[i]["TrangThai"].ToString();
-                        A_UC_SalaryItem salaryItem = new A_UC_SalaryItem(UserID, LuongID, NhanVienID, Thang, Nam, LuongCoBan, PhuCap, TongLuong, TrangThai, () => { flowLayoutPanel1.Controls.Clear(); LoadData(); });
+                        A_UC_SalaryItem salaryItem = new A_UC_SalaryItem(UserID, functionName, LuongID, NhanVienID, Thang, Nam, LuongCoBan, PhuCap, TongLuong, TrangThai, () => { flowLayoutPanel1.Controls.Clear(); LoadData(); });
                         flowLayoutPanel1.Controls.Add(salaryItem);
                     }
                 }
@@ -110,7 +111,7 @@ namespace QLNS.UI_Layer.All_UserControl
                         PhuCap = Convert.ToDecimal(dataSet.Tables[0].Rows[i]["PhuCap"]);
                         TongLuong = Convert.ToDecimal(dataSet.Tables[0].Rows[i]["TongLuong"]);
                         TrangThai = dataSet.Tables[0].Rows[i]["TrangThai"].ToString();
-                        A_UC_SalaryItem salaryItem = new A_UC_SalaryItem(UserID, LuongID, NhanVienID, Thang, Nam, LuongCoBan, PhuCap, TongLuong, TrangThai, () => { flowLayoutPanel1.Controls.Clear(); LoadData(); });
+                        A_UC_SalaryItem salaryItem = new A_UC_SalaryItem(UserID, functionName, LuongID, NhanVienID, Thang, Nam, LuongCoBan, PhuCap, TongLuong, TrangThai, () => { flowLayoutPanel1.Controls.Clear(); LoadData(); });
                         flowLayoutPanel1.Controls.Add(salaryItem);
                     }
                 }

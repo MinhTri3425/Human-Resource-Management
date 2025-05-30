@@ -75,6 +75,12 @@
     <Compile Include="UI_Layer\AccoutantUI.Designer.cs">
       <DependentUpon>AccoutantUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Layer\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Leave.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -437,6 +443,9 @@
     </Compile>
     <EmbeddedResource Include="UI_Layer\AccoutantUI.resx">
       <DependentUpon>AccoutantUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\A_UC_Leave.resx">
       <DependentUpon>A_UC_Leave.cs</DependentUpon>

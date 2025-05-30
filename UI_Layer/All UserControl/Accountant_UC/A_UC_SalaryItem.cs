@@ -14,6 +14,7 @@ namespace QLNS.UI_Layer.All_UserControl.Accountant_UC
     public partial class A_UC_SalaryItem : UserControl
     {
         int UserID;
+        string funcionName;
         private int luongid;
         private int nhanvienid;
         private int thang;
@@ -23,10 +24,11 @@ namespace QLNS.UI_Layer.All_UserControl.Accountant_UC
         private decimal tongluong;
         private string trangthai;
         private Action reloadCallback;
-        public A_UC_SalaryItem(int UserID, int luongid, int nhanvienid, int thang, int nam, decimal luongcoban, decimal phucap, decimal tongluong, string trangthai, Action reloadCallback)
+        public A_UC_SalaryItem(int UserID, string functionName, int luongid, int nhanvienid, int thang, int nam, decimal luongcoban, decimal phucap, decimal tongluong, string trangthai, Action reloadCallback)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.funcionName = functionName;
             this.luongid = luongid;
             this.nhanvienid = nhanvienid;
             this.thang = thang;
@@ -127,7 +129,7 @@ namespace QLNS.UI_Layer.All_UserControl.Accountant_UC
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            Luong luong = new Luong(this.UserID, "A.Luong");
+            Luong luong = new Luong(this.UserID, this.funcionName);
             string err = "";
             if (luong != null)
             {
@@ -149,7 +151,7 @@ namespace QLNS.UI_Layer.All_UserControl.Accountant_UC
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
-            Luong luong = new Luong(this.UserID, "A.Luong");
+            Luong luong = new Luong(this.UserID, this.funcionName);
             string err = "";
             if (luong != null)
             {

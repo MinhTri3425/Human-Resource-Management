@@ -14,7 +14,7 @@ namespace QLNS.UI_Layer.All_UserControl
     public partial class A_UC_OverTime : UserControl
     {
         int UserID;
-        String functionName = "A.TangCa";
+        String functionName;
 
         int TangCaID;
         int NhanVienID;
@@ -24,10 +24,11 @@ namespace QLNS.UI_Layer.All_UserControl
         string loaiTangCa;
         string hinhThuc;
         string trangThai;
-        public A_UC_OverTime(int UserID)
+        public A_UC_OverTime(int UserID, string functionName)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.functionName = functionName;
             LoadData();
         }
         public void LoadData()
@@ -48,7 +49,7 @@ namespace QLNS.UI_Layer.All_UserControl
                         loaiTangCa = dataSet.Tables[0].Rows[i]["LoaiTangCa"].ToString();
                         hinhThuc = dataSet.Tables[0].Rows[i]["HinhThuc"].ToString();
                         trangThai = dataSet.Tables[0].Rows[i]["TrangThai"].ToString();
-                        A_UC_OvertimeItem overtimeItem = new A_UC_OvertimeItem(TangCaID, NhanVienID, ngay, gioBatDau, gioKetThuc, loaiTangCa, hinhThuc, trangThai);
+                        A_UC_OvertimeItem overtimeItem = new A_UC_OvertimeItem(UserID, functionName, TangCaID, NhanVienID, ngay, gioBatDau, gioKetThuc, loaiTangCa, hinhThuc, trangThai);
                         flowLayoutPanel1.Controls.Add(overtimeItem);
                     }
                 }

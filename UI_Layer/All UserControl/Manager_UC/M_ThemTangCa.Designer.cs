@@ -227,7 +227,7 @@
             this.formtangca.Items.AddRange(new object[] {
             "Tăng ca thường",
             "Tăng ca lễ"});
-            this.formtangca.Location = new System.Drawing.Point(56, 431);
+            this.formtangca.Location = new System.Drawing.Point(33, 431);
             this.formtangca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.formtangca.Name = "formtangca";
             this.formtangca.Size = new System.Drawing.Size(458, 46);

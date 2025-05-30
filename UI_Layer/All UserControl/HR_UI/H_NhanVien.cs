@@ -12,7 +12,7 @@ namespace QLNS.UI_Layer.HR
 {
     public partial class H_NhanVien : UserControl
     {
-        private String functionName = "HR.NhanVien";
+        private String functionName;
         int UserID;
         private int ID_NhanVien;
         private string HoTen;
@@ -22,10 +22,11 @@ namespace QLNS.UI_Layer.HR
         private int idPhong;
         private int idChucVu;
         private string TrangThai;
-        public H_NhanVien(int userID, int ID_NhanVien, string HoTen, string NgaySinh, string cmnd, string MaSoThue, int idPhong, int idChucVu, string TrangThai)
+        public H_NhanVien(int userID, string functionName, int ID_NhanVien, string HoTen, string NgaySinh, string cmnd, string MaSoThue, int idPhong, int idChucVu, string TrangThai)
         {
             InitializeComponent();
             this.UserID = userID;
+            this.functionName = functionName;
             this.ID_NhanVien = ID_NhanVien;
             this.HoTen = HoTen;
             this.NgaySinh = NgaySinh;
@@ -66,7 +67,7 @@ namespace QLNS.UI_Layer.HR
             if (confirm == DialogResult.Yes)
             {
                 string err = "";
-                var nv = new NhanVien(1, "Admin");
+                var nv = new NhanVien(this.UserID, this.functionName);
 
                 if (nv.XoaNhanVien(ID_NhanVien, ref err))
                 {

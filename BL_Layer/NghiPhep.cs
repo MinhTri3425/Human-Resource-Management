@@ -162,5 +162,16 @@ namespace QLNS.BL_Layer
             AND np.TrangThai = N'{trangThai}'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
+        public bool CapNhatTrangThaiNghiPhep(int nghiPhepID, string trangThai, ref string err)
+        {
+            if (!UserMode.HasPermission(UserID, functionName, "Edit", ref err))
+            {
+                err = "Bạn không có quyền cập nhật trạng thái nghỉ phép.";
+                return false;
+            }
+            string sqlString = "Update NghiPhep Set TrangThai=N'" +
+            trangThai + "' Where NghiPhepID=" + nghiPhepID;
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
     }
 }

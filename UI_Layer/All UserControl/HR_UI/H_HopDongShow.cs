@@ -14,16 +14,17 @@ namespace QLNS.UI_Layer.HR
     public partial class H_HopDongShow : UserControl
     {
         int UserID;
-        private String functionName = "Admin";
+        private String functionName;
         private int ID_HopDong;
         private int ID_NhanVien;
         private string LoaiHopDong;
         private string NgayBatDau;
         private string NgayKetThuc;
-        public H_HopDongShow(int UserID)
+        public H_HopDongShow(int UserID, string functionName)
         {
             InitializeComponent();
             this.UserID = UserID;
+            this.functionName = functionName;
             LoadData();
         }
         private void LoadData()
@@ -48,7 +49,7 @@ namespace QLNS.UI_Layer.HR
                             ngayKetThuc = Convert.ToDateTime(row["NgayHetHan"]);
                             this.NgayKetThuc = ngayKetThuc.Value.ToString("dd/MM/yyyy");
                         }
-                        H_HopDong hd = new H_HopDong(ID_HopDong, ID_NhanVien, LoaiHopDong, NgayBatDau, NgayKetThuc);
+                        H_HopDong hd = new H_HopDong(UserID, functionName, ID_HopDong, ID_NhanVien, LoaiHopDong, NgayBatDau, NgayKetThuc);
                         this.flowLayoutPanel1.Controls.Add(hd);
                     }
                 }
