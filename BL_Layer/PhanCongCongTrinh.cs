@@ -102,6 +102,16 @@ namespace QLNS.BL_Layer
                 return null;
             }
         }
+        public DataSet LayPhanCongTheoNhanVienID(int nhanVienID)
+        {
+            string sql = $@"
+            SELECT pc.*, ct.TenCongTrinh, ct.DiaDiem, ct.NgayBatDau, ct.NgayKetThuc
+            FROM PhanCongCongTrinh pc
+            INNER JOIN CongTrinh ct ON pc.CongTrinhID = ct.CongTrinhID
+            WHERE pc.NhanVienID = {nhanVienID}";
+
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
 
     }
 }

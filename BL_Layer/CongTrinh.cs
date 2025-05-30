@@ -140,5 +140,17 @@ namespace QLNS.BL_Layer
                 return false; // Công trình không thuộc phòng ban này
             }
         }
+        public string LayTenCongTrinhTheoID(int congTrinhID)
+        {
+            string sql = $"SELECT TenCongTrinh FROM CongTrinh WHERE CongTrinhID = {congTrinhID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                return ds.Tables[0].Rows[0]["TenCongTrinh"].ToString();
+            }
+
+            return "--";
+        }
     }
 }

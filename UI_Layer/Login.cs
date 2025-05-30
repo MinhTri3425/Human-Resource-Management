@@ -103,6 +103,12 @@ namespace QLNS.UI_Layer
                     ManagerUI manager = new ManagerUI(userID);
                     manager.Show();
                 }
+                if (roleID == 5)
+                {
+                    this.Hide();
+                    EmployeeUI employee = new EmployeeUI(userID);
+                    employee.Show();
+                }
             }
             else
             {
