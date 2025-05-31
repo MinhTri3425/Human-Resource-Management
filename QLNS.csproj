@@ -135,6 +135,24 @@
     <Compile Include="UI_Layer\All UserControl\Accountant_UC\ThemLuong.Designer.cs">
       <DependentUpon>ThemLuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\Ad_FormThemCongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\Ad_FormThemCongTrinh.Designer.cs">
+      <DependentUpon>Ad_FormThemCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\Ad_UC_QuanLiCongTrinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\Ad_UC_QuanLiCongTrinh.Designer.cs">
+      <DependentUpon>Ad_UC_QuanLiCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\A_ThemTangCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\A_ThemTangCa.Designer.cs">
+      <DependentUpon>A_ThemTangCa.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Layer\All UserControl\Admin_UC\ItemUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -491,6 +509,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Accountant_UC\ThemLuong.resx">
       <DependentUpon>ThemLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\Ad_FormThemCongTrinh.resx">
+      <DependentUpon>Ad_FormThemCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\Ad_UC_QuanLiCongTrinh.resx">
+      <DependentUpon>Ad_UC_QuanLiCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\A_ThemTangCa.resx">
+      <DependentUpon>A_ThemTangCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\ItemUser.resx">
       <DependentUpon>ItemUser.cs</DependentUpon>

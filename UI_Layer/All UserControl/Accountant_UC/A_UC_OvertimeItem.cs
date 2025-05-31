@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNS.BL_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,9 @@ namespace QLNS.UI_Layer.All_UserControl
             this.loaiTangCa = loaiTangCa;
             this.hinhThuc = hinhThuc;
             this.trangThai = trangThai;
+
+            this.picDuyet.Visible = false;
+            this.picTuChoi.Visible = false; 
         }
         public A_UC_OvertimeItem()
         {
@@ -62,6 +66,75 @@ namespace QLNS.UI_Layer.All_UserControl
         private void lbgiobatdau_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void A_UC_OvertimeItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (functionName.Equals("Admin", StringComparison.OrdinalIgnoreCase)
+        && trangThai.Equals("Chưa duyệt", StringComparison.OrdinalIgnoreCase))
+            {
+                picDuyet.Visible = true;
+                picTuChoi.Visible = true;
+            }
+        }
+
+        private void A_UC_OvertimeItem_MouseLeave(object sender, EventArgs e)
+        {
+            if (!this.ClientRectangle.Contains(this.PointToClient(Cursor.Position)))
+            {
+                picDuyet.Visible = false;
+                picTuChoi.Visible = false;
+            }
+        }
+
+        private void picDuyet_Click(object sender, EventArgs e)
+        {
+            TangCa tangCa = new TangCa(UserID, functionName);
+            string err = "";
+
+            if (tangCa.CapNhatTrangThaiTangCa(TangCaID, "Đã duyệt", ref err))
+            {
+                MessageBox.Show("Duyệt tăng ca thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                trangThai = "Đã duyệt"; // Cập nhật trạng thái trong biến
+                lbtrangthai.Text = trangThai;
+
+                // Ghi nhật ký
+                NhatKy nhatKy = new NhatKy(UserID, "A.TangCa");
+                string hanhDong = $"Duyệt tăng ca ID: {TangCaID}";
+                nhatKy.ThemNhatKy(UserID, hanhDong, DateTime.Now, ref err);
+
+                // Ẩn nút sau khi duyệt
+                picDuyet.Visible = false;
+                picTuChoi.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Duyệt thất bại!\n" + err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void picTuChoi_Click(object sender, EventArgs e)
+        {
+            TangCa tangCa = new TangCa(UserID, functionName);
+            string err = "";
+
+            if (tangCa.CapNhatTrangThaiTangCa(TangCaID, "Từ chối", ref err))
+            {
+                MessageBox.Show("Từ chối tăng ca thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                trangThai = "Từ chối";
+                lbtrangthai.Text = trangThai;
+
+                NhatKy nhatKy = new NhatKy(UserID, "A.TangCa");
+                string hanhDong = $"Từ chối tăng ca ID: {TangCaID}";
+                nhatKy.ThemNhatKy(UserID, hanhDong, DateTime.Now, ref err);
+
+                picDuyet.Visible = false;
+                picTuChoi.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Từ chối thất bại!\n" + err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

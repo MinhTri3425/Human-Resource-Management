@@ -82,5 +82,32 @@ namespace QLNS.UI_Layer
             users_UC.Location = new Point(0, 0);
             this.guna2Panel2.Controls.Add(users_UC);
         }
+
+        private void btnTangCa_Click(object sender, EventArgs e)
+        {
+            this.guna2Panel2.Controls.Clear();
+            A_UC_OverTime a_UC_OverTime = new A_UC_OverTime(this.UserID, "Admin");
+            a_UC_OverTime.Dock = DockStyle.Fill;
+            a_UC_OverTime.Location = new Point(0, 0);
+            this.guna2Panel2.Controls.Add(a_UC_OverTime);
+        }
+
+        private void btnNghiPhep_Click(object sender, EventArgs e)
+        {
+            this.guna2Panel2.Controls.Clear();
+            A_UC_Leave a_UC_NghiPhep = new A_UC_Leave(this.UserID, "Admin");
+            a_UC_NghiPhep.Dock = DockStyle.Fill;
+            a_UC_NghiPhep.Location = new Point(0, 0);
+            this.guna2Panel2.Controls.Add(a_UC_NghiPhep);
+        }
+
+        private void btnCongTrinh_Click(object sender, EventArgs e)
+        {
+            this.guna2Panel2.Controls.Clear();
+            Ad_UC_QuanLiCongTrinh ad_UC_QuanLiCongTrinh = new Ad_UC_QuanLiCongTrinh(this.UserID, "Admin");
+            ad_UC_QuanLiCongTrinh.Dock = DockStyle.Fill;
+            ad_UC_QuanLiCongTrinh.Location = new Point(0, 0);
+            this.guna2Panel2.Controls.Add(ad_UC_QuanLiCongTrinh);
+        }
     }
 }

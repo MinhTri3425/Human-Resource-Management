@@ -44,7 +44,7 @@ namespace QLNS.UI_Layer.All_UserControl
                         ngayketthuc = dataSet.Tables[0].Rows[i]["NgayKetThuc"].ToString();
                         loai = dataSet.Tables[0].Rows[i]["Loai"].ToString();
                         trangthai = dataSet.Tables[0].Rows[i]["TrangThai"].ToString();
-                        A_UC_LeaveItem leaveItem = new A_UC_LeaveItem(UserID, functionName, NghiPhepID, NhanVienID, ngaybatdau, ngayketthuc, loai, trangthai);
+                        A_UC_LeaveItem leaveItem = new A_UC_LeaveItem(UserID, functionName, NghiPhepID, NhanVienID, ngaybatdau, ngayketthuc, loai, trangthai, LoadData);
                         flowLayoutPanel1.Controls.Add(leaveItem);
                     }
                 }

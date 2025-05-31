@@ -38,7 +38,7 @@ namespace QLNS.BL_Layer
             PhongBanID + ",N'" +
             DiaDiem + "','" +
             NgayBatDau.ToString("yyyy-MM-dd") + "','" +
-            NgayKetThuc.ToString("yyyy-MM-dd") + "')'";
+            NgayKetThuc.ToString("yyyy-MM-dd") + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool XoaCongTrinh(int CongTrinhID, ref string err)//Admin, Manager

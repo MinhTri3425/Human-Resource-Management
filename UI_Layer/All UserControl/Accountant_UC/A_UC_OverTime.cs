@@ -1,4 +1,5 @@
 ﻿using QLNS.BL_Layer;
+using QLNS.UI_Layer.All_UserControl.Admin_UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,14 @@ namespace QLNS.UI_Layer.All_UserControl
             InitializeComponent();
             this.UserID = UserID;
             this.functionName = functionName;
+            if (this.functionName.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+            {
+                btnThem.Visible = true;
+            }
+            else
+            {
+                btnThem.Visible = false;
+            }
             LoadData();
         }
         public void LoadData()
@@ -68,6 +77,17 @@ namespace QLNS.UI_Layer.All_UserControl
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void A_UC_OverTime_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            A_ThemTangCa form = new A_ThemTangCa(UserID, "Admin", LoadData);
+            form.ShowDialog();
         }
     }
 }

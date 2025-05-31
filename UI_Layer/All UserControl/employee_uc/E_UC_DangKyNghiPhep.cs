@@ -72,7 +72,7 @@ namespace QLNS.UI_Layer.All_UserControl.Employee_UC
                 string ngayKetThuc = Convert.ToDateTime(row["NgayKetThuc"]).ToString("dd/MM/yyyy");
                 string TrangThai = row["TrangThai"].ToString();
 
-                E_UC_ItemNghiPhep nghiPhep = new E_UC_ItemNghiPhep(id, hoten, loainghiphep, ngayBatDau, ngayKetThuc, TrangThai);
+                E_UC_ItemNghiPhep nghiPhep = new E_UC_ItemNghiPhep(id, hoten, ngayBatDau, ngayKetThuc, loainghiphep, TrangThai);
                 nghiPhep.Dock = DockStyle.Top;
                 this.panelNghiPhep.Controls.Add(nghiPhep);
             }

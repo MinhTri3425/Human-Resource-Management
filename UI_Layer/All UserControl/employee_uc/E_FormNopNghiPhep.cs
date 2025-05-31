@@ -37,7 +37,7 @@ namespace QLNS.UI_Layer.All_UserControl.Employee_UC
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string loai = txtLoaiNghiPhep.Text.Trim();
+            string loai = cmbLoaiNghiPhep.Text;
             DateTime ngayBatDau = dateNgayBatDau.Value.Date;
             DateTime ngayKetThuc = dateNgayKetThuc.Value.Date;
 
@@ -68,6 +68,11 @@ namespace QLNS.UI_Layer.All_UserControl.Employee_UC
             {
                 MessageBox.Show("Lỗi: " + err, "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void E_FormNopNghiPhep_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
