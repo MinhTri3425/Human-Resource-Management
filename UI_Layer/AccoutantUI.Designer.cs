@@ -210,7 +210,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(410, 109);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1572, 805);
+            this.guna2Panel2.Size = new System.Drawing.Size(1735, 805);
             this.guna2Panel2.TabIndex = 1;
             // 
             // guna2BorderlessForm1
@@ -276,7 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1989, 919);
+            this.ClientSize = new System.Drawing.Size(2180, 919);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.label1);
@@ -286,7 +286,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "AccoutantUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "All";
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

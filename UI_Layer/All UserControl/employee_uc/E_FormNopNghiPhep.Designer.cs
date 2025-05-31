@@ -49,10 +49,10 @@
             this.btnHuy.FillColor = System.Drawing.Color.Black;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(473, 285);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnHuy.Location = new System.Drawing.Point(710, 445);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(102, 40);
+            this.btnHuy.Size = new System.Drawing.Size(153, 62);
             this.btnHuy.TabIndex = 78;
             this.btnHuy.Text = "Cancel";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -67,10 +67,10 @@
             this.btnLuu.FillColor = System.Drawing.Color.Black;
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(228, 285);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnLuu.Location = new System.Drawing.Point(342, 445);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(102, 40);
+            this.btnLuu.Size = new System.Drawing.Size(153, 62);
             this.btnLuu.TabIndex = 77;
             this.btnLuu.Text = "Submit";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -81,11 +81,12 @@
             this.dateNgayBatDau.FillColor = System.Drawing.Color.White;
             this.dateNgayBatDau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateNgayBatDau.Location = new System.Drawing.Point(28, 91);
+            this.dateNgayBatDau.Location = new System.Drawing.Point(42, 142);
+            this.dateNgayBatDau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateNgayBatDau.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayBatDau.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgayBatDau.Name = "dateNgayBatDau";
-            this.dateNgayBatDau.Size = new System.Drawing.Size(307, 34);
+            this.dateNgayBatDau.Size = new System.Drawing.Size(460, 53);
             this.dateNgayBatDau.TabIndex = 76;
             this.dateNgayBatDau.Value = new System.DateTime(2025, 5, 26, 12, 3, 2, 965);
             // 
@@ -94,9 +95,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(24, 68);
+            this.label2.Location = new System.Drawing.Point(36, 106);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 20);
+            this.label2.Size = new System.Drawing.Size(132, 31);
             this.label2.TabIndex = 74;
             this.label2.Text = "Start date";
             // 
@@ -105,9 +107,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(469, 68);
+            this.label7.Location = new System.Drawing.Point(704, 106);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 20);
+            this.label7.Size = new System.Drawing.Size(127, 31);
             this.label7.TabIndex = 72;
             this.label7.Text = "End Date";
             // 
@@ -115,9 +118,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 9);
+            this.label1.Location = new System.Drawing.Point(27, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 29);
+            this.label1.Size = new System.Drawing.Size(443, 44);
             this.label1.TabIndex = 71;
             this.label1.Text = "Submit Leave Requests";
             // 
@@ -127,11 +131,12 @@
             this.dateNgayKetThuc.FillColor = System.Drawing.Color.White;
             this.dateNgayKetThuc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateNgayKetThuc.Location = new System.Drawing.Point(473, 91);
+            this.dateNgayKetThuc.Location = new System.Drawing.Point(710, 142);
+            this.dateNgayKetThuc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateNgayKetThuc.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayKetThuc.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgayKetThuc.Name = "dateNgayKetThuc";
-            this.dateNgayKetThuc.Size = new System.Drawing.Size(307, 34);
+            this.dateNgayKetThuc.Size = new System.Drawing.Size(460, 53);
             this.dateNgayKetThuc.TabIndex = 79;
             this.dateNgayKetThuc.Value = new System.DateTime(2025, 5, 26, 12, 3, 2, 965);
             // 
@@ -140,9 +145,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(24, 178);
+            this.label3.Location = new System.Drawing.Point(39, 300);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 20);
+            this.label3.Size = new System.Drawing.Size(75, 31);
             this.label3.TabIndex = 80;
             this.label3.Text = "Type";
             // 
@@ -155,26 +161,21 @@
             this.cmbLoaiNghiPhep.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbLoaiNghiPhep.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbLoaiNghiPhep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbLoaiNghiPhep.ItemHeight = 30;
+            this.cmbLoaiNghiPhep.ItemHeight = 40;
             this.cmbLoaiNghiPhep.Items.AddRange(new object[] {
-            "Nghỉ phép năm",
             "Nghỉ không lương",
-            "Nghỉ ốm",
-            "Nghỉ thai sản",
-            "Nghỉ việc riêng",
-            "Nghỉ tang",
-            "Nghỉ kết hôn",
             "Nghỉ có lương"});
-            this.cmbLoaiNghiPhep.Location = new System.Drawing.Point(30, 215);
+            this.cmbLoaiNghiPhep.Location = new System.Drawing.Point(45, 336);
+            this.cmbLoaiNghiPhep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbLoaiNghiPhep.Name = "cmbLoaiNghiPhep";
-            this.cmbLoaiNghiPhep.Size = new System.Drawing.Size(304, 36);
+            this.cmbLoaiNghiPhep.Size = new System.Drawing.Size(454, 46);
             this.cmbLoaiNghiPhep.TabIndex = 81;
             // 
             // E_FormNopNghiPhep
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 369);
+            this.ClientSize = new System.Drawing.Size(1200, 577);
             this.Controls.Add(this.cmbLoaiNghiPhep);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateNgayKetThuc);
@@ -185,6 +186,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "E_FormNopNghiPhep";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E_FormNopNghiPhep";

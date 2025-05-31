@@ -49,7 +49,7 @@ namespace QLNS.UI_Layer
             guna2Panel2.Controls.Clear();
 
             M_UC_ManageEmployees uC_ManageEmployees = new M_UC_ManageEmployees(this.UserID);
-            uC_ManageEmployees.Location = new Point(0, 0);
+            uC_ManageEmployees.Dock = DockStyle.Fill;
             guna2Panel2.Controls.Add(uC_ManageEmployees);
         }
 
@@ -58,7 +58,7 @@ namespace QLNS.UI_Layer
             guna2Panel2.Controls.Clear();
 
             M_UC_QuanLiCongTrinh quanlicongtrinh = new M_UC_QuanLiCongTrinh(this.UserID);
-            quanlicongtrinh.Location = new Point(0, 0);
+            quanlicongtrinh.Dock = DockStyle.Fill;
             guna2Panel2.Controls.Add(quanlicongtrinh);
         }
 
@@ -67,7 +67,7 @@ namespace QLNS.UI_Layer
             guna2Panel2.Controls.Clear();
 
             M_UC_QuanLiChamCong quanLiChamCong = new M_UC_QuanLiChamCong(this.UserID);
-            quanLiChamCong.Location = new Point(0, 0);
+            quanLiChamCong.Dock = DockStyle.Fill;
             guna2Panel2.Controls.Add(quanLiChamCong);
         }
 
@@ -76,7 +76,7 @@ namespace QLNS.UI_Layer
             guna2Panel2.Controls.Clear();
 
             M_UC_HopDongLaoDong hopDongLaoDong = new M_UC_HopDongLaoDong(this.UserID);
-            hopDongLaoDong.Location = new Point(0, 0);
+            hopDongLaoDong.Dock = DockStyle.Fill;
             guna2Panel2.Controls.Add(hopDongLaoDong);
         }
 
@@ -89,7 +89,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             PersonalInformation personalInformation = new PersonalInformation(this.UserID);
-            personalInformation.Location = new Point(0, 0);
+            personalInformation.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(personalInformation);
         }
 
@@ -97,7 +97,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             SalaryInformation salaryInformation = new SalaryInformation(this.UserID);
-            salaryInformation.Location = new Point(0, 0);
+            salaryInformation.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(salaryInformation);
         }
 
@@ -105,7 +105,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             Contract uC_Contract = new Contract(this.UserID);
-            uC_Contract.Location = new Point(0, 0);
+            uC_Contract.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(uC_Contract);
         }
 
@@ -113,7 +113,7 @@ namespace QLNS.UI_Layer
         {
             guna2Panel2.Controls.Clear();
             M_UC_QuanliNghiPhep quanliNghiPhep = new M_UC_QuanliNghiPhep(this.UserID, "M.NghiPhep");
-            quanliNghiPhep.Location = new Point(0, 0);
+            quanliNghiPhep.Dock = DockStyle.Fill;
             guna2Panel2.Controls.Add(quanliNghiPhep);
 
         }
@@ -122,7 +122,7 @@ namespace QLNS.UI_Layer
         {
             guna2Panel2.Controls.Clear();
             M_UC_QuanLiTangCa quanLiTangCa = new M_UC_QuanLiTangCa(this.UserID, "M.TangCa");
-            quanLiTangCa.Location = new Point(0, 0);
+            quanLiTangCa.Dock = DockStyle.Fill;
             guna2Panel2.Controls.Add(quanLiTangCa);
         }
 
@@ -130,7 +130,7 @@ namespace QLNS.UI_Layer
         {
             guna2Panel2.Controls.Clear();
             M_UC_QuanLyPhanCongCongTrinh quanLyPhanCongCongTrinh = new M_UC_QuanLyPhanCongCongTrinh(this.UserID, 4, "M.CongTrinh(samePB)");
-            quanLyPhanCongCongTrinh.Location = new Point(0, 0);
+            quanLyPhanCongCongTrinh.Dock = DockStyle.Fill;
             guna2Panel2.Controls.Add(quanLyPhanCongCongTrinh);
         }
     }

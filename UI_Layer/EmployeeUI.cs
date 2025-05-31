@@ -37,7 +37,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             PersonalInformation personalInformation = new PersonalInformation(this.UserID);
-            personalInformation.Location = new Point(0, 0);
+            personalInformation.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(personalInformation);
         }
 
@@ -45,7 +45,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             SalaryInformation salaryInformation = new SalaryInformation(this.UserID);
-            salaryInformation.Location = new Point(0, 0);
+            salaryInformation.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(salaryInformation);
         }
 
@@ -53,7 +53,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             Contract uC_Contract = new Contract(this.UserID);
-            uC_Contract.Location = new Point(0, 0);
+            uC_Contract.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(uC_Contract);
         }
 
@@ -61,7 +61,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             E_UC_ChamCong e_UC_ChamCong = new E_UC_ChamCong(this.UserID);
-            e_UC_ChamCong.Location = new Point(0, 0);
+            e_UC_ChamCong.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(e_UC_ChamCong);
         }
 
@@ -69,7 +69,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             E_UC_DangKyNghiPhep e_UC_DangKyNghiPhep = new E_UC_DangKyNghiPhep(this.UserID);
-            e_UC_DangKyNghiPhep.Location = new Point(0, 0);
+            e_UC_DangKyNghiPhep.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(e_UC_DangKyNghiPhep);
         }
 
@@ -77,7 +77,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             E_UC_DangKyTangCa e_UC_DangKyTangCa = new E_UC_DangKyTangCa(this.UserID);
-            e_UC_DangKyTangCa.Location = new Point(0, 0);
+            e_UC_DangKyTangCa.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(e_UC_DangKyTangCa);
         }
 
@@ -85,7 +85,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             E_UC_XemCongTrinh e_UC_XemCongTrinh = new E_UC_XemCongTrinh(this.UserID);
-            e_UC_XemCongTrinh.Location = new Point(0, 0);
+            e_UC_XemCongTrinh.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(e_UC_XemCongTrinh);
         }
 
@@ -93,7 +93,7 @@ namespace QLNS.UI_Layer
         {
             this.guna2Panel2.Controls.Clear();
             E_UC_DangKyCongTrinh e_UC_DangKyCongTrinh = new E_UC_DangKyCongTrinh(this.UserID);
-            e_UC_DangKyCongTrinh.Location = new Point(0, 0);
+            e_UC_DangKyCongTrinh.Dock = DockStyle.Fill;
             this.guna2Panel2.Controls.Add(e_UC_DangKyCongTrinh);
         }
     }

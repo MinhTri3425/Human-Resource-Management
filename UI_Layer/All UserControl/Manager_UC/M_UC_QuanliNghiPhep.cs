@@ -186,5 +186,12 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
                 }
             }
         }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            this.panelQuanLiNghiPhep.Controls.Clear();
+            LoadData();
+            M_UC_QuanliNghiPhep_Load(null, null);
+        }
     }
 }

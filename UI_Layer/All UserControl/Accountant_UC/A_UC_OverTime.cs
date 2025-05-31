@@ -89,5 +89,35 @@ namespace QLNS.UI_Layer.All_UserControl
             A_ThemTangCa form = new A_ThemTangCa(UserID, "Admin", LoadData);
             form.ShowDialog();
         }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            LoadData();
+        }
+
+        private void cbbtrangthai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TangCa tangCa = new TangCa(this.UserID, this.functionName);
+            string selectedStatus = cbbtrangthai.SelectedItem.ToString();
+            DataSet ds = tangCa.LayTangCaTheoTrangThai(selectedStatus);
+            flowLayoutPanel1.Controls.Clear(); // Clear current controls in the panel
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    TangCaID = Convert.ToInt32(ds.Tables[0].Rows[i]["TangCaID"]);
+                    NhanVienID = Convert.ToInt32(ds.Tables[0].Rows[i]["NhanVienID"]);
+                    ngay = ds.Tables[0].Rows[i]["NgayTangCa"].ToString();
+                    gioBatDau = ds.Tables[0].Rows[i]["GioBatDau"].ToString();
+                    gioKetThuc = ds.Tables[0].Rows[i]["GioKetThuc"].ToString();
+                    loaiTangCa = ds.Tables[0].Rows[i]["LoaiTangCa"].ToString();
+                    hinhThuc = ds.Tables[0].Rows[i]["HinhThuc"].ToString();
+                    trangThai = ds.Tables[0].Rows[i]["TrangThai"].ToString();
+                    A_UC_OvertimeItem overtimeItem = new A_UC_OvertimeItem(UserID, functionName, TangCaID, NhanVienID, ngay, gioBatDau, gioKetThuc, loaiTangCa, hinhThuc, trangThai);
+                    flowLayoutPanel1.Controls.Add(overtimeItem);
+                }
+            }
+        }
     }
 }

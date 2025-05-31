@@ -37,7 +37,7 @@ namespace QLNS.UI_Layer
             this.Panel2.Controls.Clear();
 
             PersonalInformation uC_PersonalInformation = new PersonalInformation(this.UserID);
-            uC_PersonalInformation.Location = new Point(0, 0);
+            uC_PersonalInformation.Dock = DockStyle.Fill;
             this.Panel2.Controls.Add(uC_PersonalInformation);
         }
 
@@ -46,7 +46,7 @@ namespace QLNS.UI_Layer
             this.Panel2.Controls.Clear();
 
             SalaryInformation uC_SalaryInformation = new SalaryInformation(this.UserID);
-            uC_SalaryInformation.Location = new Point(0, 0);
+            uC_SalaryInformation.Dock = DockStyle.Fill;
             this.Panel2.Controls.Add(uC_SalaryInformation);
         }
 
@@ -61,7 +61,7 @@ namespace QLNS.UI_Layer
         {
             this.Panel2.Controls.Clear();
             H_NhanVienShow h_NhanVienShow = new H_NhanVienShow(this.UserID, "HR.NhanVien");
-            h_NhanVienShow.Location = new Point(0, 0);
+            h_NhanVienShow.Dock = DockStyle.Fill;
             this.Panel2.Controls.Add(h_NhanVienShow);
         }
 
@@ -69,7 +69,7 @@ namespace QLNS.UI_Layer
         {
             this.Panel2.Controls.Clear();
             H_HopDongShow h_hopdongshow = new H_HopDongShow(this.UserID, "HR.HopDong");
-            h_hopdongshow.Location = new Point(0, 0);
+            h_hopdongshow.Dock = DockStyle.Fill;
             this.Panel2.Controls.Add(h_hopdongshow);
         }
     }

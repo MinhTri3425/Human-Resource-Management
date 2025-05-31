@@ -37,6 +37,20 @@ namespace QLNS.BL_Layer
                 return -1; // hoặc giá trị mặc định khác
             }
         }
+        public int LayPhongBanIDTheoNhanVienID(int NhanVienID, ref string err)
+        {
+            string sql = $"SELECT PhongBanID FROM NhanVien WHERE NhanVienID = {NhanVienID}";
+            DataSet ds = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return Convert.ToInt32(ds.Tables[0].Rows[0]["PhongBanID"]);
+            }
+            else
+            {
+                err = "Không tìm thấy phòng ban của nhân viên.";
+                return -1; // hoặc giá trị mặc định khác
+            }
+        } 
         public DataSet LayPhongBan()//Admin
         {
             return db.ExecuteQueryDataSet("select * from PhongBan", CommandType.Text);

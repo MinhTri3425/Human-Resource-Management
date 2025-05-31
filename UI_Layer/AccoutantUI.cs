@@ -25,7 +25,7 @@ namespace QLNS.UI_Layer
             this.guna2Panel2.Controls.Clear();
             PersonalInformation personalInformation = new PersonalInformation(this.UserID);
             personalInformation.Dock = DockStyle.Fill;
-            personalInformation.Location = new Point(0, 0);
+            
             this.guna2Panel2.Controls.Add(personalInformation);
         }
 
@@ -34,7 +34,7 @@ namespace QLNS.UI_Layer
             this.guna2Panel2.Controls.Clear();
             A_UC_OverTime overtime = new A_UC_OverTime(this.UserID, "A.TangCa");
             overtime.Dock = DockStyle.Fill;
-            overtime.Location = new Point(0, 0);
+            
             this.guna2Panel2.Controls.Add(overtime);
         }
 
@@ -55,7 +55,7 @@ namespace QLNS.UI_Layer
             this.guna2Panel2.Controls.Clear();
             SalaryInformation salaryInformation = new SalaryInformation(this.UserID);
             salaryInformation.Dock = DockStyle.Fill;
-            salaryInformation.Location = new Point(0, 0);
+            
             this.guna2Panel2.Controls.Add(salaryInformation);
         }
 
@@ -64,7 +64,7 @@ namespace QLNS.UI_Layer
             this.guna2Panel2.Controls.Clear();
             Contract contract = new Contract(this.UserID);
             contract.Dock = DockStyle.Fill;
-            contract.Location = new Point(0, 0);
+            
             this.guna2Panel2.Controls.Add(contract);
         }
 
@@ -73,7 +73,7 @@ namespace QLNS.UI_Layer
             this.guna2Panel2.Controls.Clear();
             A_UC_Timekeeping timekeeping = new A_UC_Timekeeping(this.UserID, "A.ChamCong");
             timekeeping.Dock = DockStyle.Fill;
-            timekeeping.Location = new Point(0, 0);
+            
             this.guna2Panel2.Controls.Add(timekeeping);
         }
 
@@ -82,7 +82,7 @@ namespace QLNS.UI_Layer
             this.guna2Panel2.Controls.Clear();
             A_UC_Leave leave = new A_UC_Leave(this.UserID, "A.NghiPhep");
             leave.Dock = DockStyle.Fill;
-            leave.Location = new Point(0, 0);
+            
             this.guna2Panel2.Controls.Add(leave);
         }
 
@@ -91,7 +91,7 @@ namespace QLNS.UI_Layer
             this.guna2Panel2.Controls.Clear();
             A_UC_Salary salary = new A_UC_Salary(this.UserID, "A.Luong");
             salary.Dock = DockStyle.Fill;
-            salary.Location = new Point(0, 0);
+            
             this.guna2Panel2.Controls.Add(salary);
         }
     }

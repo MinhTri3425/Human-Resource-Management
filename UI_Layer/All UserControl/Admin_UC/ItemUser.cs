@@ -44,13 +44,14 @@ namespace QLNS.UI_Layer.All_UserControl.Admin_UC
         {
             Users users = new Users(this.UserID, this.functionName);
             string err = "";
-            if (users.XoaUsers(this.userid, ref err))
+            if (users.XoaUsers(this.UserID, this.userid, ref err))
             {
                 MessageBox.Show("Xóa User thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 NhatKy nhatKy = new NhatKy(UserID, functionName);
                 string hanhDong = $"Đã xóa User ID: {userid}";
                 DateTime recentTime = DateTime.Now;
                 nhatKy.ThemNhatKy(UserID, hanhDong, recentTime, ref err);
+                reloadCallback?.Invoke(); // Gọi lại hàm reload nếu có
             }
             else
             {

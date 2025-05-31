@@ -49,14 +49,14 @@ namespace QLNS.BL_Layer
             NhanVienID + ")";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public bool XoaUsers(int UserID, ref string err)
+        public bool XoaUsers(int UserID, int userid, ref string err)
         {
             if (!UserMode.HasPermission(UserID, functionName, "Delete", ref err))
             {
                 err = "Bạn không có quyền xóa User.";
                 return false;
             }
-            string sqlString = "Delete From Users Where UserID=" + UserID;
+            string sqlString = "Delete From Users Where UserID=" + userid;
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool CapNhatUsers(int UserID, int userid, string Username, string PasswordHash, ref string err)
@@ -106,19 +106,7 @@ namespace QLNS.BL_Layer
                 return false;
             }
         }
-        public bool DoiMatKhau(int userID, string oldPasswordHash, string newPasswordHash, ref string err)
-        {
-            string sqlCheck = $"SELECT * FROM Users WHERE UserID = {userID} AND PasswordHash = N'{oldPasswordHash}'";
-            DataSet ds = db.ExecuteQueryDataSet(sqlCheck, CommandType.Text);
-            if (ds.Tables[0].Rows.Count == 0)
-            {
-                err = "Mật khẩu cũ không đúng.";
-                return false;
-            }
 
-            string sqlUpdate = $"UPDATE Users SET PasswordHash = N'{newPasswordHash}' WHERE UserID = {userID}";
-            return db.MyExecuteNonQuery(sqlUpdate, CommandType.Text, ref err);
-        }
         public int LayUserIDTheoUsername(string username, ref string err)
         {
             string sql = $"SELECT UserID FROM Users WHERE Username = N'{username}'";
@@ -132,6 +120,11 @@ namespace QLNS.BL_Layer
                 err = "Không tìm thấy User tương ứng với Username.";
                 return -1; // hoặc giá trị mặc định khác tùy bạn
             }
+        }
+        public DataSet LayUsersTheoRoleID(string roleID)
+        {
+            string sql = $"SELECT * FROM Users WHERE RoleID = {roleID}";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
         public DataSet TimKiemUsers(string keyword)
         {

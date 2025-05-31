@@ -165,6 +165,12 @@
     <Compile Include="UI_Layer\All UserControl\Admin_UC\SuaUser.Designer.cs">
       <DependentUpon>SuaUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\ThemUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\ThemUser.Designer.cs">
+      <DependentUpon>ThemUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Layer\All UserControl\Admin_UC\Users_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -524,6 +530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\SuaUser.resx">
       <DependentUpon>SuaUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\ThemUser.resx">
+      <DependentUpon>ThemUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\Users_UC.resx">
       <DependentUpon>Users_UC.cs</DependentUpon>

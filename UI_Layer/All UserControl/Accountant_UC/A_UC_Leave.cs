@@ -67,7 +67,30 @@ namespace QLNS.UI_Layer.All_UserControl
 
         private void cbbtrangthai_SelectedIndexChanged(object sender, EventArgs e)
         {
+            NghiPhep nghiPhep = new NghiPhep(UserID, functionName);
+            string selectedStatus = cbbtrangthai.SelectedItem.ToString();
+            DataSet ds = nghiPhep.LayNghiPhepTheoTrangThai(selectedStatus);
+            flowLayoutPanel1.Controls.Clear(); // Clear current controls in the panel
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    NghiPhepID = Convert.ToInt32(ds.Tables[0].Rows[i]["NghiPhepID"]);
+                    NhanVienID = Convert.ToInt32(ds.Tables[0].Rows[i]["NhanVienID"]);
+                    ngaybatdau = ds.Tables[0].Rows[i]["NgayBatDau"].ToString();
+                    ngayketthuc = ds.Tables[0].Rows[i]["NgayKetThuc"].ToString();
+                    loai = ds.Tables[0].Rows[i]["Loai"].ToString();
+                    trangthai = ds.Tables[0].Rows[i]["TrangThai"].ToString();
+                    A_UC_LeaveItem leaveItem = new A_UC_LeaveItem(UserID, functionName, NghiPhepID, NhanVienID, ngaybatdau, ngayketthuc, loai, trangthai, LoadData);
+                    flowLayoutPanel1.Controls.Add(leaveItem);
+                }
+            }
+        }
 
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear(); // Clear current controls in the panel
+            LoadData(); // Reload data to refresh the panel
         }
     }
 }

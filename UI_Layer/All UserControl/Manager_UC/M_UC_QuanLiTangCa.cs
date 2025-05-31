@@ -167,5 +167,12 @@ namespace QLNS.UI_Layer.All_UserControl.Manager_UC
                 }
             }
         }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            this.panelQuanLiTangCa.Controls.Clear();
+            LoadData();
+            M_UC_QuanLiTangCa_Load(null, null);
+        }
     }
 }

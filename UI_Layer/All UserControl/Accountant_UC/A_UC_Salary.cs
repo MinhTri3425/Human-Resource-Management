@@ -128,5 +128,11 @@ namespace QLNS.UI_Layer.All_UserControl
             };
             form.ShowDialog();
         }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            LoadData();
+        }
     }
 }

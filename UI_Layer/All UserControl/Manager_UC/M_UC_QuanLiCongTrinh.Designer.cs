@@ -41,12 +41,12 @@
             this.panelQuanLiCongTrinh = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnThemCongTrinh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnThemCongTrinh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,9 +55,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Location = new System.Drawing.Point(4, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 29);
+            this.label1.Size = new System.Drawing.Size(389, 44);
             this.label1.TabIndex = 11;
             this.label1.Text = "Project Management";
             // 
@@ -65,9 +66,10 @@
             // 
             this.lbPhongBanQuanLi.AutoSize = true;
             this.lbPhongBanQuanLi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPhongBanQuanLi.Location = new System.Drawing.Point(533, 28);
+            this.lbPhongBanQuanLi.Location = new System.Drawing.Point(800, 44);
+            this.lbPhongBanQuanLi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPhongBanQuanLi.Name = "lbPhongBanQuanLi";
-            this.lbPhongBanQuanLi.Size = new System.Drawing.Size(86, 20);
+            this.lbPhongBanQuanLi.Size = new System.Drawing.Size(140, 31);
             this.lbPhongBanQuanLi.TabIndex = 20;
             this.lbPhongBanQuanLi.Text = "Nhân Viên";
             // 
@@ -75,9 +77,10 @@
             // 
             this.lbChucVuquanli.AutoSize = true;
             this.lbChucVuquanli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChucVuquanli.Location = new System.Drawing.Point(202, 65);
+            this.lbChucVuquanli.Location = new System.Drawing.Point(303, 102);
+            this.lbChucVuquanli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbChucVuquanli.Name = "lbChucVuquanli";
-            this.lbChucVuquanli.Size = new System.Drawing.Size(86, 20);
+            this.lbChucVuquanli.Size = new System.Drawing.Size(140, 31);
             this.lbChucVuquanli.TabIndex = 18;
             this.lbChucVuquanli.Text = "Nhân Viên";
             // 
@@ -85,9 +88,10 @@
             // 
             this.lbTenQuanli.AutoSize = true;
             this.lbTenQuanli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenQuanli.Location = new System.Drawing.Point(205, 28);
+            this.lbTenQuanli.Location = new System.Drawing.Point(308, 44);
+            this.lbTenQuanli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTenQuanli.Name = "lbTenQuanli";
-            this.lbTenQuanli.Size = new System.Drawing.Size(18, 20);
+            this.lbTenQuanli.Size = new System.Drawing.Size(29, 31);
             this.lbTenQuanli.TabIndex = 17;
             this.lbTenQuanli.Text = "1";
             // 
@@ -95,9 +99,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 65);
+            this.label4.Location = new System.Drawing.Point(44, 102);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.Size = new System.Drawing.Size(119, 31);
             this.label4.TabIndex = 16;
             this.label4.Text = "Position:";
             // 
@@ -105,9 +110,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(29, 28);
+            this.label9.Location = new System.Drawing.Point(44, 44);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 20);
+            this.label9.Size = new System.Drawing.Size(214, 31);
             this.label9.TabIndex = 15;
             this.label9.Text = "Manager Name: ";
             // 
@@ -116,9 +122,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label8.Location = new System.Drawing.Point(397, 103);
+            this.label8.Location = new System.Drawing.Point(596, 161);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 20);
+            this.label8.Size = new System.Drawing.Size(117, 31);
             this.label8.TabIndex = 12;
             this.label8.Text = "Location";
             // 
@@ -127,9 +134,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(137, 103);
+            this.label7.Location = new System.Drawing.Point(206, 161);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 20);
+            this.label7.Size = new System.Drawing.Size(178, 31);
             this.label7.TabIndex = 11;
             this.label7.Text = "Project Name";
             // 
@@ -138,9 +146,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Location = new System.Drawing.Point(27, 103);
+            this.label6.Location = new System.Drawing.Point(40, 161);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 20);
+            this.label6.Size = new System.Drawing.Size(134, 31);
             this.label6.TabIndex = 10;
             this.label6.Text = "Project ID";
             // 
@@ -148,18 +157,20 @@
             // 
             this.panelQuanLiCongTrinh.AutoScroll = true;
             this.panelQuanLiCongTrinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelQuanLiCongTrinh.Location = new System.Drawing.Point(15, 131);
+            this.panelQuanLiCongTrinh.Location = new System.Drawing.Point(22, 205);
+            this.panelQuanLiCongTrinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelQuanLiCongTrinh.Name = "panelQuanLiCongTrinh";
-            this.panelQuanLiCongTrinh.Size = new System.Drawing.Size(1101, 291);
+            this.panelQuanLiCongTrinh.Size = new System.Drawing.Size(1650, 454);
             this.panelQuanLiCongTrinh.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(397, 28);
+            this.label5.Location = new System.Drawing.Point(596, 44);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 20);
+            this.label5.Size = new System.Drawing.Size(164, 31);
             this.label5.TabIndex = 19;
             this.label5.Text = "Department:";
             // 
@@ -183,21 +194,39 @@
             this.guna2Panel2.Controls.Add(this.label6);
             this.guna2Panel2.Controls.Add(this.panelQuanLiCongTrinh);
             this.guna2Panel2.Controls.Add(this.label5);
-            this.guna2Panel2.Location = new System.Drawing.Point(8, 55);
+            this.guna2Panel2.Location = new System.Drawing.Point(12, 86);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1130, 443);
+            this.guna2Panel2.Size = new System.Drawing.Size(1695, 692);
             this.guna2Panel2.TabIndex = 12;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
+            // 
+            // btnThemCongTrinh
+            // 
+            this.btnThemCongTrinh.BorderRadius = 12;
+            this.btnThemCongTrinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemCongTrinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemCongTrinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemCongTrinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemCongTrinh.FillColor = System.Drawing.Color.Black;
+            this.btnThemCongTrinh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemCongTrinh.ForeColor = System.Drawing.Color.White;
+            this.btnThemCongTrinh.Location = new System.Drawing.Point(1567, 102);
+            this.btnThemCongTrinh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnThemCongTrinh.Name = "btnThemCongTrinh";
+            this.btnThemCongTrinh.Size = new System.Drawing.Size(105, 59);
+            this.btnThemCongTrinh.TabIndex = 26;
+            this.btnThemCongTrinh.Text = "Add";
+            this.btnThemCongTrinh.Click += new System.EventHandler(this.btnThemCongTrinh_Click_1);
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::QLNS.Properties.Resources.glass;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1075, 15);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1612, 23);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(40, 38);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(60, 59);
             this.guna2PictureBox1.TabIndex = 24;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
@@ -214,12 +243,12 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(711, 15);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBox1.Location = new System.Drawing.Point(1066, 23);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(350, 38);
+            this.guna2TextBox1.Size = new System.Drawing.Size(525, 59);
             this.guna2TextBox1.TabIndex = 23;
             this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
@@ -228,9 +257,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(869, 103);
+            this.label3.Location = new System.Drawing.Point(1304, 161);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(127, 31);
             this.label3.TabIndex = 22;
             this.label3.Text = "End Date";
             // 
@@ -239,38 +269,22 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(653, 103);
+            this.label2.Location = new System.Drawing.Point(980, 161);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(137, 31);
             this.label2.TabIndex = 21;
             this.label2.Text = "Start Date";
             // 
-            // btnThemCongTrinh
-            // 
-            this.btnThemCongTrinh.BorderRadius = 12;
-            this.btnThemCongTrinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemCongTrinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemCongTrinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThemCongTrinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThemCongTrinh.FillColor = System.Drawing.Color.Black;
-            this.btnThemCongTrinh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemCongTrinh.ForeColor = System.Drawing.Color.White;
-            this.btnThemCongTrinh.Location = new System.Drawing.Point(873, 58);
-            this.btnThemCongTrinh.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.btnThemCongTrinh.Name = "btnThemCongTrinh";
-            this.btnThemCongTrinh.Size = new System.Drawing.Size(70, 38);
-            this.btnThemCongTrinh.TabIndex = 26;
-            this.btnThemCongTrinh.Text = "Add";
-            this.btnThemCongTrinh.Click += new System.EventHandler(this.btnThemCongTrinh_Click_1);
-            // 
             // M_UC_QuanLiCongTrinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel2);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "M_UC_QuanLiCongTrinh";
-            this.Size = new System.Drawing.Size(1381, 511);
+            this.Size = new System.Drawing.Size(2072, 798);
             this.Load += new System.EventHandler(this.UC_QuanLiCongTrinh_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();

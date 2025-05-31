@@ -44,13 +44,23 @@ namespace QLNS.BL_Layer
             string sql = $"SELECT * FROM Luong WHERE TrangThai = N'{trangThai}'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
-        public bool ThemLuong(int NhanVienID, int Thang, int Nam, decimal LuongCoBan, decimal PhuCap, decimal TongLuong, string TrangThai, ref string err)//Admin, Accoutants
+        public bool ThemLuong(int NhanVienID, int Thang, int Nam, decimal LuongCoBan, decimal PhuCap, decimal TongLuong, string TrangThai, ref string err)//Admin, Accoutants  
         {
+            // Check if salary already exists for the given employee, month, and year  
+            string checkSql = $"SELECT COUNT(*) FROM Luong WHERE NhanVienID = {NhanVienID} AND Thang = {Thang} AND Nam = {Nam}";
+            object result = db.ExecuteScalar(checkSql, CommandType.Text);
+            if (Convert.ToInt32(result) > 0)
+            {
+                err = "Nhân viên này đã có lương vào tháng và năm này.";
+                return false;
+            }
+
             if (!UserMode.HasPermission(UserID, functionName, "Add", ref err))
             {
                 err = "Bạn không có quyền thêm lương.";
                 return false;
             }
+
             string sqlString = "Insert Into Luong(NhanVienID, Thang, Nam, LuongCoBan, PhuCap, TongLuong, TrangThai) Values(" +
             NhanVienID + "," +
             Thang + "," +

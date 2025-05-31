@@ -191,5 +191,21 @@ namespace QLNS.BL_Layer
                 return false;
             }
         }
+        public DataSet LayTatCaNhanVienChuaCoUser(ref string err)
+        {
+            try
+            {
+                string sql = @"
+                SELECT NhanVienID 
+                FROM NhanVien 
+                WHERE NhanVienID NOT IN (SELECT NhanVienID FROM Users)";
+                return db.ExecuteQueryDataSet(sql, CommandType.Text);
+            }
+            catch (Exception ex)
+            {
+                err = "Lỗi khi lấy tất cả nhân viên chưa có User: " + ex.Message;
+                return null;
+            }
+        }
     }
 }
