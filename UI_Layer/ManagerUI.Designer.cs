@@ -66,10 +66,10 @@
             this.guna2Panel1.Controls.Add(this.btnQuanLiNhanVien);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 54);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 84);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(275, 524);
+            this.guna2Panel1.Size = new System.Drawing.Size(412, 819);
             this.guna2Panel1.TabIndex = 5;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -82,10 +82,10 @@
             this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(3, 498);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button3.Location = new System.Drawing.Point(4, 778);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(272, 46);
+            this.guna2Button3.Size = new System.Drawing.Size(408, 72);
             this.guna2Button3.TabIndex = 10;
             this.guna2Button3.Text = "Project Assignment Management";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -99,10 +99,10 @@
             this.btnQuanLiTangCa.FillColor = System.Drawing.Color.Transparent;
             this.btnQuanLiTangCa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLiTangCa.ForeColor = System.Drawing.Color.Black;
-            this.btnQuanLiTangCa.Location = new System.Drawing.Point(3, 443);
-            this.btnQuanLiTangCa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQuanLiTangCa.Location = new System.Drawing.Point(4, 692);
+            this.btnQuanLiTangCa.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnQuanLiTangCa.Name = "btnQuanLiTangCa";
-            this.btnQuanLiTangCa.Size = new System.Drawing.Size(272, 46);
+            this.btnQuanLiTangCa.Size = new System.Drawing.Size(408, 72);
             this.btnQuanLiTangCa.TabIndex = 9;
             this.btnQuanLiTangCa.Text = "Overtime Management";
             this.btnQuanLiTangCa.Click += new System.EventHandler(this.btnQuanLiTangCa_Click);
@@ -116,10 +116,10 @@
             this.btnContract.FillColor = System.Drawing.Color.Transparent;
             this.btnContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContract.ForeColor = System.Drawing.Color.Black;
-            this.btnContract.Location = new System.Drawing.Point(0, 151);
-            this.btnContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnContract.Location = new System.Drawing.Point(0, 236);
+            this.btnContract.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnContract.Name = "btnContract";
-            this.btnContract.Size = new System.Drawing.Size(275, 46);
+            this.btnContract.Size = new System.Drawing.Size(412, 72);
             this.btnContract.TabIndex = 8;
             this.btnContract.Text = "Employment Contract";
             this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
@@ -133,10 +133,10 @@
             this.btnSalary.FillColor = System.Drawing.Color.Transparent;
             this.btnSalary.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalary.ForeColor = System.Drawing.Color.Black;
-            this.btnSalary.Location = new System.Drawing.Point(0, 101);
-            this.btnSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalary.Location = new System.Drawing.Point(0, 158);
+            this.btnSalary.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSalary.Name = "btnSalary";
-            this.btnSalary.Size = new System.Drawing.Size(275, 46);
+            this.btnSalary.Size = new System.Drawing.Size(412, 72);
             this.btnSalary.TabIndex = 7;
             this.btnSalary.Text = "Salary Information";
             this.btnSalary.Click += new System.EventHandler(this.btnSalary_Click);
@@ -150,10 +150,10 @@
             this.btnPersonalInfor.FillColor = System.Drawing.Color.Transparent;
             this.btnPersonalInfor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonalInfor.ForeColor = System.Drawing.Color.Black;
-            this.btnPersonalInfor.Location = new System.Drawing.Point(0, 51);
-            this.btnPersonalInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPersonalInfor.Location = new System.Drawing.Point(0, 80);
+            this.btnPersonalInfor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnPersonalInfor.Name = "btnPersonalInfor";
-            this.btnPersonalInfor.Size = new System.Drawing.Size(275, 46);
+            this.btnPersonalInfor.Size = new System.Drawing.Size(412, 72);
             this.btnPersonalInfor.TabIndex = 6;
             this.btnPersonalInfor.Text = "Personal Information";
             this.btnPersonalInfor.Click += new System.EventHandler(this.btnPersonalInfor_Click);
@@ -167,10 +167,10 @@
             this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button7.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button7.Location = new System.Drawing.Point(3, 395);
-            this.guna2Button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button7.Location = new System.Drawing.Point(4, 617);
+            this.guna2Button7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(272, 46);
+            this.guna2Button7.Size = new System.Drawing.Size(408, 72);
             this.guna2Button7.TabIndex = 5;
             this.guna2Button7.Text = "View Employment Contracts";
             this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
@@ -184,10 +184,10 @@
             this.btnQuanLiChamCong.FillColor = System.Drawing.Color.Transparent;
             this.btnQuanLiChamCong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLiChamCong.ForeColor = System.Drawing.Color.Black;
-            this.btnQuanLiChamCong.Location = new System.Drawing.Point(3, 346);
-            this.btnQuanLiChamCong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQuanLiChamCong.Location = new System.Drawing.Point(4, 541);
+            this.btnQuanLiChamCong.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnQuanLiChamCong.Name = "btnQuanLiChamCong";
-            this.btnQuanLiChamCong.Size = new System.Drawing.Size(272, 46);
+            this.btnQuanLiChamCong.Size = new System.Drawing.Size(408, 72);
             this.btnQuanLiChamCong.TabIndex = 4;
             this.btnQuanLiChamCong.Text = "Attendance Management";
             this.btnQuanLiChamCong.Click += new System.EventHandler(this.btnQuanLiChamCong_Click);
@@ -201,10 +201,10 @@
             this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(3, 298);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button5.Location = new System.Drawing.Point(4, 466);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(272, 46);
+            this.guna2Button5.Size = new System.Drawing.Size(408, 72);
             this.guna2Button5.TabIndex = 3;
             this.guna2Button5.Text = "Leave Management";
             this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
@@ -218,10 +218,10 @@
             this.btnQuanLiCongTrinh.FillColor = System.Drawing.Color.Transparent;
             this.btnQuanLiCongTrinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLiCongTrinh.ForeColor = System.Drawing.Color.Black;
-            this.btnQuanLiCongTrinh.Location = new System.Drawing.Point(3, 249);
-            this.btnQuanLiCongTrinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQuanLiCongTrinh.Location = new System.Drawing.Point(4, 389);
+            this.btnQuanLiCongTrinh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnQuanLiCongTrinh.Name = "btnQuanLiCongTrinh";
-            this.btnQuanLiCongTrinh.Size = new System.Drawing.Size(272, 46);
+            this.btnQuanLiCongTrinh.Size = new System.Drawing.Size(408, 72);
             this.btnQuanLiCongTrinh.TabIndex = 2;
             this.btnQuanLiCongTrinh.Text = "Projects Management";
             this.btnQuanLiCongTrinh.Click += new System.EventHandler(this.btnQuanLiCongTrinh_Click);
@@ -235,10 +235,10 @@
             this.btnQuanLiNhanVien.FillColor = System.Drawing.Color.Transparent;
             this.btnQuanLiNhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLiNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.btnQuanLiNhanVien.Location = new System.Drawing.Point(3, 200);
-            this.btnQuanLiNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQuanLiNhanVien.Location = new System.Drawing.Point(4, 312);
+            this.btnQuanLiNhanVien.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnQuanLiNhanVien.Name = "btnQuanLiNhanVien";
-            this.btnQuanLiNhanVien.Size = new System.Drawing.Size(272, 46);
+            this.btnQuanLiNhanVien.Size = new System.Drawing.Size(408, 72);
             this.btnQuanLiNhanVien.TabIndex = 1;
             this.btnQuanLiNhanVien.Text = "Employees Management";
             this.btnQuanLiNhanVien.Click += new System.EventHandler(this.btnQuanLiNhanVien_Click);
@@ -252,10 +252,10 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(3, 2);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button2.Location = new System.Drawing.Point(4, 3);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(272, 46);
+            this.guna2Button2.Size = new System.Drawing.Size(408, 72);
             this.guna2Button2.TabIndex = 0;
             this.guna2Button2.Text = "DashBoard";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -266,10 +266,10 @@
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.Location = new System.Drawing.Point(274, 54);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(411, 84);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1381, 523);
+            this.guna2Panel2.Size = new System.Drawing.Size(2072, 817);
             this.guna2Panel2.TabIndex = 6;
             // 
             // guna2BorderlessForm1
@@ -293,10 +293,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Black;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1528, 9);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(2292, 14);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(125, 40);
+            this.guna2Button1.Size = new System.Drawing.Size(188, 62);
             this.guna2Button1.TabIndex = 7;
             this.guna2Button1.Text = "Exit";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -311,35 +311,37 @@
             this.btnLogOut.FillColor = System.Drawing.Color.Black;
             this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(1376, 9);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogOut.Location = new System.Drawing.Point(2064, 14);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(125, 40);
+            this.btnLogOut.Size = new System.Drawing.Size(188, 62);
             this.btnLogOut.TabIndex = 9;
-            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.Text = "Log out";
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 14);
+            this.label1.Location = new System.Drawing.Point(42, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 29);
+            this.label1.Size = new System.Drawing.Size(176, 44);
             this.label1.TabIndex = 8;
             this.label1.Text = "Manager";
             // 
             // ManagerUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1668, 604);
+            this.ClientSize = new System.Drawing.Size(2502, 944);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ManagerUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager";

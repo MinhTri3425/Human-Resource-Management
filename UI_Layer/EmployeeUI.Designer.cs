@@ -52,9 +52,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 22);
+            this.label1.Location = new System.Drawing.Point(121, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 32);
+            this.label1.Size = new System.Drawing.Size(197, 44);
             this.label1.TabIndex = 13;
             this.label1.Text = "Employee";
             // 
@@ -67,10 +68,10 @@
             this.btnDangKyTangCa.FillColor = System.Drawing.Color.Transparent;
             this.btnDangKyTangCa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKyTangCa.ForeColor = System.Drawing.Color.Black;
-            this.btnDangKyTangCa.Location = new System.Drawing.Point(-3, 484);
-            this.btnDangKyTangCa.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnDangKyTangCa.Location = new System.Drawing.Point(-4, 605);
+            this.btnDangKyTangCa.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnDangKyTangCa.Name = "btnDangKyTangCa";
-            this.btnDangKyTangCa.Size = new System.Drawing.Size(306, 58);
+            this.btnDangKyTangCa.Size = new System.Drawing.Size(408, 72);
             this.btnDangKyTangCa.TabIndex = 9;
             this.btnDangKyTangCa.Text = "Register for Overtime";
             this.btnDangKyTangCa.Click += new System.EventHandler(this.btnQuanLiTangCa_Click);
@@ -84,10 +85,10 @@
             this.btnContract.FillColor = System.Drawing.Color.Transparent;
             this.btnContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContract.ForeColor = System.Drawing.Color.Black;
-            this.btnContract.Location = new System.Drawing.Point(-3, 180);
-            this.btnContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnContract.Location = new System.Drawing.Point(-4, 225);
+            this.btnContract.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnContract.Name = "btnContract";
-            this.btnContract.Size = new System.Drawing.Size(309, 58);
+            this.btnContract.Size = new System.Drawing.Size(412, 72);
             this.btnContract.TabIndex = 8;
             this.btnContract.Text = "Employment Contract";
             this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
@@ -101,10 +102,10 @@
             this.btnSalary.FillColor = System.Drawing.Color.Transparent;
             this.btnSalary.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalary.ForeColor = System.Drawing.Color.Black;
-            this.btnSalary.Location = new System.Drawing.Point(-3, 118);
-            this.btnSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalary.Location = new System.Drawing.Point(-4, 148);
+            this.btnSalary.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSalary.Name = "btnSalary";
-            this.btnSalary.Size = new System.Drawing.Size(309, 58);
+            this.btnSalary.Size = new System.Drawing.Size(412, 72);
             this.btnSalary.TabIndex = 7;
             this.btnSalary.Text = "Salary Information";
             this.btnSalary.Click += new System.EventHandler(this.btnSalary_Click);
@@ -118,10 +119,10 @@
             this.btnPersonalInfor.FillColor = System.Drawing.Color.Transparent;
             this.btnPersonalInfor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonalInfor.ForeColor = System.Drawing.Color.Black;
-            this.btnPersonalInfor.Location = new System.Drawing.Point(-3, 62);
-            this.btnPersonalInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPersonalInfor.Location = new System.Drawing.Point(-4, 78);
+            this.btnPersonalInfor.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnPersonalInfor.Name = "btnPersonalInfor";
-            this.btnPersonalInfor.Size = new System.Drawing.Size(309, 58);
+            this.btnPersonalInfor.Size = new System.Drawing.Size(412, 72);
             this.btnPersonalInfor.TabIndex = 6;
             this.btnPersonalInfor.Text = "Personal Information";
             this.btnPersonalInfor.Click += new System.EventHandler(this.btnPersonalInfor_Click);
@@ -135,10 +136,10 @@
             this.btnXemCongtrinh.FillColor = System.Drawing.Color.Transparent;
             this.btnXemCongtrinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemCongtrinh.ForeColor = System.Drawing.Color.Black;
-            this.btnXemCongtrinh.Location = new System.Drawing.Point(-4, 364);
-            this.btnXemCongtrinh.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnXemCongtrinh.Location = new System.Drawing.Point(-5, 455);
+            this.btnXemCongtrinh.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnXemCongtrinh.Name = "btnXemCongtrinh";
-            this.btnXemCongtrinh.Size = new System.Drawing.Size(306, 58);
+            this.btnXemCongtrinh.Size = new System.Drawing.Size(408, 72);
             this.btnXemCongtrinh.TabIndex = 3;
             this.btnXemCongtrinh.Text = "View Projects";
             this.btnXemCongtrinh.Click += new System.EventHandler(this.btnXemCongtrinh_Click);
@@ -153,10 +154,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Black;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1720, 5);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.guna2Button1.Location = new System.Drawing.Point(2293, 6);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(141, 50);
+            this.guna2Button1.Size = new System.Drawing.Size(188, 62);
             this.guna2Button1.TabIndex = 12;
             this.guna2Button1.Text = "Exit";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -181,10 +182,10 @@
             this.btnDangKyXinNghi.FillColor = System.Drawing.Color.Transparent;
             this.btnDangKyXinNghi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKyXinNghi.ForeColor = System.Drawing.Color.Black;
-            this.btnDangKyXinNghi.Location = new System.Drawing.Point(-4, 301);
-            this.btnDangKyXinNghi.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnDangKyXinNghi.Location = new System.Drawing.Point(-5, 376);
+            this.btnDangKyXinNghi.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnDangKyXinNghi.Name = "btnDangKyXinNghi";
-            this.btnDangKyXinNghi.Size = new System.Drawing.Size(306, 58);
+            this.btnDangKyXinNghi.Size = new System.Drawing.Size(408, 72);
             this.btnDangKyXinNghi.TabIndex = 2;
             this.btnDangKyXinNghi.Text = "Submit Leave Requests";
             this.btnDangKyXinNghi.Click += new System.EventHandler(this.btnDangKyXinNghi_Click);
@@ -198,10 +199,10 @@
             this.btnChamCong.FillColor = System.Drawing.Color.Transparent;
             this.btnChamCong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChamCong.ForeColor = System.Drawing.Color.Black;
-            this.btnChamCong.Location = new System.Drawing.Point(-4, 241);
-            this.btnChamCong.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnChamCong.Location = new System.Drawing.Point(-5, 301);
+            this.btnChamCong.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnChamCong.Name = "btnChamCong";
-            this.btnChamCong.Size = new System.Drawing.Size(306, 58);
+            this.btnChamCong.Size = new System.Drawing.Size(408, 72);
             this.btnChamCong.TabIndex = 1;
             this.btnChamCong.Text = "Timekeeping";
             this.btnChamCong.Click += new System.EventHandler(this.btnChamCong_Click);
@@ -216,9 +217,9 @@
             this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
             this.guna2Button2.Location = new System.Drawing.Point(0, 1);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(306, 58);
+            this.guna2Button2.Size = new System.Drawing.Size(408, 72);
             this.guna2Button2.TabIndex = 0;
             this.guna2Button2.Text = "DashBoard";
             // 
@@ -236,10 +237,10 @@
             this.guna2Panel1.Controls.Add(this.btnChamCong);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Location = new System.Drawing.Point(1, 62);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.guna2Panel1.Location = new System.Drawing.Point(1, 78);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(309, 749);
+            this.guna2Panel1.Size = new System.Drawing.Size(412, 936);
             this.guna2Panel1.TabIndex = 10;
             // 
             // btnDangKyCongTrinh
@@ -251,10 +252,10 @@
             this.btnDangKyCongTrinh.FillColor = System.Drawing.Color.Transparent;
             this.btnDangKyCongTrinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKyCongTrinh.ForeColor = System.Drawing.Color.Black;
-            this.btnDangKyCongTrinh.Location = new System.Drawing.Point(-3, 424);
-            this.btnDangKyCongTrinh.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnDangKyCongTrinh.Location = new System.Drawing.Point(-4, 530);
+            this.btnDangKyCongTrinh.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnDangKyCongTrinh.Name = "btnDangKyCongTrinh";
-            this.btnDangKyCongTrinh.Size = new System.Drawing.Size(306, 58);
+            this.btnDangKyCongTrinh.Size = new System.Drawing.Size(408, 72);
             this.btnDangKyCongTrinh.TabIndex = 10;
             this.btnDangKyCongTrinh.Text = "Register for Project";
             this.btnDangKyCongTrinh.Click += new System.EventHandler(this.btnDangKyCongTrinh_Click);
@@ -265,10 +266,10 @@
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.Location = new System.Drawing.Point(308, 62);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.guna2Panel2.Location = new System.Drawing.Point(411, 78);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1554, 750);
+            this.guna2Panel2.Size = new System.Drawing.Size(2072, 938);
             this.guna2Panel2.TabIndex = 11;
             // 
             // btnLogOut
@@ -281,26 +282,26 @@
             this.btnLogOut.FillColor = System.Drawing.Color.Black;
             this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(1549, 5);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnLogOut.Location = new System.Drawing.Point(2065, 6);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(141, 50);
+            this.btnLogOut.Size = new System.Drawing.Size(188, 62);
             this.btnLogOut.TabIndex = 14;
-            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.Text = "Log out";
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // EmployeeUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1892, 855);
+            this.ClientSize = new System.Drawing.Size(2523, 1069);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.btnLogOut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "EmployeeUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeUI";
