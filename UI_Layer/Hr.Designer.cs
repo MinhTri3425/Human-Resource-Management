@@ -33,7 +33,6 @@
             this.btnEmloyee = new Guna.UI2.WinForms.Guna2Button();
             this.btnSalary = new Guna.UI2.WinForms.Guna2Button();
             this.btnPersonalInfor = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.Panel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
@@ -48,7 +47,6 @@
             this.Panel1.Controls.Add(this.btnEmloyee);
             this.Panel1.Controls.Add(this.btnSalary);
             this.Panel1.Controls.Add(this.btnPersonalInfor);
-            this.Panel1.Controls.Add(this.guna2Button2);
             this.Panel1.Location = new System.Drawing.Point(4, 145);
             this.Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel1.Name = "Panel1";
@@ -64,7 +62,7 @@
             this.btnContract.FillColor = System.Drawing.Color.Transparent;
             this.btnContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContract.ForeColor = System.Drawing.Color.Black;
-            this.btnContract.Location = new System.Drawing.Point(9, 316);
+            this.btnContract.Location = new System.Drawing.Point(9, 238);
             this.btnContract.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnContract.Name = "btnContract";
             this.btnContract.Size = new System.Drawing.Size(399, 72);
@@ -81,7 +79,7 @@
             this.btnEmloyee.FillColor = System.Drawing.Color.Transparent;
             this.btnEmloyee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmloyee.ForeColor = System.Drawing.Color.Black;
-            this.btnEmloyee.Location = new System.Drawing.Point(4, 238);
+            this.btnEmloyee.Location = new System.Drawing.Point(4, 160);
             this.btnEmloyee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEmloyee.Name = "btnEmloyee";
             this.btnEmloyee.Size = new System.Drawing.Size(404, 72);
@@ -98,7 +96,7 @@
             this.btnSalary.FillColor = System.Drawing.Color.Transparent;
             this.btnSalary.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalary.ForeColor = System.Drawing.Color.Black;
-            this.btnSalary.Location = new System.Drawing.Point(4, 159);
+            this.btnSalary.Location = new System.Drawing.Point(4, 81);
             this.btnSalary.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSalary.Name = "btnSalary";
             this.btnSalary.Size = new System.Drawing.Size(404, 72);
@@ -115,29 +113,13 @@
             this.btnPersonalInfor.FillColor = System.Drawing.Color.Transparent;
             this.btnPersonalInfor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonalInfor.ForeColor = System.Drawing.Color.Black;
-            this.btnPersonalInfor.Location = new System.Drawing.Point(4, 81);
+            this.btnPersonalInfor.Location = new System.Drawing.Point(4, 3);
             this.btnPersonalInfor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnPersonalInfor.Name = "btnPersonalInfor";
             this.btnPersonalInfor.Size = new System.Drawing.Size(404, 72);
             this.btnPersonalInfor.TabIndex = 2;
             this.btnPersonalInfor.Text = "Personal Information";
             this.btnPersonalInfor.Click += new System.EventHandler(this.btnPersonalInfor_Click);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(4, 3);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(404, 72);
-            this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "DashBoard";
             // 
             // Panel2
             // 
@@ -147,7 +129,6 @@
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(1842, 849);
             this.Panel2.TabIndex = 1;
-            this.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // label1
             // 
@@ -224,7 +205,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Button btnExit;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button btnPersonalInfor;
         private Guna.UI2.WinForms.Guna2Button btnSalary;
         private Guna.UI2.WinForms.Guna2Button btnEmloyee;

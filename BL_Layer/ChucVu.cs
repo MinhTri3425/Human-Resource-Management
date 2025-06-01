@@ -68,7 +68,10 @@ namespace QLNS.BL_Layer
         public bool KiemTraChucVuDangSuDung(int ChucVuID)
         {
             string sqlString = $"SELECT COUNT(*) FROM NhanVien WHERE ChucVuID = {ChucVuID}";
-            int count = (int)db.ExecuteScalar(sqlString, CommandType.Text);
+            object result = db.ExecuteScalar(sqlString, CommandType.Text);
+            int count = 0;
+            if (result != null && int.TryParse(result.ToString(), out int temp))
+                count = temp;
             return count > 0;
         }
         public bool XoaChucVu(int ChucVuID, ref string err)//Admin

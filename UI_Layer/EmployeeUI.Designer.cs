@@ -40,7 +40,6 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnDangKyXinNghi = new Guna.UI2.WinForms.Guna2Button();
             this.btnChamCong = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnDangKyCongTrinh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -68,7 +67,7 @@
             this.btnDangKyTangCa.FillColor = System.Drawing.Color.Transparent;
             this.btnDangKyTangCa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKyTangCa.ForeColor = System.Drawing.Color.Black;
-            this.btnDangKyTangCa.Location = new System.Drawing.Point(-4, 605);
+            this.btnDangKyTangCa.Location = new System.Drawing.Point(0, 527);
             this.btnDangKyTangCa.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnDangKyTangCa.Name = "btnDangKyTangCa";
             this.btnDangKyTangCa.Size = new System.Drawing.Size(408, 72);
@@ -85,7 +84,7 @@
             this.btnContract.FillColor = System.Drawing.Color.Transparent;
             this.btnContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContract.ForeColor = System.Drawing.Color.Black;
-            this.btnContract.Location = new System.Drawing.Point(-4, 225);
+            this.btnContract.Location = new System.Drawing.Point(-1, 147);
             this.btnContract.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnContract.Name = "btnContract";
             this.btnContract.Size = new System.Drawing.Size(412, 72);
@@ -102,7 +101,7 @@
             this.btnSalary.FillColor = System.Drawing.Color.Transparent;
             this.btnSalary.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalary.ForeColor = System.Drawing.Color.Black;
-            this.btnSalary.Location = new System.Drawing.Point(-4, 148);
+            this.btnSalary.Location = new System.Drawing.Point(-1, 70);
             this.btnSalary.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSalary.Name = "btnSalary";
             this.btnSalary.Size = new System.Drawing.Size(412, 72);
@@ -119,7 +118,7 @@
             this.btnPersonalInfor.FillColor = System.Drawing.Color.Transparent;
             this.btnPersonalInfor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonalInfor.ForeColor = System.Drawing.Color.Black;
-            this.btnPersonalInfor.Location = new System.Drawing.Point(-4, 78);
+            this.btnPersonalInfor.Location = new System.Drawing.Point(-1, 0);
             this.btnPersonalInfor.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnPersonalInfor.Name = "btnPersonalInfor";
             this.btnPersonalInfor.Size = new System.Drawing.Size(412, 72);
@@ -136,7 +135,7 @@
             this.btnXemCongtrinh.FillColor = System.Drawing.Color.Transparent;
             this.btnXemCongtrinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemCongtrinh.ForeColor = System.Drawing.Color.Black;
-            this.btnXemCongtrinh.Location = new System.Drawing.Point(-5, 455);
+            this.btnXemCongtrinh.Location = new System.Drawing.Point(0, 377);
             this.btnXemCongtrinh.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnXemCongtrinh.Name = "btnXemCongtrinh";
             this.btnXemCongtrinh.Size = new System.Drawing.Size(408, 72);
@@ -182,7 +181,7 @@
             this.btnDangKyXinNghi.FillColor = System.Drawing.Color.Transparent;
             this.btnDangKyXinNghi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKyXinNghi.ForeColor = System.Drawing.Color.Black;
-            this.btnDangKyXinNghi.Location = new System.Drawing.Point(-5, 376);
+            this.btnDangKyXinNghi.Location = new System.Drawing.Point(0, 298);
             this.btnDangKyXinNghi.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnDangKyXinNghi.Name = "btnDangKyXinNghi";
             this.btnDangKyXinNghi.Size = new System.Drawing.Size(408, 72);
@@ -199,29 +198,13 @@
             this.btnChamCong.FillColor = System.Drawing.Color.Transparent;
             this.btnChamCong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChamCong.ForeColor = System.Drawing.Color.Black;
-            this.btnChamCong.Location = new System.Drawing.Point(-5, 301);
+            this.btnChamCong.Location = new System.Drawing.Point(0, 223);
             this.btnChamCong.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnChamCong.Name = "btnChamCong";
             this.btnChamCong.Size = new System.Drawing.Size(408, 72);
             this.btnChamCong.TabIndex = 1;
             this.btnChamCong.Text = "Timekeeping";
             this.btnChamCong.Click += new System.EventHandler(this.btnChamCong_Click);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 1);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(408, 72);
-            this.guna2Button2.TabIndex = 0;
-            this.guna2Button2.Text = "DashBoard";
             // 
             // guna2Panel1
             // 
@@ -235,7 +218,6 @@
             this.guna2Panel1.Controls.Add(this.btnXemCongtrinh);
             this.guna2Panel1.Controls.Add(this.btnDangKyXinNghi);
             this.guna2Panel1.Controls.Add(this.btnChamCong);
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Location = new System.Drawing.Point(1, 78);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
@@ -252,7 +234,7 @@
             this.btnDangKyCongTrinh.FillColor = System.Drawing.Color.Transparent;
             this.btnDangKyCongTrinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKyCongTrinh.ForeColor = System.Drawing.Color.Black;
-            this.btnDangKyCongTrinh.Location = new System.Drawing.Point(-4, 530);
+            this.btnDangKyCongTrinh.Location = new System.Drawing.Point(0, 452);
             this.btnDangKyCongTrinh.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.btnDangKyCongTrinh.Name = "btnDangKyCongTrinh";
             this.btnDangKyCongTrinh.Size = new System.Drawing.Size(408, 72);
@@ -325,7 +307,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnDangKyXinNghi;
         private Guna.UI2.WinForms.Guna2Button btnChamCong;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Button btnDangKyCongTrinh;

@@ -1,4 +1,5 @@
 ﻿using QLNS.BL_Layer;
+using QLNS.UI_Layer.All_UserControl.HR_UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +57,17 @@ namespace QLNS.UI_Layer.HR
                         H_HopDong hd = new H_HopDong(UserID, functionName, ID_HopDong, ID_NhanVien, LoaiHopDong, NgayBatDau, NgayKetThuc);
                         this.flowLayoutPanel1.Controls.Add(hd);
                     }
+                }
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            using (var form = new FormThemHopDong(this.UserID))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    LoadData();
                 }
             }
         }

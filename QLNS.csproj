@@ -153,11 +153,65 @@
     <Compile Include="UI_Layer\All UserControl\Admin_UC\A_ThemTangCa.Designer.cs">
       <DependentUpon>A_ThemTangCa.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\chucvu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\chucvu.Designer.cs">
+      <DependentUpon>chucvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\ChucVuShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\ChucVuShow.Designer.cs">
+      <DependentUpon>ChucVuShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\FormSuaChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\FormSuaChucVu.Designer.cs">
+      <DependentUpon>FormSuaChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\FormSuaPB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\FormSuaPB.Designer.cs">
+      <DependentUpon>FormSuaPB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\FormThemChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\FormThemChucVu.Designer.cs">
+      <DependentUpon>FormThemChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\FormThemPB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\FormThemPB.Designer.cs">
+      <DependentUpon>FormThemPB.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Layer\All UserControl\Admin_UC\ItemUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI_Layer\All UserControl\Admin_UC\ItemUser.Designer.cs">
       <DependentUpon>ItemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\nhatky.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\nhatky.Designer.cs">
+      <DependentUpon>nhatky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\NhatKyShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\NhatKyShow.Designer.cs">
+      <DependentUpon>NhatKyShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\phongban.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\Admin_UC\phongban.Designer.cs">
+      <DependentUpon>phongban.cs</DependentUpon>
     </Compile>
     <Compile Include="UI_Layer\All UserControl\Admin_UC\SuaUser.cs">
       <SubType>Form</SubType>
@@ -261,11 +315,23 @@
     <Compile Include="UI_Layer\All UserControl\employee_uc\E_UC_XemCongTrinh.Designer.cs">
       <DependentUpon>E_UC_XemCongTrinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Layer\All UserControl\HR_UI\FormSuaHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\HR_UI\FormSuaHopDong.Designer.cs">
+      <DependentUpon>FormSuaHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Layer\All UserControl\HR_UI\FormSuaNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI_Layer\All UserControl\HR_UI\FormSuaNhanVien.Designer.cs">
       <DependentUpon>FormSuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\HR_UI\FormThemHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Layer\All UserControl\HR_UI\FormThemHopDong.Designer.cs">
+      <DependentUpon>FormThemHopDong.cs</DependentUpon>
     </Compile>
     <Compile Include="UI_Layer\All UserControl\HR_UI\FormThemNhanVien.cs">
       <SubType>Form</SubType>
@@ -441,12 +507,6 @@
     <Compile Include="UI_Layer\All UserControl\SalaryInformation.Designer.cs">
       <DependentUpon>SalaryInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI_Layer\All.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI_Layer\All.Designer.cs">
-      <DependentUpon>All.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI_Layer\EmployeeUI.cs">
@@ -525,8 +585,35 @@
     <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\A_ThemTangCa.resx">
       <DependentUpon>A_ThemTangCa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\chucvu.resx">
+      <DependentUpon>chucvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\ChucVuShow.resx">
+      <DependentUpon>ChucVuShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\FormSuaChucVu.resx">
+      <DependentUpon>FormSuaChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\FormSuaPB.resx">
+      <DependentUpon>FormSuaPB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\FormThemChucVu.resx">
+      <DependentUpon>FormThemChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\FormThemPB.resx">
+      <DependentUpon>FormThemPB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\ItemUser.resx">
       <DependentUpon>ItemUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\nhatky.resx">
+      <DependentUpon>nhatky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\NhatKyShow.resx">
+      <DependentUpon>NhatKyShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\phongban.resx">
+      <DependentUpon>phongban.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\Admin_UC\SuaUser.resx">
       <DependentUpon>SuaUser.cs</DependentUpon>
@@ -579,8 +666,14 @@
     <EmbeddedResource Include="UI_Layer\All UserControl\employee_uc\E_UC_XemCongTrinh.resx">
       <DependentUpon>E_UC_XemCongTrinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\HR_UI\FormSuaHopDong.resx">
+      <DependentUpon>FormSuaHopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\HR_UI\FormSuaNhanVien.resx">
       <DependentUpon>FormSuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Layer\All UserControl\HR_UI\FormThemHopDong.resx">
+      <DependentUpon>FormThemHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\HR_UI\FormThemNhanVien.resx">
       <DependentUpon>FormThemNhanVien.cs</DependentUpon>
@@ -662,9 +755,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\All UserControl\SalaryInformation.resx">
       <DependentUpon>SalaryInformation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI_Layer\All.resx">
-      <DependentUpon>All.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Layer\EmployeeUI.resx">
       <DependentUpon>EmployeeUI.cs</DependentUpon>

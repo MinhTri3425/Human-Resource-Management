@@ -1,6 +1,6 @@
-﻿namespace QLNS.UI_Layer.HR
+﻿namespace QLNS.UI_Layer.All_UserControl.Admin_UC
 {
-    partial class H_HopDong
+    partial class phongban
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,59 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbIDHopDong = new System.Windows.Forms.Label();
-            this.lbLoaiHD = new System.Windows.Forms.Label();
-            this.lbIDNhanVien = new System.Windows.Forms.Label();
-            this.lbNgayKy = new System.Windows.Forms.Label();
-            this.lbNgayHetHan = new System.Windows.Forms.Label();
+            this.IDPBan = new System.Windows.Forms.Label();
+            this.TenPB = new System.Windows.Forms.Label();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
-            // lbIDHopDong
+            // IDPBan
             // 
-            this.lbIDHopDong.AutoSize = true;
-            this.lbIDHopDong.Location = new System.Drawing.Point(40, 14);
-            this.lbIDHopDong.Name = "lbIDHopDong";
-            this.lbIDHopDong.Size = new System.Drawing.Size(83, 16);
-            this.lbIDHopDong.TabIndex = 0;
-            this.lbIDHopDong.Text = "ID Hợp đồng";
+            this.IDPBan.AutoSize = true;
+            this.IDPBan.Location = new System.Drawing.Point(79, 4);
+            this.IDPBan.Name = "IDPBan";
+            this.IDPBan.Size = new System.Drawing.Size(89, 16);
+            this.IDPBan.TabIndex = 0;
+            this.IDPBan.Text = "ID Phòng Ban";
             // 
-            // lbLoaiHD
+            // TenPB
             // 
-            this.lbLoaiHD.AutoSize = true;
-            this.lbLoaiHD.Location = new System.Drawing.Point(380, 14);
-            this.lbLoaiHD.Name = "lbLoaiHD";
-            this.lbLoaiHD.Size = new System.Drawing.Size(93, 16);
-            this.lbLoaiHD.TabIndex = 1;
-            this.lbLoaiHD.Text = "Loại hợp đồng";
-            // 
-            // lbIDNhanVien
-            // 
-            this.lbIDNhanVien.AutoSize = true;
-            this.lbIDNhanVien.Location = new System.Drawing.Point(216, 14);
-            this.lbIDNhanVien.Name = "lbIDNhanVien";
-            this.lbIDNhanVien.Size = new System.Drawing.Size(85, 16);
-            this.lbIDNhanVien.TabIndex = 2;
-            this.lbIDNhanVien.Text = "ID Nhân Viên";
-            // 
-            // lbNgayKy
-            // 
-            this.lbNgayKy.AutoSize = true;
-            this.lbNgayKy.Location = new System.Drawing.Point(616, 14);
-            this.lbNgayKy.Name = "lbNgayKy";
-            this.lbNgayKy.Size = new System.Drawing.Size(57, 16);
-            this.lbNgayKy.TabIndex = 3;
-            this.lbNgayKy.Text = "Ngày ký";
-            // 
-            // lbNgayHetHan
-            // 
-            this.lbNgayHetHan.AutoSize = true;
-            this.lbNgayHetHan.Location = new System.Drawing.Point(782, 14);
-            this.lbNgayHetHan.Name = "lbNgayHetHan";
-            this.lbNgayHetHan.Size = new System.Drawing.Size(86, 16);
-            this.lbNgayHetHan.TabIndex = 4;
-            this.lbNgayHetHan.Text = "Ngày hết hạn";
+            this.TenPB.AutoSize = true;
+            this.TenPB.Location = new System.Drawing.Point(216, 4);
+            this.TenPB.Name = "TenPB";
+            this.TenPB.Size = new System.Drawing.Size(98, 16);
+            this.TenPB.TabIndex = 1;
+            this.TenPB.Text = "Tên phòng ban";
             // 
             // btnSua
             // 
@@ -92,10 +62,10 @@
             this.btnSua.FillColor = System.Drawing.Color.Black;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(1004, 14);
+            this.btnSua.Location = new System.Drawing.Point(472, 4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(61, 24);
-            this.btnSua.TabIndex = 11;
+            this.btnSua.TabIndex = 13;
             this.btnSua.Text = "Sửa";
             this.btnSua.Visible = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -110,30 +80,26 @@
             this.btnXoa.FillColor = System.Drawing.Color.Black;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(922, 14);
+            this.btnXoa.Location = new System.Drawing.Point(399, 4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(61, 24);
-            this.btnXoa.TabIndex = 10;
+            this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Visible = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // H_HopDong
+            // phongban
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.lbNgayHetHan);
-            this.Controls.Add(this.lbNgayKy);
-            this.Controls.Add(this.lbIDNhanVien);
-            this.Controls.Add(this.lbLoaiHD);
-            this.Controls.Add(this.lbIDHopDong);
-            this.Name = "H_HopDong";
-            this.Size = new System.Drawing.Size(1081, 44);
-            this.Load += new System.EventHandler(this.H_HopDong_Load);
-            this.MouseEnter += new System.EventHandler(this.MouseEnter_HopDong);
-            this.MouseLeave += new System.EventHandler(this.MouseLeave_HopDong);
+            this.Controls.Add(this.TenPB);
+            this.Controls.Add(this.IDPBan);
+            this.Name = "phongban";
+            this.Size = new System.Drawing.Size(560, 37);
+            this.MouseEnter += new System.EventHandler(this.MouseEnter_Pb);
+            this.MouseLeave += new System.EventHandler(this.MouseLeave_Pb);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,11 +107,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbIDHopDong;
-        private System.Windows.Forms.Label lbLoaiHD;
-        private System.Windows.Forms.Label lbIDNhanVien;
-        private System.Windows.Forms.Label lbNgayKy;
-        private System.Windows.Forms.Label lbNgayHetHan;
+        private System.Windows.Forms.Label IDPBan;
+        private System.Windows.Forms.Label TenPB;
         private Guna.UI2.WinForms.Guna2Button btnSua;
         private Guna.UI2.WinForms.Guna2Button btnXoa;
     }
